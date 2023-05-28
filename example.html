@@ -1,0 +1,2235 @@
+<!doctype html>
+<html lang="ru">
+
+<head itemscope itemtype="http://schema.org/WPHeader">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="yandex-verification" content="e7d3606d1fe48b7c" />
+  <meta itemprop="appleid-signin-client-id" name="appleid-signin-client-id" content="[CLIENT_ID]">
+  <meta itemprop="appleid-signin-scope" name="appleid-signin-scope" content="[SCOPE_ID]">
+  <meta itemprop="appleid-signin-redirect-uri" name="appleid-signin-redirect-uri" content="[REDIRECT_URI]">
+  <meta itemprop="appleid-signin-state" name="appleid-signin-state" content="[STATE]">
+  <meta itemprop="appleid-signin-nonce" name="appleid-signin-nonce" content="[NONCE]">
+  <meta itemprop="appleid-signin-use-popup" name="appleid-signin-use-popup" content="true">
+  <meta itemprop="description_page" name="description_page" content="Описание страницы через генератор">
+  <meta itemprop="color-scheme" name="color-scheme" content="dark light">
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="./assets/img/favicon.ico">
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="./assets/img/favicon.ico">
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="./assets/img/favicon.ico">
+  <link rel="apple-touch-icon-precomposed" href="./assets/img/favicon.ico">
+  <link rel="shortcut icon" href="./assets/img/favicon.ico">
+  <title itemprop="headline">Производство - Марктеплейс услуг для бизнеса - городского акселератора Санкт-Петербурга</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <link rel="stylesheet" href="./assets/theme/cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+  <link rel="stylesheet" type="text/css" href="./assets/theme/css/main.css">
+  <link rel="stylesheet" type="text/css" href="./assets/theme/css/utilities.css">
+  <link rel="stylesheet" href="./assets/theme/css/custom_manufacture.css">
+  <link rel="stylesheet" href="./assets/practice.css">
+  <link rel="stylesheet" href="./assets/theme/vendor/dropzone/dropzone.css">
+  <link rel="stylesheet" type="text/css" href="./assets/theme/vendor/jquery-tags-input/jquery.tagsinput.min.css">
+  <link rel="stylesheet" href="./assets/theme/vendor/lightbox/lightbox.css">
+  <link rel="stylesheet" href="./assets/theme/vendor/croppie/croppie.css">
+  <script src="./assets/theme/jquery/dist/jquery.min.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="  https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
+  <link rel="stylesheet" href="./assets/vendor/comp_toast/ui.css">
+
+  <script src="./assets/vendor/sweetalert2/sweetalert2.all.js"></script>
+  <!-- <script src="./assets/vendor/inputmask/jquery.inputmask.min.js"></script> -->
+
+</head>
+
+
+<body class="body_market">
+  <div class="block_header_menu">
+    <div class="container header-market">
+      <div class="d-flex bd-highlight mb-3" itemscope itemtype="http://schema.org/SiteNavigationElement">
+        <div class="me-auto bd-highlight">
+          <a href="/manufacture" itemprop="url">
+            <!-- <img src="./assets/theme/img/logo_accelerator.svg" class="header-logo" alt="Городской акселератор Санкт-Петербурга"> -->
+            <img src="./assets/img/eSPB.PRO_logo_02.svg" class="header-logo" alt="Городской акселератор Санкт-Петербурга">
+          </a>
+        </div>
+        <a href="/accelerator" class="padding__menu bd-highlight" itemprop="url">Акселератор</a>
+        <a href="/market" class="padding__menu bd-highlight" itemprop="url">Маркетплейс</a>
+        <a href="/manufacture" class="padding__menu bd-highlight" itemprop="url">Производство</a>
+        <!-- <a href="#" class="padding__menu bd-highlight">Резиденты</a> -->
+        <a href="#contacts" class="padding__menu bd-highlight" itemprop="url">Контакты</a>
+        <div class="dropdown" style="  padding-top: 19px;   padding-right: 20px;">
+          <a itemprop="url" href="/user" class="bd-highlight align-items-center justify-content-center dropbtn">
+            <div class="div_login_link">
+              <h3><i class="bi bi-person" style="font-size: 28px;"></i></h3>
+            </div>
+          </a>
+          <div class="dropdown-content">
+            <div class="dropdown_body">
+              <div class="d-grid">
+
+                <button onclick="logout();" type="button" class="btn btn-primary btn_login text-center" name="button">Выход</button>
+              </div>
+              <div class="dropdown_link">
+                <a itemprop="url" href="/user">Личный кабинет</a>
+                <a itemprop="url" href="/accelerator">Акселератор</a>
+                <a itemprop="url" href="/user/market">Маркетплейс</a>
+                <a itemprop="url" href="/user/manufacture">Производство</a>
+                <a itemprop="url" href="/user/profile">Личные данные</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="dropdown " style="  padding-top: 22px;   padding-right: 22px;">
+          <a href="/cart" class="bd-highlight align-items-center justify-content-center dropbtn">
+            <div class="div_login_link">
+              <h3><i class="bi bi-bag"></i></h3>
+            </div>
+          </a>
+        </div>
+
+        <style media="screen">
+          #head_icon_circle_notify,
+          #head_icon_circle_download {
+            -webkit-animation: blink_notify 3s linear infinite;
+            animation: blink_notify 3s linear infinite;
+          }
+
+          @-webkit-keyframes blink_notify {
+            0% {
+              background-color: #075055;
+              opacity: 1;
+            }
+
+            50% {
+              background-color: #075055;
+              opacity: 0;
+            }
+
+            100% {
+              background-color: #075055;
+              opacity: 1;
+            }
+          }
+
+          @keyframes blink_notify {
+            0% {
+              background-color: #075055;
+              opacity: 1;
+            }
+
+            50% {
+              background-color: #075055;
+              opacity: 0;
+            }
+
+            100% {
+              background-color: #075055;
+              opacity: 1;
+            }
+          }
+        </style>
+
+        <div class="dropdown" style="  padding-top: 22px;   padding-right: 22px;">
+          <a itemprop="url" href="/user/notify" class="bd-highlight align-items-center justify-content-center dropbtn">
+            <div class="div_login_link">
+              <h3><i class="bi bi-bell"></i></h3>
+            </div>
+          </a>
+          <span class="position-absolute translate-middle border border-light rounded-circle " id="head_icon_circle_notify" style="display:none; padding: 5px; top: 25px; right: 9px; ">
+            <span class="visually-hidden">Новые уведомления</span>
+          </span>
+        </div>
+
+        <div class="dropdown" style="  padding-top: 22px;   padding-right: 0px;">
+          <a itemprop="url" href="/user/downloads" class="bd-highlight align-items-center justify-content-center dropbtn">
+            <div class="div_login_link">
+              <h3><i class="bi bi-file-earmark-arrow-down"></i></h3>
+            </div>
+          </a>
+          <span class="position-absolute translate-middle border border-light rounded-circle " id="head_icon_circle_download" style="display:none; padding: 5px; top: 25px; right: -14px; background-color: #075055; ">
+            <span class="visually-hidden">Новые выгрузки</span>
+          </span>
+        </div>
+
+
+        <!-- <a href="/logout" class="padding__menu__button bd-highlight"><button type="button" class="btn btn-primary button_login_header" name="button">Выход</button></a> -->
+      </div>
+    </div>
+
+    <div class="container header-mobile-market" itemscope itemtype="http://schema.org/SiteNavigationElement">
+      <div class="div-header-logo">
+        <a href="/manufacture">
+          <img src="./assets/img/eSPB.PRO_logo_02.svg" class="" alt="Городской акселератор Санкт-Петербурга">
+        </a>
+      </div>
+      <div class="div-icons-mobile-market">
+        <div class="div-icon-mobile-market" data-bs-toggle="collapse" data-bs-target="#collapseMenuAccountMobile" aria-expanded="false" aria-controls="collapseMenuAccountMobile">
+          <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M12 11.3333C12.923 11.3333 13.8253 11.0596 14.5927 10.5469C15.3601 10.0341 15.9583 9.30525 16.3115 8.45253C16.6647 7.5998 16.7571 6.66149 16.577 5.75625C16.397 4.851 15.9525 4.01948 15.2999 3.36684C14.6472 2.71419 13.8157 2.26974 12.9105 2.08967C12.0052 1.90961 11.0669 2.00202 10.2142 2.35523C9.36146 2.70844 8.63263 3.30658 8.11985 4.07401C7.60707 4.84144 7.33337 5.74369 7.33337 6.66667C7.33337 7.90435 7.82504 9.09133 8.70021 9.9665C9.57538 10.8417 10.7624 11.3333 12 11.3333ZM12 3.33334C12.6593 3.33334 13.3038 3.52883 13.8519 3.8951C14.4001 4.26137 14.8273 4.78197 15.0796 5.39106C15.3319 6.00014 15.3979 6.67037 15.2693 7.31697C15.1407 7.96357 14.8232 8.55752 14.3571 9.02369C13.8909 9.48987 13.2969 9.80734 12.6503 9.93595C12.0037 10.0646 11.3335 9.99856 10.7244 9.74627C10.1153 9.49398 9.59475 9.06673 9.22848 8.51857C8.8622 7.97041 8.66671 7.32594 8.66671 6.66667C8.66671 5.78261 9.0179 4.93477 9.64302 4.30965C10.2681 3.68452 11.116 3.33334 12 3.33334Z"
+              fill="black" />
+            <path
+              d="M20.3134 16.2465C19.2442 15.1165 17.9559 14.2165 16.5271 13.6013C15.0982 12.9862 13.559 12.6689 12.0034 12.6689C10.4478 12.6689 8.9085 12.9862 7.47968 13.6013C6.05086 14.2165 4.7625 15.1165 3.69338 16.2465C3.46158 16.4941 3.33285 16.8207 3.33338 17.1599V20.6665C3.33338 21.0202 3.47385 21.3593 3.7239 21.6093C3.97395 21.8594 4.31309 21.9999 4.66671 21.9999H19.3334C19.687 21.9999 20.0261 21.8594 20.2762 21.6093C20.5262 21.3593 20.6667 21.0202 20.6667 20.6665V17.1599C20.669 16.8216 20.5427 16.4951 20.3134 16.2465ZM19.3334 20.6665H4.66671V17.1532C5.61153 16.1583 6.7489 15.3661 8.00961 14.8247C9.27033 14.2834 10.628 14.0042 12 14.0042C13.3721 14.0042 14.7298 14.2834 15.9905 14.8247C17.2512 15.3661 18.3886 16.1583 19.3334 17.1532V20.6665Z"
+              fill="black" />
+          </svg>
+        </div>
+        <div class="div-icon-mobile-market" style="margin-bottom: 4px; margin-right: 20px;">
+          <a itemprop="url" href="/cart" class="bd-highlight align-items-center justify-content-center dropbtn" style="color: black;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" class="qa4">
+              <path fill="currentColor"
+                d="M6 6a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2h4a1 1 0 0 1 .986 1.164l-1.582 9.494A4 4 0 0 1 17.46 22H6.54a4 4 0 0 1-3.945-3.342L1.014 9.164A1 1 0 0 1 2 8h4V6Zm2 2h5a1 1 0 1 1 0 2H3.18l1.389 8.329A2 2 0 0 0 6.54 20h10.92a2 2 0 0 0 1.972-1.671L20.82 10H17a1 1 0 0 1-1-1V6a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2Z"
+                stroke="white" stroke-width="0.6px">
+              </path>
+            </svg>
+          </a>
+        </div>
+        <div class="div-icon-mobile-market" data-bs-toggle="collapse" data-bs-target="#collapseMenuMarketMobile" aria-expanded="false" aria-controls="collapseMenuMarketMobile">
+          <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M24.8889 22.5556H3.11115C2.90487 22.5556 2.70704 22.4736 2.56118 22.3278C2.41532 22.1819 2.33337 21.9841 2.33337 21.7778C2.33337 21.5715 2.41532 21.3737 2.56118 21.2278C2.70704 21.0819 2.90487 21 3.11115 21H24.8889C25.0952 21 25.293 21.0819 25.4389 21.2278C25.5848 21.3737 25.6667 21.5715 25.6667 21.7778C25.6667 21.9841 25.5848 22.1819 25.4389 22.3278C25.293 22.4736 25.0952 22.5556 24.8889 22.5556Z"
+              fill="black" />
+            <path
+              d="M24.8889 14.7782H3.11115C2.90487 14.7782 2.70704 14.6963 2.56118 14.5504C2.41532 14.4045 2.33337 14.2067 2.33337 14.0004C2.33337 13.7942 2.41532 13.5963 2.56118 13.4505C2.70704 13.3046 2.90487 13.2227 3.11115 13.2227H24.8889C25.0952 13.2227 25.293 13.3046 25.4389 13.4505C25.5848 13.5963 25.6667 13.7942 25.6667 14.0004C25.6667 14.2067 25.5848 14.4045 25.4389 14.5504C25.293 14.6963 25.0952 14.7782 24.8889 14.7782Z"
+              fill="black" />
+            <path
+              d="M24.8889 6.99989H3.11115C2.90487 6.99989 2.70704 6.91795 2.56118 6.77209C2.41532 6.62622 2.33337 6.42839 2.33337 6.22211C2.33337 6.01583 2.41532 5.818 2.56118 5.67214C2.70704 5.52628 2.90487 5.44434 3.11115 5.44434H24.8889C25.0952 5.44434 25.293 5.52628 25.4389 5.67214C25.5848 5.818 25.6667 6.01583 25.6667 6.22211C25.6667 6.42839 25.5848 6.62622 25.4389 6.77209C25.293 6.91795 25.0952 6.99989 24.8889 6.99989Z"
+              fill="black" />
+          </svg>
+        </div>
+      </div>
+    </div>
+
+    <div class="collapse collapseMenuAccountMobile" id="collapseMenuAccountMobile">
+      <div class="collapseMenuBodyMobile">
+        <div class="collapseMenuItemsMobile">
+          <a itemprop="url" href="/user">Личный кабинет</a>
+        </div>
+        <div class="collapseMenuItemsMobile">
+          <a itemprop="url" href="/user/diagnostics">Диагностика</a>
+        </div>
+        <div class="collapseMenuItemsMobile">
+          <a itemprop="url" href="/user/market">Маркетплейс</a>
+        </div>
+        <div class="collapseMenuItemsMobile">
+          <a itemprop="url" href="/user/manufacture">Производство</a>
+        </div>
+        <div class="collapseMenuItemsMobile">
+          <a itemprop="url" href="/user/profile">Личные данные</a>
+        </div>
+        <div class="collapseMenuItemsButtonMobile">
+          <a itemprop="url" href="/logout" class="btn btn-primary button_action" name="button">Выход</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="collapse collapseMenuMarketMobile" id="collapseMenuMarketMobile">
+      <div class="collapseMenuBodyMobile">
+        <div class="collapseMenuItemsMobile">
+          <a href="/accelerator">Акселератор</a>
+        </div>
+        <div class="collapseMenuItemsMobile">
+          <a href="/market">Маркетплейс</a>
+        </div>
+        <div class="collapseMenuItemsMobile">
+          <a href="/manufacture">Производство</a>
+        </div>
+        <div class="collapseMenuItemsMobile">
+          <a href="#contacts">Контакты</a>
+        </div>
+      </div>
+    </div>
+
+
+    <script type="text/javascript">
+      $(function() {
+        $('#collapseMenuAccountMobile').on('show.bs.collapse', function() {
+          if ($('#collapseMenuMarketMobile').hasClass('show')) {
+            $('#collapseMenuMarketMobile').collapse('hide');
+          }
+        });
+        $('#collapseMenuMarketMobile').on('show.bs.collapse', function() {
+          if ($('#collapseMenuAccountMobile').hasClass('show')) {
+            $('#collapseMenuAccountMobile').collapse('hide');
+          }
+        })
+      })
+      $('body').on('click', function() {
+        var el_click = document.elementFromPoint(event.clientX, event.clientY);
+        if (el_click != null && el_click != undefined) {
+          if ($('#collapseMenuAccountMobile').is(':visible') && (el_click.closest('#collapseMenuAccountMobile') == null || el_click.closest('#collapseMenuAccountMobile') == undefined)) {
+            $('#collapseMenuAccountMobile').collapse('hide');
+          }
+          if ($('#collapseMenuMarketMobile').is(':visible') && (el_click.closest('#collapseMenuMarketMobile') == null || el_click.closest('#collapseMenuMarketMobile') == undefined)) {
+            $('#collapseMenuMarketMobile').collapse('hide');
+          }
+        }
+      });
+
+      function change_view_pass(el) {
+        if ($(el.previousElementSibling).attr('type') == 'password') {
+          $(el).removeClass();
+          $(el).addClass("icon_pass text-primary bi bi-eye-slash");
+          $(el.previousElementSibling).attr('type', 'text');
+        } else {
+          $(el).removeClass();
+          $(el).addClass("icon_pass text-primary bi bi-eye");
+          $(el.previousElementSibling).attr('type', 'password');
+        }
+        return false;
+      };
+    </script>
+
+
+  </div>
+
+
+  <script type="text/javascript">
+    // $(function() {
+    //   $(":input").inputmask();
+    // })
+  </script>
+
+  <!-- /* общий для мобилки */ -->
+  <style>
+    body {
+      background: #f8f8fa;
+    }
+
+    @media (max-width:992px) {
+
+      .general_cabinet_container {
+        margin-top: 75px;
+      }
+
+      .cabinet-container-manufacture {
+        display: flex;
+        flex-wrap: wrap;
+        min-height: 600px;
+        margin-bottom: 30px;
+        padding-left: 15px;
+        padding-right: 15px;
+        align-content: flex-start;
+      }
+
+      .cabinet-div-manufacture {
+        margin-left: 0px;
+        margin-top: 0px;
+      }
+
+
+
+      .cabinet_welcome_h {
+        margin-top: 10px;
+        margin-left: 15px;
+      }
+
+    }
+
+    @media (min-width:992px) {
+
+      .cabinet-container-manufacture {
+        display: flex;
+        flex-wrap: inherit;
+        min-height: 600px;
+        margin-bottom: 60px;
+      }
+
+      .cabinet-div-manufacture {
+        margin-left: 18px;
+        margin-top: 0px;
+      }
+
+      .cabinet-body-manufacture {
+        background: #FFFFFF;
+        border-radius: 24px;
+        margin-top: 5px;
+        padding: 30px;
+        /* тень */
+        box-shadow: 0px 0px 13px rgba(91, 106, 144, 0.3);
+        border-radius: 24px;
+      }
+
+      .cabinet-body-manufacture-head span {
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 24px;
+        color: #075055;
+      }
+
+    }
+  </style>
+
+  <!-- /* для этой страницы */ -->
+  <style>
+    body {
+      background: #f8f8fa;
+    }
+
+    @media (max-width:992px) {
+
+      .cabinet-body-manufacture {
+        background: #FFFFFF;
+        border-radius: 24px;
+        margin-top: 12px;
+        padding: 20px;
+        /* зеленая тень */
+        box-shadow: 0px 0px 13px rgba(91, 144, 96, 0.3);
+        border-radius: 24px;
+      }
+
+      .cabinet-body-manufacture-head span {
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 24px;
+        color: #075055;
+      }
+
+      .cabinet-body-manufacture-occupancy {
+        margin-top: 18px;
+        margin-bottom: 18px;
+        border-bottom: 1px solid rgba(254, 198, 8, 0.3);
+      }
+
+      .cabinet-body-manufacture-occupancy-img {
+        width: 100%;
+        height: 34px;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position-x: center;
+      }
+
+      .cabinet-body-manufacture-occupancy-img.one {
+        background-image: url(./assets/img/manufacture-mobile-cabinet-one.svg);
+      }
+
+      .cabinet-body-manufacture-occupancy-img.two {
+        background-image: url(./assets/img/manufacture-mobile-cabinet-two.svg);
+      }
+
+      .cabinet-body-manufacture-occupancy-img.three {
+        background-image: url(./assets/img/manufacture-mobile-cabinet-three.svg);
+      }
+
+      .cabinet-body-manufacture-occupancy-stage {
+        padding-top: 12px;
+        padding-bottom: 22px;
+        display: flex;
+      }
+
+      .cabinet-body-manufacture-occupancy-stage div {
+        width: calc(100%/3);
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 15px;
+        color: #000000;
+      }
+
+      .cabinet-body-manufacture-decoding ul {
+        padding-left: 1.25rem;
+      }
+
+      .cabinet-body-manufacture-decoding li {
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 18px;
+        color: rgba(7, 80, 85, 0.5);
+      }
+
+
+
+      .manufacture-decode-collapse {
+        margin-top: 30px;
+      }
+
+      #manufacture-decode-collapse li::marker {
+        color: #075055;
+        font-size: 20px;
+      }
+
+      #manufacture-decode-collapse li {
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 18px;
+        color: #000000;
+      }
+
+      .cabinet-body-manufacture-order {
+        margin-top: 30px;
+        padding: 30px;
+        /* зеленая тень */
+        filter: drop-shadow(0px 0px 13px rgba(91, 144, 96, 0.3));
+        border-radius: 18px;
+        background: url(./assets/img/cabinet-body-manufacture-order-line.svg), #FEC608;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position-x: right;
+      }
+
+      .cabinet-body-manufacture-order-head span {
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 800;
+        font-size: 20px;
+        line-height: 24px;
+        color: #000000;
+      }
+
+      .cabinet-body-manufacture-order-head p {
+        margin-top: 14px;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 20px;
+        color: #000000;
+      }
+
+      .cabinet-body-manufacture-order a {
+        margin-top: 30px;
+        width: 171px;
+        height: 40px;
+        padding: 8px 30px;
+        background: #075055;
+        border-radius: 10px;
+        color: #fff;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 20px;
+      }
+
+      .cabinet-body-manufacture-order a:hover {
+        color: #fff;
+        background: #09676e;
+      }
+
+      .cabinet-body-manufacture-desc {
+        margin-top: 30px;
+        margin-bottom: 110px;
+        padding: 20px;
+        background: #FFFFFF;
+        /* зеленая тень */
+        box-shadow: 0px 0px 13px rgba(91, 144, 96, 0.3);
+        border-radius: 24px;
+      }
+
+      .cabinet-body-manufacture-desc-head span {
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 24px;
+        color: #075055;
+      }
+
+      .cabinet-body-manufacture-desc-body {
+        width: 100%;
+        margin-top: 30px;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+
+      .cabinet-body-manufacture-desc-body-item {
+        width: 100%;
+        margin: 10px;
+        display: flex;
+      }
+
+      .cabinet-body-manufacture-desc-body-item.bias {
+        margin-left: 80px;
+      }
+
+
+      .cabinet-body-manufacture-desc-body-item-stage {
+        width: 15%;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-direction: column;
+        margin-right: 20px;
+      }
+
+      .cabinet-body-manufacture-desc-body-item-body {
+        width: 85%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      .cabinet-body-manufacture-desc-body-item-body p:nth-child(1) {
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 17px;
+        color: #075055;
+        line-height: 30px;
+      }
+
+      .cabinet-body-manufacture-desc-body-item-body p:nth-child(2) {
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 17px;
+        color: #000000;
+      }
+
+    }
+
+    @media (min-width:992px) {
+
+      .cabinet-body-manufacture {
+        background: #FFFFFF;
+        border-radius: 24px;
+        margin-top: 12px;
+        padding: 30px;
+        /* зеленая тень */
+        box-shadow: 0px 0px 13px rgba(91, 144, 96, 0.3);
+        border-radius: 24px;
+      }
+
+      .cabinet-body-manufacture-head span {
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 24px;
+        color: #075055;
+      }
+
+      .cabinet-body-manufacture-occupancy {
+        margin-top: 18px;
+        margin-bottom: 18px;
+        border-bottom: 1px solid rgba(254, 198, 8, 0.3);
+      }
+
+      .cabinet-body-manufacture-occupancy-img {
+        width: 100%;
+        height: 34px;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position-x: center;
+      }
+
+      .cabinet-body-manufacture-occupancy-img.one {
+        background-image: url(./assets/img/manufacture-cabinet-one.svg);
+      }
+
+      .cabinet-body-manufacture-occupancy-img.two {
+        background-image: url(./assets/img/manufacture-cabinet-two.svg);
+      }
+
+      .cabinet-body-manufacture-occupancy-img.three {
+        background-image: url(./assets/img/manufacture-cabinet-three.svg);
+      }
+
+      .cabinet-body-manufacture-occupancy-stage {
+        padding-top: 12px;
+        padding-bottom: 12px;
+        display: flex;
+      }
+
+      .cabinet-body-manufacture-occupancy-stage div {
+        width: calc(100%/3);
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 17px;
+        color: #000000;
+      }
+
+      .cabinet-body-manufacture-decoding li {
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 17px;
+        color: rgba(7, 80, 85, 0.5);
+      }
+
+      .manufacture-decode-collapse {
+        margin-top: 30px;
+      }
+
+      #manufacture-decode-collapse li::marker {
+        color: #075055;
+      }
+
+      #manufacture-decode-collapse li {
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 18px;
+        color: #000000;
+      }
+
+      .cabinet-body-manufacture-order {
+        margin-top: 30px;
+        padding: 30px;
+        /* зеленая тень */
+        filter: drop-shadow(0px 0px 13px rgba(91, 144, 96, 0.3));
+        border-radius: 18px;
+        background: url(./assets/img/cabinet-body-manufacture-order-line.svg), #FEC608;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position-x: right;
+      }
+
+      .cabinet-body-manufacture-order-head span {
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 800;
+        font-size: 24px;
+        line-height: 29px;
+        color: #000000;
+      }
+
+      .cabinet-body-manufacture-order-head p {
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 20px;
+        color: #000000;
+      }
+
+      .cabinet-body-manufacture-order a {
+        margin-top: 17px;
+        width: 171px;
+        height: 40px;
+        padding: 8px 30px;
+        background: #075055;
+        border-radius: 10px;
+        color: #fff;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 20px;
+      }
+
+      .cabinet-body-manufacture-order a:hover {
+        color: #fff;
+        background: #09676e;
+      }
+
+      .cabinet-body-manufacture-desc {
+        margin-top: 30px;
+        margin-bottom: 110px;
+        padding: 30px;
+        background: #FFFFFF;
+        /* зеленая тень */
+        box-shadow: 0px 0px 13px rgba(91, 144, 96, 0.3);
+        border-radius: 24px;
+      }
+
+      .cabinet-body-manufacture-desc-head span {
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 24px;
+        color: #075055;
+      }
+
+      .cabinet-body-manufacture-desc-body {
+        width: 100%;
+        margin-top: 30px;
+        display: flex;
+        justify-content: center;
+      }
+
+      .cabinet-body-manufacture-desc-body-item {
+        width: calc(100%/3);
+        margin: 10px;
+        display: flex;
+      }
+
+      .cabinet-body-manufacture-desc-body-item-stage {
+        width: 15%;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        margin-right: 10px;
+      }
+
+      .cabinet-body-manufacture-desc-body-item-stage {
+        width: 15%;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-direction: column;
+        margin-right: 20px;
+      }
+
+      .cabinet-body-manufacture-desc-body-item-body {
+        width: 85%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      .cabinet-body-manufacture-desc-body-item-body p:nth-child(1) {
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 17px;
+        color: #075055;
+        line-height: 30px;
+      }
+
+      .cabinet-body-manufacture-desc-body-item-body p:nth-child(2) {
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 17px;
+        color: #000000;
+      }
+
+
+    }
+  </style>
+
+
+
+
+
+  <div class="container general_cabinet_container">
+    <style media="screen">
+      @media (max-width:992px) {
+
+        .col-main-cabinet-chit-row {
+          margin-left: 0;
+          margin-right: 0;
+          position: fixed;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          height: 60px;
+          display: flex;
+          align-content: center;
+          justify-content: center;
+          align-items: center;
+          background: #FFFFFF;
+          box-shadow: 0px -1px 8px rgba(48, 79, 254, 0.08);
+          border-radius: 5px 5px 0px 0px;
+          z-index: 10;
+        }
+
+        .col-main-cabinet-chit {
+          width: calc(100%/5);
+        }
+
+        .col-main-cabinet-chit .d-flex {
+          background: #fff;
+          border-radius: 12px;
+          font-family: 'Montserrat';
+          font-style: normal;
+          font-weight: 500;
+          font-size: 15px;
+          line-height: 18px;
+          color: #000000;
+          width: 100%;
+          height: 50px;
+          cursor: pointer;
+          display: flex;
+          align-items: center;
+          align-content: center;
+          justify-content: center;
+        }
+
+        .col-main-cabinet-chit-icon {
+          width: 20%;
+          min-width: 60px;
+          height: 50px;
+          display: flex;
+          align-items: center;
+          align-content: center;
+          justify-content: center;
+        }
+
+        .col-main-cabinet-chit-icon svg {
+          margin: 13px 13px 13px 16px;
+          fill: #ADB4BE;
+        }
+
+        .col-main-cabinet-chit-text {
+          display: none;
+        }
+
+        .col-main-cabinet-chit-row .col-main-cabinet-chit:nth-child(1):hover .d-flex {
+          background: #606372;
+          transition: .3s;
+        }
+
+        .col-main-cabinet-chit-row .col-main-cabinet-chit:nth-child(2):hover .d-flex {
+          background: #304fff;
+          transition: .3s;
+        }
+
+        .col-main-cabinet-chit-row .col-main-cabinet-chit:nth-child(3):hover .d-flex {
+          background: #304fff;
+          transition: .3s;
+        }
+
+        .col-main-cabinet-chit-row .col-main-cabinet-chit:nth-child(4):hover .d-flex {
+          background: #075056;
+          transition: .3s;
+        }
+
+        .col-main-cabinet-chit-row .col-main-cabinet-chit:nth-child(5):hover .d-flex {
+          background: #606372;
+          transition: .3s;
+        }
+
+        .col-main-cabinet-chit-row .col-main-cabinet-chit:nth-child(1).active .d-flex {
+          background: #606372;
+          transition: .2s;
+        }
+
+        .col-main-cabinet-chit-row .col-main-cabinet-chit:nth-child(2).active .d-flex {
+          background: #304fff;
+          transition: .2s;
+        }
+
+        .col-main-cabinet-chit-row .col-main-cabinet-chit:nth-child(3).active .d-flex {
+          background: #304fff;
+          transition: .2s;
+        }
+
+        .col-main-cabinet-chit-row .col-main-cabinet-chit:nth-child(4).active .d-flex {
+          background: #075056;
+          transition: .2s;
+        }
+
+        .col-main-cabinet-chit-row .col-main-cabinet-chit:nth-child(5).active .d-flex {
+          background: #606372;
+          transition: .2s;
+        }
+
+        .col-main-cabinet-chit-row .col-main-cabinet-chit.active .d-flex svg {
+          fill: #fff;
+          transition: .2s;
+        }
+
+
+        .col-main-cabinet-chit-row .col-main-cabinet-chit.active .col-main-cabinet-chit-text {
+          color: #fff;
+          transition: .2s;
+        }
+
+
+        .col-main-cabinet-chit-row .col-main-cabinet-chit:hover .col-main-cabinet-chit-text {
+          color: #fff;
+          transition: .3s;
+        }
+
+        .col-main-cabinet-chit-row .col-main-cabinet-chit:hover svg {
+          fill: #fff;
+          transition: .3s;
+        }
+
+
+      }
+
+      @media (min-width:992px) {
+
+        .col-main-cabinet-chit-row {
+          margin-top: 20px;
+          margin-bottom: 40px;
+          display: flex;
+        }
+
+        .col-main-cabinet-chit {
+          width: calc(100%/5);
+        }
+
+        .col-main-cabinet-chit .d-flex {
+          background: #EAEDF1;
+          border-radius: 12px;
+          font-family: 'Montserrat';
+          font-style: normal;
+          font-weight: 500;
+          font-size: 15px;
+          line-height: 18px;
+          color: #000000;
+          width: 100%;
+          height: 50px;
+          cursor: pointer;
+        }
+
+        .col-main-cabinet-chit-icon {
+          width: 20%;
+          min-width: 60px;
+          height: 50px;
+        }
+
+        .col-main-cabinet-chit-icon svg {
+          margin: 13px 13px 13px 16px;
+          fill: #ADB4BE;
+        }
+
+        .col-main-cabinet-chit-text {
+          display: block;
+          width: 80%;
+          height: 50px;
+          margin-left: 6px;
+          margin-top: 16px;
+          margin-bottom: 16px;
+          font-family: 'Montserrat';
+          font-style: normal;
+          font-weight: 500;
+          font-size: 15px;
+          line-height: 18px;
+          color: #000000;
+        }
+
+        .col-main-cabinet-chit-row .col-main-cabinet-chit:nth-child(1):hover .d-flex {
+          background: #606372;
+          transition: .3s;
+        }
+
+        .col-main-cabinet-chit-row .col-main-cabinet-chit:nth-child(2):hover .d-flex {
+          background: #304fff;
+          transition: .3s;
+        }
+
+        .col-main-cabinet-chit-row .col-main-cabinet-chit:nth-child(3):hover .d-flex {
+          background: #304fff;
+          transition: .3s;
+        }
+
+        .col-main-cabinet-chit-row .col-main-cabinet-chit:nth-child(4):hover .d-flex {
+          background: #075056;
+          transition: .3s;
+        }
+
+        .col-main-cabinet-chit-row .col-main-cabinet-chit:nth-child(5):hover .d-flex {
+          background: #606372;
+          transition: .3s;
+        }
+
+        .col-main-cabinet-chit-row .col-main-cabinet-chit:nth-child(1).active .d-flex {
+          background: #606372;
+          transition: .2s;
+        }
+
+        .col-main-cabinet-chit-row .col-main-cabinet-chit:nth-child(2).active .d-flex {
+          background: #304fff;
+          transition: .2s;
+        }
+
+        .col-main-cabinet-chit-row .col-main-cabinet-chit:nth-child(3).active .d-flex {
+          background: #304fff;
+          transition: .2s;
+        }
+
+        .col-main-cabinet-chit-row .col-main-cabinet-chit:nth-child(4).active .d-flex {
+          background: #075056;
+          transition: .2s;
+        }
+
+        .col-main-cabinet-chit-row .col-main-cabinet-chit:nth-child(5).active .d-flex {
+          background: #606372;
+          transition: .2s;
+        }
+
+        .col-main-cabinet-chit-row .col-main-cabinet-chit.active .d-flex svg {
+          fill: #fff;
+          transition: .2s;
+        }
+
+        .col-main-cabinet-chit-row .col-main-cabinet-chit.active .col-main-cabinet-chit-text {
+          color: #fff;
+          transition: .2s;
+        }
+
+
+        .col-main-cabinet-chit-row .col-main-cabinet-chit:hover .col-main-cabinet-chit-text {
+          color: #fff;
+          transition: .3s;
+        }
+
+        .col-main-cabinet-chit-row .col-main-cabinet-chit:hover svg {
+          fill: #fff;
+          transition: .3s;
+        }
+
+      }
+
+      /* footer {
+    display: none;
+  } */
+    </style>
+
+    <div class="row col-main-cabinet-chit-row">
+      <div class="col-main-cabinet-chit">
+        <a href="/user">
+          <div class="d-flex">
+            <div class="col-main-cabinet-chit-icon">
+              <svg width="26" height="24" viewBox="0 0 26 24" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M22 12.667C21.9123 12.6675 21.8253 12.6507 21.7441 12.6176C21.6629 12.5844 21.589 12.5355 21.5267 12.4737L12 2.94037L2.47335 12.4737C2.34582 12.5829 2.18177 12.64 2.01398 12.6335C1.8462 12.627 1.68704 12.5575 1.56831 12.4387C1.44958 12.32 1.38002 12.1609 1.37354 11.9931C1.36706 11.8253 1.42413 11.6612 1.53335 11.5337L11.5334 1.53371C11.6583 1.40954 11.8272 1.33984 12.0034 1.33984C12.1795 1.33984 12.3484 1.40954 12.4734 1.53371L22.4734 11.5337C22.5651 11.6273 22.6272 11.7458 22.6519 11.8745C22.6767 12.0032 22.6629 12.1364 22.6124 12.2573C22.5619 12.3782 22.4769 12.4816 22.368 12.5545C22.2591 12.6273 22.1311 12.6665 22 12.667Z" />
+                <path
+                  d="M12 5.19336L4 13.22V21.3334C4 21.687 4.14048 22.0261 4.39052 22.2762C4.64057 22.5262 4.97971 22.6667 5.33333 22.6667H10V16H14V22.6667H18.6667C19.0203 22.6667 19.3594 22.5262 19.6095 22.2762C19.8595 22.0261 20 21.687 20 21.3334V13.1734L12 5.19336Z" />
+              </svg>
+            </div>
+            <div class="col-main-cabinet-chit-text">
+              Главная
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <div class="col-main-cabinet-chit">
+        <a href="/user/accelerator">
+          <div class="d-flex">
+            <div class="col-main-cabinet-chit-icon">
+              <svg width="26" height="24" viewBox="0 0 26 24" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M12.0001 0.833259C9.90189 0.830855 7.84683 1.42895 6.07762 2.55691C4.30841 3.68486 2.89894 5.29557 2.01568 7.19879C1.13241 9.10201 0.812254 11.2182 1.09301 13.2976C1.37376 15.3769 2.24369 17.3324 3.60008 18.9333L3.80008 19.1666H20.2001L20.4001 18.9333C21.7565 17.3324 22.6264 15.3769 22.9071 13.2976C23.1879 11.2182 22.8677 9.10201 21.9845 7.19879C21.1012 5.29557 19.6917 3.68486 17.9225 2.55691C16.1533 1.42895 14.0983 0.830855 12.0001 0.833259ZM17.7334 7.15326L13.7867 11.0266C13.9885 11.453 14.0329 11.9371 13.9123 12.3932C13.7917 12.8492 13.5137 13.248 13.1276 13.519C12.7414 13.7899 12.2719 13.9157 11.8019 13.8739C11.332 13.8322 10.892 13.6257 10.5596 13.291C10.2272 12.9562 10.0238 12.5147 9.98544 12.0446C9.94704 11.5744 10.0761 11.1057 10.3498 10.7215C10.6235 10.3372 11.0242 10.0621 11.4811 9.9447C11.938 9.8273 12.4217 9.8752 12.8467 10.0799L16.7867 6.20659L17.7334 7.15326ZM2.40008 11.2666H4.66674V12.5999H2.37341C2.37341 12.3399 2.34008 12.0866 2.34008 11.8199C2.34008 11.5533 2.35341 11.4533 2.36674 11.2666H2.40008ZM5.65341 4.59993L7.29341 6.23993L6.31341 7.15993L4.66674 5.52659C4.96229 5.18941 5.28083 4.8731 5.62008 4.57993L5.65341 4.59993ZM12.6667 4.52659H11.3334V2.19326H12.0001C12.2467 2.19326 12.4667 2.19326 12.6667 2.22659V4.52659ZM21.6601 11.8266C21.6601 12.0866 21.6601 12.3533 21.6267 12.6066H19.2801V11.2733H21.6334C21.6467 11.4533 21.6601 11.6399 21.6601 11.8266Z" />
+              </svg>
+            </div>
+            <div class="col-main-cabinet-chit-text">
+              Акселератор
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="col-main-cabinet-chit">
+        <a href="/user/market">
+          <div class="d-flex">
+            <div class="col-main-cabinet-chit-icon">
+              <svg width="26" height="24" viewBox="0 0 26 24" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M18.6667 20.0001H10.6667V14.6667H9.33333V20.0001H5.33333V14.6667H4V20.0001C4 20.3537 4.14048 20.6928 4.39052 20.9429C4.64057 21.1929 4.97971 21.3334 5.33333 21.3334H18.6667C19.0203 21.3334 19.3594 21.1929 19.6095 20.9429C19.8595 20.6928 20 20.3537 20 20.0001V14.6667H18.6667V20.0001Z" />
+                <path
+                  d="M22.5264 8.84675L19.8064 3.40675C19.696 3.18461 19.5258 2.99766 19.315 2.86693C19.1042 2.73621 18.8611 2.66688 18.613 2.66675H5.38635C5.1383 2.66688 4.89519 2.73621 4.68438 2.86693C4.47357 2.99766 4.3034 3.18461 4.19302 3.40675L1.47302 8.84675C1.38015 9.03308 1.3322 9.23856 1.33302 9.44675V11.5001C1.33241 11.8116 1.44091 12.1135 1.63968 12.3534C1.93346 12.6902 2.29628 12.9597 2.70351 13.1438C3.11073 13.3278 3.5528 13.4221 3.99968 13.4201C4.72886 13.4212 5.43581 13.1691 5.99968 12.7067C6.56356 13.1693 7.27035 13.4221 7.99968 13.4221C8.72902 13.4221 9.43581 13.1693 9.99969 12.7067C10.5636 13.1693 11.2703 13.4221 11.9997 13.4221C12.729 13.4221 13.4358 13.1693 13.9997 12.7067C14.5636 13.1693 15.2703 13.4221 15.9997 13.4221C16.729 13.4221 17.4358 13.1693 17.9997 12.7067C18.6291 13.2236 19.4344 13.4762 20.2463 13.4116C21.0581 13.3469 21.8133 12.97 22.353 12.3601C22.5542 12.1211 22.6651 11.8191 22.6664 11.5067V9.44675C22.6672 9.23856 22.6192 9.03308 22.5264 8.84675ZM9.99969 9.60008V10.6134L9.45302 11.3334C9.2852 11.5621 9.06588 11.7481 8.81281 11.8763C8.55974 12.0046 8.28004 12.0714 7.99635 12.0714C7.71266 12.0714 7.43296 12.0046 7.17989 11.8763C6.92682 11.7481 6.7075 11.5621 6.53969 11.3334L5.99968 10.5867V9.60008L7.72635 4.00008H10.6664L9.99969 9.60008ZM17.9997 10.5867L17.4597 11.3334C17.2919 11.5621 17.0725 11.7481 16.8195 11.8763C16.5664 12.0046 16.2867 12.0714 16.003 12.0714C15.7193 12.0714 15.4396 12.0046 15.1866 11.8763C14.9335 11.7481 14.7142 11.5621 14.5464 11.3334L13.9997 10.5867V9.60008L13.333 4.00008H16.2997L17.9997 9.60008V10.5867Z" />
+              </svg>
+            </div>
+            <div class="col-main-cabinet-chit-text">
+              Маркетплейс
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="col-main-cabinet-chit">
+        <a href="/user/manufacture">
+          <div class="d-flex">
+            <div class="col-main-cabinet-chit-icon">
+              <svg width="26" height="24" viewBox="0 0 26 24" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M20.633 4.62664L13.6663 9.19997V5.33997C13.6668 5.21382 13.6314 5.09013 13.5643 4.98328C13.4973 4.87642 13.4012 4.7908 13.2874 4.73634C13.1736 4.68188 13.0467 4.66084 12.9214 4.67564C12.7962 4.69044 12.6776 4.74049 12.5797 4.81997L8.37967 8.33331H5.66634V1.70664L1.66634 0.806641V8.33331H0.333008V19.6666C0.333008 19.8435 0.403246 20.013 0.52827 20.138C0.653294 20.2631 0.822863 20.3333 0.999674 20.3333H20.9997C21.1765 20.3333 21.3461 20.2631 21.4711 20.138C21.5961 20.013 21.6663 19.8435 21.6663 19.6666V5.17997C21.6657 5.05992 21.6327 4.94226 21.5707 4.83942C21.5088 4.73658 21.4202 4.65238 21.3144 4.5957C21.2086 4.53903 21.0894 4.51199 20.9694 4.51743C20.8495 4.52288 20.7333 4.56061 20.633 4.62664ZM8.33301 18.3333H2.99967V17H8.33301V18.3333ZM8.33301 15.6666H2.99967V14.3333H8.33301V15.6666ZM8.33301 13H2.99967V11.6666H8.33301V13ZM13.6663 18.3333H12.333V16.3333H13.6663V18.3333ZM13.6663 14.3333H12.333V12.3333H13.6663V14.3333ZM16.333 18.3333H14.9997V16.3333H16.333V18.3333ZM16.333 14.3333H14.9997V12.3333H16.333V14.3333ZM18.9997 18.3333H17.6663V16.3333H18.9997V18.3333ZM18.9997 14.3333H17.6663V12.3333H18.9997V14.3333Z" />
+              </svg>
+            </div>
+            <div class="col-main-cabinet-chit-text">
+              Производство
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="col-main-cabinet-chit">
+        <a href="/user/profile">
+          <div class="d-flex">
+            <div class="col-main-cabinet-chit-icon">
+              <svg width="26" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M20.4063 16.3466C19.3351 15.1859 18.0351 14.2596 16.5883 13.6261C15.1415 12.9926 13.5791 12.6655 11.9997 12.6655C10.4202 12.6655 8.85788 12.9926 7.41105 13.6261C5.96421 14.2596 4.66424 15.1859 3.59301 16.3466C3.42762 16.5294 3.3351 16.7667 3.33301 17.0132V21.0132C3.33651 21.2761 3.44342 21.5271 3.63057 21.7117C3.81773 21.8964 4.07009 21.9999 4.33301 21.9999H19.6663C19.9316 21.9999 20.1859 21.8945 20.3734 21.707C20.561 21.5195 20.6663 21.2651 20.6663 20.9999V16.9999C20.661 16.7579 20.5687 16.526 20.4063 16.3466Z" />
+                <path d="M11.9997 11.3333C14.577 11.3333 16.6663 9.244 16.6663 6.66667C16.6663 4.08934 14.577 2 11.9997 2C9.42235 2 7.33301 4.08934 7.33301 6.66667C7.33301 9.244 9.42235 11.3333 11.9997 11.3333Z" />
+              </svg>
+            </div>
+            <div class="col-main-cabinet-chit-text">
+              Личные данные
+            </div>
+          </div>
+        </a>
+      </div>
+
+
+    </div>
+
+    <div class="modal fade" id="mdlSelectTypeUserContinue" tabindex="-1" aria-labelledby="mdlSelectTypeUserContinueLabel" aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false" aria-labelledby="staticBackdropLabel">
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-body text-center">
+            <form class="" action="#!" id="FormSelectTypeUserContinue" method="post">
+              <h3>Согласно нашим данным</br>компания которую вы указывали при регистрации</br>"ликвидирована"</h3>
+
+              <div class="mt-3 d-flex justify-content-around" id="body_select_data_ur_ip">
+                <button type="button" class="btn btn-secondary w-50 mx-1 btn_mdl_sel_type_user_continue" value="ur" name="button">указать ИНН новой компании или ИП</button>
+                <button type="button" class="btn btn-secondary w-50 mx-1 btn_mdl_sel_type_user_continue" value="fz" name="button">продолжить как физическое лицо</button>
+              </div>
+
+              <div class="mt-6" id="body_input_data_fz" style="display:none;">
+
+                <div class="mb-3">
+                  <div class="d-flex align-items-center justify-content-between">
+                    <div><label class="form-label" for="password">ИНН* Физ. лица</label></div>
+                  </div><input type="text" autocomplete="off" class="form-control input_logreg border_blue m-0" value="123456789012" id="mdl_inn_fz" name="inn_fz">
+                </div>
+
+                <div class="mb-3">
+                  <div class="d-flex align-items-center justify-content-between">
+                    <div><label class="form-label" for="password">ИНН <small>Вашего работадателя</small></label></div>
+                  </div><input type="text" autocomplete="off" class="form-control input_logreg border_blue m-0" value="" id="mdl_inn_boss" name="inn_boss">
+                </div>
+
+                <div class="col-md-12 mt-6">
+                  <button type="submit" class="btn btn-primary w-full button_action pt-2" id="mdlSelectTypeUserContinueBtnFZ" disabled>
+                    <text value="continue">Продолжить</text>
+                    <text value="spiner" style="display:none"><span class="spinner-border spinner-border-sm mx-2" role="status" aria-hidden="true"></span>Ожидайте...</text>
+                  </button>
+                </div>
+
+              </div>
+
+              <div class="mt-6" id="body_input_data_ur_ip" style="display:none;">
+                <div class="input-group general_search_group mb-3">
+                  <input type="text" id="mdl_inn" name="inn" class="form-control general_search_input" autocomplete="off" placeholder="ИНН: 1234567890" aria-label="Введите ИНН" aria-describedby="btn_get_data_company">
+                  <button class="btn btn-outline-secondary general_search_button" type="button" id="btn_get_data_company" disabled onclick="get_data_company();">
+                    <text value="search">Найти</text>
+                    <text value="spiner" style="display:none"><span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>Загрузка...</text>
+                  </button>
+                </div>
+
+                <div class="row justify-content-center" id="body_data_ur_ip" style="display:none;">
+                  <div class="col-md-6">
+                    <div class="mb-3">
+                      <div class="d-flex align-items-center justify-content-between">
+                        <div><label class="form-label" for="password">Наименование</label></div>
+                      </div><input type="text" autocomplete="off" class="form-control input_logreg border_blue m-0" id="mdl_comp_name" name="comp_name" required="" readonly="">
+                    </div>
+                    <div class="mb-3">
+                      <div class="d-flex align-items-center justify-content-between">
+                        <div><label class="form-label" for="password">КПП</label></div>
+                      </div><input type="text" autocomplete="off" class="form-control input_logreg border_blue m-0" id="mdl_kpp" name="kpp" required="" readonly="">
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="mb-3">
+                      <div class="d-flex align-items-center justify-content-between">
+                        <div><label class="form-label" for="password">ОГРН</label></div>
+                      </div><input type="text" autocomplete="off" class="form-control input_logreg border_blue m-0" id="mdl_ogrn" name="mdl_ogrn" required="" readonly="">
+                    </div>
+                    <div class="mb-3">
+                      <div class="d-flex align-items-center justify-content-between">
+                        <div><label class="form-label" for="password">ОКВЭД</label></div>
+                      </div><input type="text" autocomplete="off" class="form-control input_logreg border_blue m-0" id="mdl_okved" name="okved" required="" readonly="">
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="col-md-6 mt-3 d-flex align-items-center">
+                    <button type="submit" class="btn btn-primary w-full button_action pt-2 " id="mdlSelectTypeUserContinueBtn">
+                      <text value="continue">Продолжить</text>
+                      <text value="spiner" style="display:none"><span class="spinner-border spinner-border-sm mx-2" role="status" aria-hidden="true"></span>Ожидайте...</text>
+                    </button>
+                  </div>
+                </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script type="text/javascript">
+    var id_comp;
+    $(function() {
+
+      $('#mdl_inn').on('input', function() {
+        this.value = this.value.replace(/\D/g, '');
+        if (this.value.length == 12 || this.value.length == 10) {
+          $('#btn_get_data_company').removeAttr('disabled');
+        } else {
+          $('#btn_get_data_company').attr('disabled', 'disabled');
+        }
+      });
+
+
+      $('#mdl_inn_fz').on('input', function() {
+        this.value = this.value.replace(/\D/g, '');
+        if (this.value.length == 12) {
+          $('#mdlSelectTypeUserContinueBtnFZ').removeAttr('disabled');
+        } else {
+          $('#mdlSelectTypeUserContinueBtnFZ').attr('disabled', 'disabled');
+        }
+      });
+
+      $('#mdl_inn_fz').inputmask({
+        'mask': '999999999999'
+      });
+      $('#mdl_inn_boss').inputmask({
+        'mask': '99999999'
+      });
+
+      $('#mdlSelectTypeUserContinue').on('click', '.btn_mdl_sel_type_user_continue', function() {
+        if ($(this).val() == 'ur') {
+          $('#body_select_data_ur_ip').slideUp('fast', function() {
+            $('#body_select_data_ur_ip').removeClass('d-flex');
+            $('#body_input_data_ur_ip').slideDown();
+          });
+        } else {
+          $('#body_select_data_ur_ip').slideUp('fast', function() {
+            $('#body_select_data_ur_ip').removeClass('d-flex');
+            $('#body_input_data_fz').slideDown();
+            $('#mdl_inn_fz').attr('required', 'required');
+          });
+        }
+      });
+
+      $('#FormSelectTypeUserContinue').on('submit', function() {
+        event.preventDefault();
+        var $form = $(this);
+
+        $('#spiner').removeClass('d-none');
+
+        $('#mdl_inn').attr('disabled', 'disabled');
+        $('#mdl_inn_fz').attr('disabled', 'disabled');
+        $('#mdl_inn_boss').attr('disabled', 'disabled');
+        $('#mdlSelectTypeUserContinueBtnFZ').attr('disabled', 'disabled');
+        $('#mdlSelectTypeUserContinueBtn').attr('disabled', 'disabled');
+
+        $('#mdlSelectTypeUserContinueBtnFZ').find('[value="continue"]').hide();
+        $('#mdlSelectTypeUserContinueBtnFZ').find('[value="spiner"]').show();
+
+        $('#mdlSelectTypeUserContinueBtn').find('[value="continue"]').hide();
+        $('#mdlSelectTypeUserContinueBtn').find('[value="spiner"]').show();
+
+        $('#btn_get_data_company').attr('disabled', 'disabled');
+
+        $.ajax({
+          type: 'POST',
+          url: '/ajax',
+          data: {
+            "action": "upd_type_user",
+            "inn": $('#mdl_inn').val(),
+            "innfz": $('#mdl_inn_fz').val(),
+            "innboss": $('#mdl_inn_boss').val()
+          },
+          dataType: 'json',
+          success: function(result) {
+            if (result.response == true) {
+              window.location.reload();
+            } else {
+              alerts('warning', result.description);
+            }
+          },
+          error: function(jqXHR, textStatus) {
+            alerts('error', 'Не удалось подключиться');
+          },
+          complete: function(jqXHR, textStatus) {
+            $('#spiner').addClass('d-none');
+            $('#mdl_inn').removeAttr('disabled', 'disabled');
+            $('#mdl_inn_fz').removeAttr('disabled', 'disabled');
+            $('#mdl_inn_boss').removeAttr('disabled', 'disabled');
+            $('#mdlSelectTypeUserContinueBtnFZ').removeAttr('disabled', 'disabled');
+            $('#mdlSelectTypeUserContinueBtn').removeAttr('disabled', 'disabled');
+            $('#mdlSelectTypeUserContinueBtnFZ').find('[value="spiner"]').hide();
+            $('#mdlSelectTypeUserContinueBtnFZ').find('[value="continue"]').show();
+            $('#mdlSelectTypeUserContinueBtn').find('[value="spiner"]').hide();
+            $('#mdlSelectTypeUserContinueBtn').find('[value="continue"]').show();
+          }
+        });
+
+      });
+
+
+    });
+
+    function get_data_company() {
+      $('#spiner').removeClass('d-none');
+      $('#btn_get_data_company').attr('disabled', 'disabled');
+      $('#btn_get_data_company').find('[value="search"]').hide();
+      $('#btn_get_data_company').find('[value="spiner"]').show();
+      $.ajax({
+        type: 'POST',
+        url: '/ajax',
+        data: {
+          "action": "get_data_inn",
+          "inn": $('#mdl_inn').val()
+        },
+        dataType: 'json',
+        success: function(result) {
+          if (result.response) {
+            id_comp = result.data.lastid;
+            if (result.data.inn != '') {
+              $('#mdl_inn_company').val(result.data.inn);
+            }
+            if (result.data.name != '') {
+              $('#mdl_comp_name').val(result.data.name);
+            }
+            if (result.data.kpp != '') {
+              $('#mdl_kpp').val(result.data.kpp);
+            }
+            if (result.data.OGRN != '') {
+              $('#mdl_ogrn').val(result.data.ogrn);
+            }
+            if (result.data.OKVED != '') {
+              $('#mdl_okved').val(result.data.okved);
+            }
+          } else {
+            alert(result.description);
+          }
+          $('#body_data_ur_ip').slideDown();
+        },
+        error: function(jqXHR, textStatus) {
+          alerts('error', 'Не удалось подключиться');
+        },
+        complete: function(jqXHR, textStatus) {
+          $('#spiner').addClass('d-none');
+          $('#btn_get_data_company').find('[value="search"]').show();
+          $('#btn_get_data_company').find('[value="spiner"]').hide();
+          $('#btn_get_data_company').removeAttr('disabled');
+        }
+      });
+    };
+  </script>
+  <script type="text/javascript">
+    $(function() {
+      $($('.col-main-cabinet-chit')[3]).addClass('active');
+    })
+  </script>
+  </div>
+
+  <div class="container d-flex align-items-start cabinet-container-manufacture">
+    <style media="screen">
+      .menu_cabinet .active {
+        background: #C9E4DF;
+      }
+
+      .menu_btn:hover {
+        background: #9cdfd3;
+      }
+
+      .button_action_profile {
+        background: #075055;
+        border-color: #075055;
+      }
+
+      .button_action_profile:hover {
+        background: #086a70 !important;
+      }
+
+      @media (max-width:992px) {
+
+        .menu_cabinet {
+          display: flex;
+          width: 100%;
+          overflow-x: auto;
+          background: none;
+          box-shadow: none;
+
+        }
+
+        .menu_cabinet::-webkit-scrollbar {
+          width: 0;
+        }
+
+        .menu_cabinet .menu_btn {
+          width: max-content;
+          margin-left: 13px;
+        }
+
+        .menu_cabinet .menu_btn:nth-child(1) {
+          margin-left: 0;
+        }
+
+      }
+
+      @media (min-width:992px) {}
+    </style>
+
+    <div class="menu_cabinet mt-3 mb-1 me-1">
+
+      <a href="/user/manufacture">
+        <div id="menu_btn_main_manufacture" class="menu_btn">Главная</div>
+      </a>
+      <a href="/user/manufacture-add-order">
+        <div id="menu_btn_add_order_manufacture" class="menu_btn">Разместить запрос</div>
+      </a>
+      <a href="/user/manufacture-orders">
+        <div id="menu_btn_view_order_manufacture" class="menu_btn">Мои запросы</div>
+      </a>
+      <a href="/user/manufacture-kps">
+        <div id="menu_btn_view_kps_manufacture" class="menu_btn">Мои КП</div>
+      </a>
+
+
+      <a href="/user/manufacture-service-my-order">
+        <div id="menu_btn_service_my_order" class="menu_btn">Заказанные услуги</div>
+      </a>
+
+      <a href="/user/manufacture-service-inbox-order">
+        <div id="menu_btn_service_inbox_order" class="menu_btn">Входящие заказы услуг</div>
+      </a>
+
+      <a href="/user/manufacture-product">
+        <div id="menu_btn_view_product_manufacture" class="menu_btn">Мои товары</div>
+      </a>
+
+      <a href="/user/manufacture-add-product">
+        <div id="menu_btn_add_product_manufacture" class="menu_btn">Добавить товар</div>
+      </a>
+
+      <a href="/user/orders-products-cabinet">
+        <div id="menu_btn_orders_products_manufacture" class="menu_btn">Мои заказанные товары</div>
+      </a>
+
+      <a href="/user/orders-products-manufacture">
+        <div id="menu_btn_orders_products_manufacture_buy" class="menu_btn">Заказы товаров</div>
+      </a>
+
+      <a href="/user/manufacture-equipment">
+        <div id="menu_btn_equipment_manufacture" class="menu_btn">Оборудование</div>
+      </a>
+
+    </div>
+    <script type="text/javascript">
+      document.addEventListener('DOMContentLoaded', () => {
+        const $navItems = document.querySelector('.menu_cabinet');
+        const $navItemActive = $navItems.querySelector('.menu_btn.active');
+        if (!$navItemActive) {
+          return;
+        }
+        const navItemsRect = $navItems.getBoundingClientRect();
+        const navItemActiveRect = $navItemActive.getBoundingClientRect();
+        const navItemsLeft = navItemActiveRect.left - navItemsRect.left + (navItemActiveRect.width - navItemsRect.width) / 2;
+        $navItems.scrollLeft = navItemsLeft;
+      });
+    </script>
+    <script>
+      $('#menu_btn_profile').addClass('active');
+    </script>
+    <script>
+      $('#menu_btn_main_manufacture').addClass('active');
+    </script>
+
+    <div class="cabinet-div-manufacture">
+      <div class="cabinet-body-manufacture w-100">
+        <div class="cabinet-body-manufacture-head">
+          <span>Заполненность профиля</span>
+        </div>
+        <div class="cabinet-body-manufacture-occupancy">
+          <div class="cabinet-body-manufacture-occupancy-img two"></div>
+          <div class="cabinet-body-manufacture-occupancy-stage d-flex">
+            <div class="text-center">Пользователь</div>
+            <div class="text-center">Заказчик</div>
+            <div class="text-center">Производство</div>
+          </div>
+        </div>
+        <div class="cabinet-body-manufacture-decoding">
+          <div class="manufacture-decode-collapse">
+            <div class="" id="manufacture-decode-collapse">
+              <ul class="my-0">
+                <li>Пользователь - минимальный функционал профиля. Позволяет просматривать заказы и товар.</li>
+                <li>Заказчик - обозначает, что пользователь заполнил некоторую дополнительную информацию о себе или своей организации. Вполне достаточно для размещения заказов.</li>
+                <li>Производство - статус необходимый для того ,чтобы иметь возможность брать заказы на исполнение.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="cabinet-body-manufacture-order w-100">
+        <div class="cabinet-body-manufacture-order-head">
+          <span>Подайте заявку на получение статуса производства!</span>
+          <p>Вы сможете размещать заказы, а так же брать опубликованные на исполнение</p>
+        </div>
+        <a href="/user/manufacture-equipment" class="btn">Перейти</a>
+      </div>
+
+
+      <div class="cabinet-body-manufacture-desc w-100">
+        <div class="cabinet-body-manufacture-desc-head">
+          <span>Как это работает?</span>
+        </div>
+        <div class="cabinet-body-manufacture-desc-body">
+          <div class="cabinet-body-manufacture-desc-body-item">
+            <div class="cabinet-body-manufacture-desc-body-item-stage me-0">
+              <svg width="61" height="72" viewBox="0 0 61 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12.5 70V8.2L22.6 17.8H0.5V-4.76837e-06H36.1V70H12.5Z" fill="#C9E4DF" />
+              </svg>
+            </div>
+            <div class="cabinet-body-manufacture-desc-body-item-body">
+              <p>Разместите заказ</p>
+              <p>Разместите заказ в личном кабинете</p>
+            </div>
+          </div>
+          <div class="cabinet-body-manufacture-desc-body-item bias">
+            <div class="cabinet-body-manufacture-desc-body-item-stage">
+              <svg width="61" height="72" viewBox="0 0 61 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M4.96016 72V57.5L30.2602 34.1C31.8602 32.5667 33.0268 31.2333 33.7602 30.1C34.5602 28.9667 35.0935 27.9667 35.3602 27.1C35.6268 26.1667 35.7602 25.3 35.7602 24.5C35.7602 22.7667 35.1935 21.4333 34.0602 20.5C32.9268 19.5 31.2268 19 28.9602 19C26.8935 19 24.9268 19.5667 23.0602 20.7C21.1935 21.7667 19.7268 23.3667 18.6602 25.5L0.860156 16.6C3.39349 11.8 7.19349 7.9 12.2602 4.9C17.3268 1.9 23.6268 0.399998 31.1602 0.399998C36.6935 0.399998 41.5935 1.3 45.8602 3.1C50.1268 4.9 53.4602 7.43333 55.8602 10.7C58.2602 13.9667 59.4602 17.8333 59.4602 22.3C59.4602 24.5667 59.1602 26.8333 58.5602 29.1C58.0268 31.3667 56.8935 33.7667 55.1602 36.3C53.4268 38.7667 50.8602 41.5333 47.4602 44.6L28.4602 61.9L24.7602 53.7H61.0602V72H4.96016Z"
+                  fill="#C9E4DF" />
+              </svg>
+            </div>
+            <div class="cabinet-body-manufacture-desc-body-item-body ">
+              <p>Ожидайте КП</p>
+              <p>Ожидайте предложений от исполнителей</p>
+            </div>
+          </div>
+          <div class="cabinet-body-manufacture-desc-body-item">
+            <div class="cabinet-body-manufacture-desc-body-item-stage">
+              <svg width="61" height="72" viewBox="0 0 61 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M28.5742 71.6C23.7742 71.6 18.9076 71.0667 13.9742 70C9.04089 68.9333 4.70755 67.3667 0.974219 65.3L8.97422 47.9C11.9742 49.6333 15.1076 50.9333 18.3742 51.8C21.7076 52.6 24.8409 53 27.7742 53C30.4409 53 32.6076 52.5667 34.2742 51.7C36.0076 50.7667 36.8742 49.4 36.8742 47.6C36.8742 46.0667 36.2409 44.9 34.9742 44.1C33.7076 43.2333 31.5742 42.8 28.5742 42.8H19.2742V28.3L37.3742 9.9L39.4742 17.8H4.57422V-4.76837e-06H56.7742V14.5L38.6742 32.9L27.3742 26.5H33.5742C42.3742 26.5 49.0742 28.4667 53.6742 32.4C58.2742 36.3333 60.5742 41.4 60.5742 47.6C60.5742 51.6 59.4409 55.4333 57.1742 59.1C54.9742 62.7667 51.5076 65.7667 46.7742 68.1C42.1076 70.4333 36.0409 71.6 28.5742 71.6Z"
+                  fill="#C9E4DF" />
+              </svg>
+            </div>
+            <div class="cabinet-body-manufacture-desc-body-item-body">
+              <p>Выберите КП</p>
+              <p>Выберите понравившегося Вам исполнителя</p>
+            </div>
+          </div>
+        </div>
+        <div class="cabinet-body-manufacture-desc-body ">
+          <div class="cabinet-body-manufacture-desc-body-item bias">
+            <div class="cabinet-body-manufacture-desc-body-item-stage">
+              <svg width="61" height="72" viewBox="0 0 61 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0.108594 58V43L29.8086 -4.76837e-06H54.0086L25.4086 43L14.4086 39.7H68.6086V58H0.108594ZM36.4086 70V58L37.1086 39.7V29H59.3086V70H36.4086Z" fill="#C9E4DF" />
+              </svg>
+            </div>
+            <div class="cabinet-body-manufacture-desc-body-item-body">
+              <p>Ожидайте выполнения заказа</p>
+              <p>Вам придет уведомление о готовности выполнения</p>
+            </div>
+          </div>
+          <div class="cabinet-body-manufacture-desc-body-item">
+            <div class="cabinet-body-manufacture-desc-body-item-stage">
+              <svg width="61" height="72" viewBox="0 0 61 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M28.1859 71.6C23.3859 71.6 18.5193 71.0667 13.5859 70C8.6526 68.9333 4.31927 67.3667 0.585938 65.3L8.58594 47.9C11.5859 49.6333 14.7193 50.9333 17.9859 51.8C21.2526 52.6 24.3526 53 27.2859 53C29.9526 53 32.1526 52.5333 33.8859 51.6C35.6193 50.6667 36.4859 49.3 36.4859 47.5C36.4859 46.5 36.1859 45.6333 35.5859 44.9C34.9859 44.1 33.9193 43.5 32.3859 43.1C30.9193 42.7 28.7526 42.5 25.8859 42.5H5.58594L9.08594 -4.76837e-06H55.5859V17.8H17.3859L29.2859 7.7L27.1859 34.8L15.2859 24.7H31.5859C38.5193 24.7 44.0526 25.7 48.1859 27.7C52.3859 29.7 55.4193 32.4 57.2859 35.8C59.2193 39.1333 60.1859 42.8667 60.1859 47C60.1859 51.1333 59.0526 55.1 56.7859 58.9C54.5859 62.6333 51.1193 65.7 46.3859 68.1C41.7193 70.4333 35.6526 71.6 28.1859 71.6Z"
+                  fill="#C9E4DF" />
+              </svg>
+            </div>
+            <div class="cabinet-body-manufacture-desc-body-item-body">
+              <p>Произведите оплату за заказ</p>
+              <p>После подтверждения исполнения вы производите оплату за заказ</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+
+    </div>
+
+
+
+
+  </div>
+
+
+  <script type="text/javascript">
+    $(function() {
+
+      $('#manufacture-decode-collapse')[0].addEventListener('hidden.bs.collapse', function() {
+        $('#manufacture-decode-span').text('Показать');
+      });
+
+      $('#manufacture-decode-collapse')[0].addEventListener('shown.bs.collapse', function() {
+        $('#manufacture-decode-span').text('Скрыть');
+      });
+
+    })
+  </script>
+
+
+  <div class="modal fade" id="modal_success_request_resident" tabindex="-1" aria-labelledby="modal_success_request_residentLabel" aria-hidden="true" role="dialog">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content modal_success_request_resident">
+        <div class="header_modal_success_request_resident">
+          <a type="button" data-bs-dismiss="modal">
+            <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M20.9999 20.9999L1.00006 1M21 1L1 21" stroke="black" stroke-opacity="0.5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </a>
+        </div>
+        <div class="body_modal_success_request_resident">
+          <div class="title_modal_success_request_resident">
+            Ваша заявка принята!
+          </div>
+          <div class="text-center mb-5">
+            Мы обрабатываем запрос и свяжемся с
+            Вами в ближайшее время
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <a id="butntotop" class="d-none d-md-block">
+    <i class="bi bi-caret-up-fill"></i>
+  </a>
+
+
+
+  <footer itemscope itemtype="http://schema.org/WPFooter">
+
+
+    <div class="footer-overall-gray" style="background-color: #075055">
+
+      <div class="container flex_container_footer">
+
+        <div class="footer_logo_img">
+          <img class="footer_image" src="./assets/img/eSPB.PRO_logo_02.svg" alt="espb.pro">
+        </div>
+        <div class="social__footer_block">
+          <div class="social_link"></div>
+        </div>
+
+      </div>
+
+      <div class="container flex_container_footer">
+        <div class="footer-overall-column">
+          <div class="footer-overall-header">
+            Маркетплейс
+          </div>
+          <div class="footer-overall-nav">
+            <div class="footer-overall-link"><a href="/">О Маркетплейсе</a></div>
+            <div class="footer-overall-link"><a href="/category/all">Каталог</a></div>
+            <div class="footer-overall-link"><a href="/market">Подборки</a></div>
+            <div class="footer-overall-link"><a href="/user/market/my-services">Мои услуги</a></div>
+            <div class="footer-overall-link"><a href="/user/market/my-orders">Мои заказы</a></div>
+            <div class="footer-overall-link"><a href="/user/market/inbox-orders">Входящие заявки</a></div>
+            <div class="footer-overall-link"><a href="/user/market/yandex-business">Я.Бизнес </a></div>
+          </div>
+        </div>
+        <div class="footer-overall-column">
+          <div class="footer-overall-header">
+            Акселератор
+          </div>
+          <div class="footer-overall-nav">
+            <div class="footer-overall-link"><a href="/user/accelerator">Главная</a></div>
+            <div class="footer-overall-link"><a href="/user/diagnostics">Диагностика </a></div>
+            <div class="footer-overall-link"><a href="/user/lections">Лекции менторов</a></div>
+            <div class="footer-overall-link"><a href="/user/check_location">Оценка локации </a></div>
+
+          </div>
+        </div>
+        <div class="footer-overall-column">
+          <div class="footer-overall-header">
+            Производство
+          </div>
+          <div class="footer-overall-nav">
+            <div class="footer-overall-link"><a href="/manufacture">Главная</a></div>
+            <div class="footer-overall-link"><a href="/user/manufacture-add-order">Разместить заказ</a></div>
+            <div class="footer-overall-link"><a href="/manufacture/categories">Заказы на производство</a></div>
+            <div class="footer-overall-link"><a href="/manufacture/companies">Производители</a></div>
+            <div class="footer-overall-link"><a href="/manufacture/networking">Нетворкинг</a></div>
+            <div class="footer-overall-link"><a href="/user/manufacture-equipment">Оборудование</a></div>
+          </div>
+        </div>
+
+        <div class="footer-overall-column">
+          <div class="footer-overall-header">
+            Компания
+          </div>
+          <div class="footer-overall-nav">
+            <!--                        <div class="footer-overall-link"><a href="#!">О нас </a></div>-->
+            <!--                        <div class="footer-overall-link"><a href="#!">Реквизиты </a></div>-->
+            <!--                        <div class="footer-overall-link"><a href="#!">Партнерам </a></div>-->
+            <div class="footer-overall-link"><a href="/manufacture/contacts">Контакты </a></div>
+            <div class="footer-overall-link"><a href="/developers">Разработчикам </a></div>
+            <div class="footer-overall-link"><a href="/download">Мобильное приложение</a></div>
+          </div>
+        </div>
+        <div class="footer-overall-column">
+          <div class="footer-overall-header">
+            Кабинет
+          </div>
+          <div class="footer-overall-nav">
+            <div class="footer-overall-link"><a href="/user">Профиль</a></div>
+            <div class="footer-overall-link"><a href="/user/market/add-services">Мои услуги</a></div>
+            <div class="footer-overall-link"><a href="/user/market/services">Добавить услугу</a></div>
+            <div class="footer-overall-link"><a href="/user/market/inbox-orders">Входящие заказы услуг</a></div>
+            <div class="footer-overall-link"><a href="/user/manufacture-orders">Мои заказы на производство </a></div>
+            <div class="footer-overall-link"><a href="/user/manufacture-add-order">Создать заказ</a></div>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+
+        <div class="big-header-cabinet" id="contacts">Наши контакты</div>
+
+      </div>
+
+      <div class="container flex_container_footer" style="border-bottom: 1px dashed #d3d3d3;">
+
+        <div class="footer-overall-column_contact" itemscope itemtype="http://schema.org/LocalBusiness">
+          <div class="footer-overall-header">
+            <span itemprop="name">Акселератор</span>
+          </div>
+          <div class="footer-overall-nav">
+            <p class="footer-overall-link mb-1"><a href="tel:88123725290"><i class="bi bi-telephone-fill"></i> <span itemprop="telephone">8 (812) 372-52-90</span></a></p>
+            <p class="footer-overall-link mb-1"><a href="mailto:info@crpp.ru"><i class="bi bi-envelope-fill"></i> <span itemprop="email">info@crpp.ru</span></a></p>
+            <p class="footer-overall-link mb-1"><a href="https://wa.me/79626900355"><i class="bi bi-whatsapp"></i> <span itemprop="telephone">+7 (962) 690-03-55</span></a></p>
+            <p class="footer-overall-link mb-1"><a href="https://t.me/espbpro"><i class="bi bi-telegram"></i> span@espbpro</a></p>
+          </div>
+        </div>
+        <div class="footer-overall-column_contact" itemscope itemtype="http://schema.org/LocalBusiness">
+          <div class="footer-overall-header">
+            <span itemprop="name">Производство</span>
+          </div>
+          <div class="footer-overall-nav">
+            <p class="footer-overall-link mb-1"><a href="tel:+79944048408"><i class="bi bi-telephone-fill"></i> <span itemprop="telephone">+7 981 759-28-63</span></a></p>
+            <p class="footer-overall-link mb-1"><a href="mailto:info@espb.pro"><i class="bi bi-envelope-fill"></i> <span itemprop="email">info@espb.pro</span></a></p>
+          </div>
+        </div>
+        <div class="footer-overall-column_contact" itemscope itemtype="http://schema.org/LocalBusiness">
+          <div class="footer-overall-header">
+            <span itemprop="name">Маркетплейс</span>
+          </div>
+          <div class="footer-overall-nav">
+            <p class="footer-overall-link mb-1"><a href="tel:+79944048408"><i class="bi bi-telephone-fill"></i> <span itemprop="telephone">+7 981 759-28-63</span></a></p>
+            <p class="footer-overall-link mb-1"><a href="mailto:info@espb.pro"><i class="bi bi-envelope-fill"></i> <span itemprop="email">info@espb.pro</span></a></p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="container px-0">
+
+        <div class="footer_copyright">
+
+          <div class="">
+            <span itemprop="copyrightYear">2020 - 2023</span><span itemprop="copyrightHolder">© Городской акселератор Санкт-Петербурга</span>
+          </div>
+
+          <div class="footer-overall-right_menu">
+            <div class="footer-overall-link footer-overall-link_padding">
+              <a href="/privacy_policy">Политика конфиденциальности</a>
+            </div>
+            <div class="footer-overall-link ">
+              <a href="#offcanvasCreate" data-bs-toggle="offcanvas">Помощь</a>
+            </div>
+          </div>
+
+
+        </div>
+
+      </div>
+    </div>
+
+  </footer>
+
+  <script type="text/javascript">
+    const currentUser = "2";
+    localStorage.setItem('sender_id', "356441039207");
+  </script>
+
+  <script type="text/javascript" src="//www.gstatic.com/firebasejs/3.6.8/firebase.js"></script>
+  <script type="text/javascript" id="scr_firebase_subscribe" src="/firebase_subscribe.js"></script>
+
+  <form id="form_contact" class="" onsubmit="send_support_message()">
+    <input type="hidden" name="action" value="send_support_message">
+    <div class="offcanvas offcanvas-end w-full w-lg-1/3" data-bs-scroll="true" data-bs-backdrop="true" tabindex="-1" id="offcanvasCreate" aria-labelledby="offcanvasCreateLabel">
+      <div class="offcanvas-header border-bottom bg-surface-secondary">
+        <h3 class="" style="font-size: calc(1.2625rem + .15vw);">Форма обратной связи</h3>
+        <button type="button" class="btn-close text-reset text-sm" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body vstack" style="gap: 1.25rem!important;">
+        <p class="text-dark" style="font-size: 1.125rem; font-weight: 400;">
+          Заполните форму ниже, и мы свяжемся с вами в ближайшее время
+        </p>
+        <div class="row">
+          <!-- form group -->
+          <div class="mb-3 col-12 col-md-6">
+            <label class="form-label" for="fname">ФИО:<span class="text-danger">*</span></label>
+            <input class="form-control" type="text" value="Сергей" autocomplete="on" name="first_name_sup" id="fname_sup" placeholder="Иванов Иван Иванович" required />
+          </div>
+          <!-- form group -->
+          <div class="mb-3 col-12 col-md-6">
+            <label class="form-label" for="email">Email:<span class="text-danger">*</span></label>
+            <input class="form-control" type="email" value="segr@kt-segment.ru" autocomplete="email" name="email_sup" id="email_sup" data-inputmask="'alias': 'email'" placeholder="email@example.ru" inputmode="numeric" required />
+          </div>
+          <!-- form group -->
+          <div class="mb-3 col-12 col-md-6">
+            <label class="form-label" for="phone">Номер телефона:<span class="text-danger">*</span></label>
+            <input class="form-control" type="text" value="+7(999) 999-99-98" name="phone_sup" autocomplete="tel" id="phone_sup" data-inputmask="'mask': '+7(999) 999-99-99'" placeholder="+7(999) 999-99-99" required="" />
+          </div>
+          <!-- form group -->
+          <div class="mb-3 col-12 col-md-6">
+            <label class="text-dark form-label" for="frustration">Причина обращения:<span class="text-danger">*</span></label>
+            <select class="form-select" name="theme_message_sup" data-width="100%" required placeholder="Выберите тему обращения">
+              <option disabled>Выберите тему обращения</option>
+              <option value="Ошибка на сайте">Ошибка на сайте</option>
+              <option value="Акселератор">Акселератор</option>
+              <option value="Маркетплейс">Маркетплейс</option>
+              <option value="Производство">Производство</option>
+              <option value="Разработка">Разработка</option>
+              <option value="Прочее, другое">Прочее, другое</option>
+            </select>
+          </div>
+          <!-- form group -->
+          <div class="mb-3 col-12">
+            <label class="text-dark form-label" for="messages">Сообщение:<span class="text-danger">*</span></label>
+            <textarea class="form-control" name="message_body_sup" id="messages_sup" required rows="3" placeholder="Ваш текст сообщения тут"></textarea>
+          </div>
+          <p><span class="text-danger">*</span><span><small> - поля обязательные к заполнению</small></span></p>
+          <div id="capcha_contact"></div>
+        </div>
+      </div>
+      <div class="modal-footer py-2 bg-surface-secondary">
+        <button type="button" class="btn btn-sm btn-neutral" data-bs-dismiss="offcanvas">Отмена</button>
+        <button type="submit" id="form_contact_btn" class="btn btn-sm btn-primary">Отправить</button>
+      </div>
+    </div>
+  </form>
+
+  <link rel="stylesheet" href="./assets/theme/vendor/air-datepicker/air-datepicker.css">
+  <script src="./assets/theme/vendor/air-datepicker/air-datepicker.js"></script>
+
+  <script src="./assets/theme/vendor/comp_toast/ui.js"></script>
+  <script src="./assets/theme/jquery/dist/jquery.min.js"></script>
+  <!-- <script src="./assets/vendor/sweetalert2/sweetalert2.all.js"></script> -->
+  <script src="./assets/theme/js/custom_market.js"></script>
+  <script src="./assets/practice.js"></script>
+  <script src="./assets/theme/js/main.js"></script>
+  <script src="./assets/theme/vendor/inputmask/jquery.inputmask.min.js"></script>
+  <!--<script type="text/javascript" src="https://appleid.cdn-apple.com/appleauth/static/jsapi/appleid/1/ru_RU/appleid.auth.js"></script>-->
+  <script src="./assets/general.js"></script>
+  <script src="./assets/theme/js/flatpickr_ru.js"></script>
+  <script src='https://www.google.com/recaptcha/api.js'></script>
+
+  <link rel="stylesheet" href="./assets/theme/vendor/select2/select2.min.css">
+  <script src="./assets/theme/vendor/select2/select2.min.js"></script>
+  <script src="./assets/theme/vendor/select2/select2.ru.min.js"></script>
+
+  <script src="./assets/theme/vendor/jquery-tags-input/jquery.tagsinput.min.js"></script>
+  <script src="./assets/theme/js/popper.min.js"></script>
+  <script src="./assets/theme/js/tippy.umd.min.js"></script>
+  <script src="./assets/theme/vendor/lightbox/lightbox.min.js"></script>
+  <script src="./assets/theme/vendor/BootstrapMaxlength/bootstrap-maxlength.js"></script>
+
+
+  <!-- moment -->
+  <script src="./assets/theme/vendor/moment/moment.min.js"></script>
+  <!-- datatables -->
+  <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
+  <script src="https://cdn.datatables.net/1.11.5/js/dataTables.bootstrap5.min.js"></script>
+  <!-- dataTables dateTime -->
+  <script src="https://cdn.datatables.net/datetime/1.1.1/js/dataTables.dateTime.min.js"></script>
+  <!-- dataTables buttons -->
+  <script src="https://cdn.datatables.net/buttons/1.7.0/js/dataTables.buttons.min.js"></script>
+  <script src="https://cdn.datatables.net/buttons/2.0.1/js/buttons.print.min.js"></script>
+  <script src="https://cdn.datatables.net/buttons/2.0.1/js/buttons.html5.min.js"></script>
+  <!-- dataTables keyTable -->
+  <script src='https://cdn.datatables.net/keytable/2.2.0/js/dataTables.keyTable.min.js'></script>
+  <!-- dataTables responsive-->
+  <!-- <link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.2.6/css/responsive.dataTables.min.css"> -->
+  <!-- <script src="https://cdn.datatables.net/responsive/2.2.6/js/dataTables.responsive.min.js"></script> -->
+  <!-- <script src="https://cdn.datatables.net/responsive/2.2.6/js/responsive.dataTables.min.js"></script> -->
+  <!-- dataTables datetime-moment -->
+  <script src="//cdn.datatables.net/plug-ins/1.10.25/sorting/datetime-moment.js"></script>
+  <!-- pdfmake -->
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js"></script> -->
+  <!-- vfs_fonts -->
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js"></script> -->
+  <!-- jszip -->
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script> -->
+
+  <script>
+    // $(document).ready(function() {
+    $.extend(true, $.fn.dataTable.defaults, { // datatables language
+      language: {
+        processing: "Подождите...",
+        search: "Поиск:",
+        lengthMenu: "Показать _MENU_ записей",
+        info: "Записи с _START_ до _END_ из _TOTAL_ записей",
+        infoEmpty: "Записи с 0 до 0 из 0 записей",
+        infoFiltered: "(отфильтровано из _MAX_ записей)",
+        loadingRecords: "Загрузка записей...",
+        zeroRecords: "Записи отсутствуют.",
+        emptyTable: "В таблице отсутствуют данные",
+        paginate: {
+          first: "Первая",
+          previous: "Предыдущая",
+          next: "Следующая",
+          last: "Последняя"
+        },
+        aria: {
+          sortAscending: ": активировать для сортировки столбца по возрастанию",
+          sortDescending: ": активировать для сортировки столбца по убыванию"
+        },
+        select: {
+          rows: {
+            _: "Выбрано записей: %d",
+            1: "Выбрана одна запись"
+          },
+          cells: {
+            1: "1 ячейка выбрана",
+            _: "Выбрано %d ячеек"
+          },
+          columns: {
+            1: "1 столбец выбран",
+            _: "%d столбцов выбрано"
+          }
+        },
+        searchBuilder: {
+          conditions: {
+            string: {
+              startsWith: "Начинается с",
+              contains: "Содержит",
+              empty: "Пусто",
+              endsWith: "Заканчивается на",
+              equals: "Равно",
+              not: "Не",
+              notEmpty: "Не пусто"
+            },
+            date: {
+              after: "После",
+              before: "До",
+              between: "Между",
+              empty: "Пусто",
+              equals: "Равно",
+              not: "Не",
+              notBetween: "Не между",
+              notEmpty: "Не пусто"
+            },
+            number: {
+              empty: "Пусто",
+              equals: "Равно",
+              gt: "Больше чем",
+              gte: "Больше, чем равно",
+              lt: "Меньше чем",
+              lte: "Меньше, чем равно",
+              not: "Не",
+              notEmpty: "Не пусто",
+              between: "Между",
+              notBetween: "Не между ними"
+            },
+            array: {
+              equals: "Равно",
+              empty: "Пусто",
+              contains: "Содержит",
+              not: "Не равно",
+              notEmpty: "Не пусто",
+              without: "Без"
+            }
+          },
+          data: "Данные",
+          deleteTitle: "Удалить условие фильтрации",
+          logicAnd: "И",
+          logicOr: "Или",
+          title: {
+            0: "Конструктор поиска",
+            _: "Конструктор поиска (%d)"
+          },
+          value: "Значение",
+          add: "Добавить условие",
+          button: {
+            0: "Конструктор поиска",
+            _: "Конструктор поиска (%d)"
+          },
+          clearAll: "Очистить всё",
+          condition: "Условие",
+          leftTitle: "Превосходные критерии",
+          rightTitle: "Критерии отступа"
+        }
+      }
+    });
+    // });
+  </script>
+
+  <!-- dropzone -->
+  <script src="./assets/vendor/dropzone/dropzone.min.js"></script>
+
+  <!-- Голосовой ввод -->
+  <script src="./assets/theme/js/voice_to_text.js"></script>
+
+  <!--Обрезка изображений-->
+  <script src="./assets/vendor/croppie/croppie.js"></script>
+
+  <script type="text/javascript">
+    var sitekey = '6LeD0zMfAAAAAJFPjKQ3TxeZP0kOtnvQVYqTgCfB',
+      capcha_request, capcha_request_manufacture, capcha_request_dev;
+
+    grecaptcha.ready(function() {
+      if ($('#form_request_resident').attr('id')) {
+        capcha_request = grecaptcha.render('capcha_request_res', {
+          'sitekey': sitekey,
+          'callback': 'send_resident',
+          'size': 'invisible'
+        });
+      }
+      if ($('#form_request_manufacture').attr('id')) {
+        capcha_request_manufacture = grecaptcha.render('capcha_request_manufacture', {
+          'sitekey': sitekey,
+          'callback': 'send_manufacture',
+          'size': 'invisible'
+        });
+      }
+      if ($('#form_request_dev').attr('id')) {
+        capcha_request_dev = grecaptcha.render('capcha_request_dev', {
+          'sitekey': sitekey,
+          'callback': 'send_dev',
+          'size': 'invisible'
+        });
+      }
+    });
+
+    function send_resident() {
+      send_request('resident');
+    }
+
+    function send_manufacture() {
+      send_request('manufacture');
+    }
+
+    function send_dev() {
+      send_request('dev');
+    }
+
+    function send_request(type) {
+      switch (type) {
+        case "resident":
+          var $form = $('#form_request_resident');
+          break;
+        case "manufacture":
+          var $form = $('#form_request_manufacture');
+          break;
+        case "dev":
+          var $form = $('#form_request_dev');
+          break;
+      }
+      var $btn = $($form[0].elements["submit"]);
+      $btn.attr('disabled', 'disabled');
+      $('#spiner').removeClass('d-none');
+      $.ajax({
+        type: 'POST',
+        url: '/ajax',
+        data: $form.serialize(),
+        dataType: "json",
+        success: function(result) {
+          if (result.response) {
+            $('#modal_success_request_resident').modal('show');
+            $form[0].reset();
+          } else {
+            alerts('warning', '', result.description);
+          }
+        },
+        error: function(jqXHR, textStatus) {
+          alerts('error', '', 'Не удалось подключиться');
+        },
+        complete: function(jqXHR, textStatus) {
+          $('#spiner').addClass('d-none');
+          $btn.removeAttr('disabled');
+          switch (type) {
+            case "resident":
+              grecaptcha.reset(capcha_request);
+              break;
+            case "manufacture":
+              grecaptcha.reset(capcha_request_manufacture);
+              break;
+            case "dev":
+              grecaptcha.reset(capcha_request_dev);
+              break;
+          }
+        },
+      });
+    }
+
+    $(document).ready(function() {
+
+      if ($('#form_request_resident').attr('id')) $('#form_request_resident').submit(function(event) {
+        event.preventDefault();
+        grecaptcha.execute(capcha_request);
+      });
+      if ($('#form_request_manufacture').attr('id')) $('#form_request_manufacture').submit(function(event) {
+        event.preventDefault();
+        grecaptcha.execute(capcha_request_manufacture);
+      });
+      if ($('#form_request_dev').attr('id')) $('#form_request_dev').submit(function(event) {
+        event.preventDefault();
+        grecaptcha.execute(capcha_request_dev);
+      });
+
+      $('button[href*="#block_acsel_date_become"]').on('click', function() {
+        document.getElementById('block_acsel_date_become').scrollIntoView({
+          behavior: 'smooth',
+          block: 'center'
+        })
+      });
+
+      // $(":input").inputmask();
+
+      $('.button_call_to_action').on('click', function() {
+        if (!$('#row_form_request_resident').is(':visible')) {
+          $('.button_call_to_action').hide(function() {
+            $('.block_call_to_action').css('transition', '0.5s');
+            $('.block_call_to_action').css('height', '570px');
+            $('#row_form_request_resident').slideDown();
+          });
+        }
+      });
+
+      $('#form_auth').on('submit', function() {
+        event.preventDefault();
+
+        auth_user(window.location.href);
+      });
+    });
+  </script>
+
+
+  <!-- Yandex.Metrika counter -->
+  <script type="text/javascript">
+    (function(m, e, t, r, i, k, a) {
+      m[i] = m[i] || function() {
+        (m[i].a = m[i].a || []).push(arguments)
+      };
+      m[i].l = 1 * new Date();
+      k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode.insertBefore(k, a)
+    })
+    (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+    ym(86975524, "init", {
+      clickmap: true,
+      trackLinks: true,
+      accurateTrackBounce: true,
+      webvisor: true,
+      ecommerce: "dataLayer",
+      userParams: {
+        'user': '2',
+      }
+    });
+
+    ym(73156642, "init", {
+      clickmap: true,
+      trackLinks: true,
+      accurateTrackBounce: true,
+      webvisor: true
+    });
+  </script>
+  <noscript>
+    <div>
+      <img src="https://mc.yandex.ru/watch/86975524" style="position:absolute; left:-9999px;" alt="" />
+      <img src="https://mc.yandex.ru/watch/73156642" style="position:absolute; left:-9999px;" alt="" />
+    </div>
+  </noscript>
+  <!-- /Yandex.Metrika counter -->
+
+
+
+</body>
+
+</html>

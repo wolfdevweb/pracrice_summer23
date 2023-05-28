@@ -1,0 +1,70 @@
+/*
+    file: Стили производства без брейкпоинтов
+    description: подключается к файлу /template/market/header-shop-market.php
+    author: КТ-Сегмент
+
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,700;1,800;1,900&display=swap');
+
+
+.btn-primary {
+    color: #fff;
+    background-color: #075055;
+    border-color: #075055;
+}
+
+.btn-primary:hover {
+    color: #fff;
+    background-color: #0b8891;
+    border-color: #0b8891;
+}
+
+.btn-primary:focus {
+    color: #fff;
+    background-color: #0b8891;
+    border-color: #0b8891;
+}
+
+.btn-outline-primary {
+    border-color: #0b8891;
+    color: #0b8891;
+}
+
+.btn-outline-primary:hover {
+    border-color: #0b8891;
+    color: #0b8891;
+}
+
+.btn-outline-primary:focus {
+    border-color: #0b8891;
+    color: #0b8891;
+}
+
+  .button_action_outline {
+      border: 1px solid #075055;
+      border-radius: 10px;
+      font-family: Montserrat;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 20px;
+      /* identical to box height */
+      height: 40px;
+      color: #075055;
+  }
+
+  .button_action_outline:hover {
+      border: 1px solid #0b8891;
+      background: #0b8891;
+      border-radius: 10px;
+      font-family: Montserrat;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 20px;
+      /* identical to box height */
+      height: 40px;
+      color: white;
+  }

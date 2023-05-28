@@ -1,0 +1,11 @@
+@media (min-width:1500px) {
+
+  .title_reg_button_ip_for_big {
+      display: block;
+  }
+
+  .title_reg_button_ip_for_small {
+      display: none;
+  }
+
+}

@@ -1,0 +1,166 @@
+/*
+    file: Стилеи маркетплейса
+    description: подключается к файлу /template/market/header-shop-market.php
+    author: КТ-Сегмент
+
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,700;1,800;1,900&display=swap');
+
+
+.btn-primary {
+    color: #fff;
+    background-color: #606472;
+    border-color: #606472;
+}
+
+.btn-primary:hover {
+    color: #fff;
+    background-color: #79797a;
+    border-color: #79797a;
+}
+
+.btn-primary:active {
+    color: #fff;
+    background-color: #79797a;
+    border-color: #79797a;
+}
+
+.btn-primary:focus {
+    color: #fff;
+    background-color: #79797a;
+    border-color: #79797a;
+}
+
+
+.btn-outline-primary {
+    border-color: #79797a;
+    color: #79797a;
+}
+
+.btn-outline-primary:hover {
+    border-color: #79797a!important;
+    color: white;
+    background: #79797a!important;
+}
+
+.btn-outline-primary:active {
+    border-color: #79797a!important;
+    color: white;
+    background: #79797a!important;
+}
+
+.footer-overall-gray {
+    color: white;
+    padding: 30px 30px 0px 30px;
+}
+
+.footer-overall-link a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer-overall-link a:active {
+    color: white;
+    text-decoration: none;
+}
+
+.footer-overall-link a:hover {
+    color: white;
+    text-decoration: underline!important;
+}
+
+.footer-overall-column {
+    display: flex;
+    width: 20%;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: stretch;
+    align-items: flex-start;
+}
+.footer-overall-header {
+
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 29px;
+    padding-bottom: 15px;
+
+}
+
+.footer-overall-nav {
+
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+
+}
+
+.flex_container_footer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: stretch;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 20px 10px 50px 10px;
+}
+
+.footer-overall-link {
+    margin: 7px 0;
+}
+
+.footer-overall-column_contact {
+    display: flex;
+    width: 33%;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: stretch;
+    align-items: flex-start;
+
+
+}
+
+.big-header-cabinet {
+
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 29px;
+    padding-bottom: 15px;
+
+}
+
+.footer_image {
+    filter: invert(1);
+}
+
+.footer_logo_img {
+    width: 20%;
+}
+
+.footer_copyright {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    padding: 10px 0;
+}
+
+.footer-overall-link_padding {
+    margin-right: 30px;
+}
+
+.footer-overall-right_menu {
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    align-items: center;
+}
