@@ -35,6 +35,11 @@
     font-weight: 600;
     font-size: 16px;
     color: var(--light-blue);
+    transition: color .3s ease-in-out;
+}
+
+.btn-hint:hover {
+    color: var(--darked-green)
 }
 
 .hint-profile-fullness {
