@@ -1,0 +1,6 @@
+
+.card-header-system-conversation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

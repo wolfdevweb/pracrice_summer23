@@ -1,0 +1,20 @@
+
+.card-placing-order {
+    background: url("../../pracrice_summer23/assets/img/cabinet-body-manufacture-order-line.svg"),
+    var(--yellow);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position-x: right;
+    margin-top: 35px;
+}
+
+.card-placing-order-header {
+    margin-bottom: 20px;
+}
+
+.card-placing-order-header span {
+    font-weight: 800;
+    font-size: 24px;
+    line-height: 29px;
+    margin-bottom: 10px;
+}

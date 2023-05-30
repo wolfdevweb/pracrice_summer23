@@ -86,34 +86,4 @@
     margin-bottom: 5px;
 }
 
-.card-desc-content {
-    display: flex;
-    flex-wrap: wrap;
-}
 
-.card-desc-item {
-    display: flex;
-    align-items: center;
-    height: 100px;
-    width: 33%;
-    margin-top: 50px;
-}
-
-.num-desc-item {
-    font-weight: 900;
-    font-size: 110px;
-    color: var(--mint);
-}
-
-.desc-item-container {
-    margin-left: 10px;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-}
-
-.desc-item-header {
-    font-weight: 600;
-    color: var(--darked-green);
-}
