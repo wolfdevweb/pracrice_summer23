@@ -5,10 +5,12 @@
     --black: #000000;
     --light-green: #9cdfd3;
     --darked-green: #075055;
+    --darked-green--100: #09676e;
     --white: #ffffff;
     --darked-green-blue: #075055;
     --light-blue: #83a8aa;
     --yellow: #FEC608;
+    --mint: #C9E4DF;
 }
 
 * {
@@ -79,6 +81,11 @@
 
 .card {
     padding: 30px;
+    margin-top: 35px;
+}
+
+.card:nth-child(1) {
+    margin: 0;
 }
 
 .card-header span {
@@ -91,8 +98,14 @@
 .btn-cabinet {
     font-weight: 600;
     color: var(--white);
-    background: var(--darked-green);
+    background-color: var(--darked-green);
     padding: 10px 30px;
     border-radius: 8px;
     border: none;
+    transition: background-color .3s ease-in-out;
+    cursor: pointer;
+}
+
+.btn-cabinet:hover {
+    background-color: var(--darked-green--100);
 }
