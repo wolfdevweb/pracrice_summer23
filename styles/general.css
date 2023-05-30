@@ -4,8 +4,11 @@
 :root {
     --black: #000000;
     --light-green: #9cdfd3;
+    --darked-green: #075055;
     --white: #ffffff;
     --darked-green-blue: #075055;
+    --light-blue: #83a8aa;
+    --yellow: #FEC608;
 }
 
 * {
@@ -35,6 +38,7 @@
 }
 
 .menu-cabinet {
+    height: fit-content;
     display: flex;
     flex-direction: column;
     width: 260px;
@@ -82,4 +86,13 @@
     font-size: 20px;
     line-height: 24px;
     color: var(--darked-green-blue)
+}
+
+.btn-cabinet {
+    font-weight: 600;
+    color: var(--white);
+    background: var(--darked-green);
+    padding: 10px 30px;
+    border-radius: 8px;
+    border: none;
 }
