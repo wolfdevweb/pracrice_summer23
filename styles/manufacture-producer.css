@@ -1,0 +1,125 @@
+
+/*Стили для страницы производство-заказчик*/
+
+.profile-fullness {
+    width: 100%;
+}
+
+.img-profile-fullness {
+    background-image: url("../../pracrice_summer23/assets/img/manufacture-cabinet-three.svg");
+    width: 100%;
+    height: 50px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position-x: center;
+}
+
+.status-profile-fullness {
+    display: flex;
+    justify-content: space-around;
+    padding: 15px;
+    border-bottom: 1px solid rgba(254, 198, 8, 0.3);
+}
+
+.status-profile-fullness div {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 17px;
+}
+
+.btn-hint {
+    margin-top: 20px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 16px;
+    color: var(--light-blue);
+    transition: color .3s ease-in-out;
+}
+
+.btn-hint:hover {
+    color: var(--darked-green)
+}
+
+.hint-profile-fullness {
+    display: none;
+    margin-top: 30px;
+}
+
+.hint-profile-fullness.active {
+    display: block;
+}
+
+.list-hints {
+    padding-left: 20px;
+}
+
+.list-hints-item {
+    vertical-align: center;
+    margin: 12px 0;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.list-hints-item::marker {
+    font-size: 22px
+}
+
+.card-placing-order {
+    background: url("../../pracrice_summer23/assets/img/cabinet-body-manufacture-order-line.svg"),
+    var(--yellow);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position-x: right;
+    margin-top: 35px;
+}
+
+.card-placing-order-header {
+    margin-bottom: 20px;
+}
+
+.card-placing-order-header span {
+    font-weight: 800;
+    font-size: 24px;
+    line-height: 29px;
+    margin-bottom: 5px;
+}
+
+.card-desc-content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.card-desc-item {
+    display: flex;
+    align-items: flex-start;
+    height: 240px;
+    width: 28%;
+    margin-top: 20px;
+}
+
+.num-desc-item {
+    line-height: 130px;
+    height: fit-content;
+    font-weight: 900;
+    font-size: 110px;
+    color: var(--mint);
+}
+
+.desc-item-container {
+    margin-left: 10px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.desc-item-header {
+    font-weight: 600;
+    color: var(--darked-green);
+}
+
+.btn-complete-order {
+    width: 100%;
+}
