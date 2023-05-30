@@ -66,12 +66,16 @@
     width: calc(100% - 12px);
     display: flex;
     content: "";
-    border-bottom: 1px solid #C9E4DF;
+    border-bottom: 1px solid var(--mint);
 }
 
-.menu-cabinet-item:hover {
+.menu-cabinet-item:hover, .menu-cabinet-item.active:hover {
     background: var(--light-green);
     font-weight: 500;
+}
+
+.menu-cabinet-item.active {
+    background: var(--mint);
 }
 
 .cabinet-content {
