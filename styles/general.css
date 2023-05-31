@@ -133,7 +133,6 @@ a {
     border-radius: 9px;
     padding: 0 6px;
     position: relative;
-    transition: background-color .3s ease-in-out;
 }
 
 .menu-cabinet-item::after {
@@ -181,17 +180,36 @@ a {
 
 .btn-cabinet {
     font-weight: 600;
-    color: var(--white);
-    background-color: var(--darked-green);
-    padding: 10px 30px;
+    color: var(--darked-green);
+    padding: 0 30px;
+    height: 40px;
+    background: none;
     border-radius: 8px;
-    border: none;
-    transition: background-color .3s ease-in-out;
+    border: 2px solid var(--darked-green);
+    transition: all .3s ease-in-out;
     cursor: pointer;
 }
 
+.btn-cabinet.active {
+    background-color: var(--darked-green);
+    color: var(--white);
+}
+
 .btn-cabinet:hover {
+    color: var(--white);
     background-color: var(--darked-green--100);
+    border: 2px solid var(--darked-green--100);
+}
+
+.btn-transparent-cabinet {
+    border: 2px solid var(--darked-green);
+    background: none;
+    color: var(--darked-green);
+    padding: 8px 30px;
+}
+
+.btn-transparent-cabinet:hover {
+    color: var(--white);
 }
 
 .card-desc-content {
@@ -225,3 +243,4 @@ a {
     font-weight: 600;
     color: var(--darked-green);
 }
+
