@@ -35,7 +35,8 @@
     border: 1px solid var(--lightnest-grey);
     border-radius: 8px;
     padding: 10px;
-    position: relative
+    position: relative;
+    margin-top: 30px;
 }
 
 .card-list-header {
@@ -70,10 +71,11 @@
 
 .dropdown-arrow-list-response {
     transition: all .3s ease-in-out;
+    transform: rotate(-90deg);
 }
 
 .dropdown-arrow-list-response.active {
-    transform: rotate(-90deg);
+    transform: rotate(0deg);
 }
 
 .card-list-body {
@@ -98,7 +100,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 0;
+    padding: 20px 0;
     position: relative;
 }
 

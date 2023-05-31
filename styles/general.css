@@ -10,9 +10,12 @@
     --darked-green-blue: #075055;
     --light-blue: #83a8aa;
     --yellow: #FEC608;
+    --light-yellow: rgba(255, 238, 151, 0.72);
     --mint: #C9E4DF;
     --light-grey: #EAEDF1;
     --lightnest-grey: #dddddd;
+    --light-red: #FF7D7DB8;
+    --light-green-100: rgba(180, 255, 183, 0.72)
 }
 
 a {
@@ -242,5 +245,17 @@ a {
 .desc-item-header {
     font-weight: 600;
     color: var(--darked-green);
+}
+
+.dropdown-body-item-green {
+    background: var(--light-green-100)
+}
+
+.dropdown-body-item-red {
+    background: var(--light-red);
+}
+
+.dropdown-body-item-yellow {
+    background: var(--light-yellow);
 }
 
