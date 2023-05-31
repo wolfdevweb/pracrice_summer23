@@ -12,6 +12,7 @@
     --yellow: #FEC608;
     --mint: #C9E4DF;
     --light-grey: #EAEDF1;
+    --lightnest-grey: #dddddd;
 }
 
 a {
@@ -56,6 +57,12 @@ a {
 
 .dropdown-item.active {
     border-radius: 6px 6px 0 0;
+}
+
+.dropdown-arrow {
+    width: 19px;
+    height: 14px;
+    background: url("../../pracrice_summer23/assets/img/dropdown_arrow.svg") no-repeat;
 }
 
 
@@ -185,9 +192,13 @@ a {
     height: 40px;
     background: none;
     border-radius: 8px;
-    border: 2px solid var(--darked-green);
+    border: 1px solid var(--darked-green);
     transition: all .3s ease-in-out;
     cursor: pointer;
+}
+
+.btn-cabinet-smaller {
+    height: 35px;
 }
 
 .btn-cabinet.active {
@@ -198,18 +209,7 @@ a {
 .btn-cabinet:hover {
     color: var(--white);
     background-color: var(--darked-green--100);
-    border: 2px solid var(--darked-green--100);
-}
-
-.btn-transparent-cabinet {
-    border: 2px solid var(--darked-green);
-    background: none;
-    color: var(--darked-green);
-    padding: 8px 30px;
-}
-
-.btn-transparent-cabinet:hover {
-    color: var(--white);
+    border: 1px solid var(--darked-green--100);
 }
 
 .card-desc-content {

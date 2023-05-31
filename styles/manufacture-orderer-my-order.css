@@ -1,0 +1,144 @@
+
+
+.card-response-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.dropdown-sort-header span {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 12px;
+}
+
+.card-subheader {
+    margin: 25px 0;
+
+}
+
+.card-subheader .btn-cabinet {
+    margin-right: 30px;
+}
+
+.dropdown-sort {
+    margin: 0;
+}
+
+.btn-sort-by-criterion {
+    padding: 0 20px;
+    height: 38px;
+    vertical-align: center;
+}
+
+.card-list-container {
+    border: 1px solid var(--lightnest-grey);
+    border-radius: 8px;
+    padding: 10px;
+    position: relative
+}
+
+.card-list-header {
+    width: fit-content;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    cursor: pointer;
+}
+
+.card-list-header div {
+    margin-right: 50px;
+}
+
+.card-list-title {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 24px;
+}
+
+.info-response {
+    display: flex;
+    align-items: center;
+}
+
+.info-response > span:nth-last-child(1) {
+    margin-left: 10px;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 18px
+}
+
+.dropdown-arrow-list-response {
+    transition: all .3s ease-in-out;
+}
+
+.dropdown-arrow-list-response.active {
+    transform: rotate(-90deg);
+}
+
+.card-list-body {
+    margin: 0 auto;
+    width: 95%;
+    display: none;
+}
+
+.card-list-body.active {
+    display: block;
+}
+
+.wrapper-card-list-header {
+    display: flex;
+    width: 95%;
+    margin: 0 auto;
+    justify-content: space-between;
+}
+
+
+.wrapper-response {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+    position: relative;
+}
+
+.wrapper-response::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    bottom: 0;
+    border-bottom: 2px dashed var(--lightnest-grey);
+}
+
+.wrapper-response:nth-last-child(1)::after {
+    border: none;
+}
+
+.wrapper-info-response {
+    display: flex;
+}
+
+.info-response {
+    margin-right: 30px;
+}
+
+.dropdown-item-status-response {
+    margin: 0;
+}
+
+.num-response {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 12px
+}
+
+.response-title {
+    margin-left: 10px;
+    font-weight: 600;
+    line-height: 15px;
+}
+
+.content-response {
+    margin-top: 5px;
+    line-height: 15px
+}
