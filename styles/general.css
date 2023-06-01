@@ -34,7 +34,7 @@ a {
 }
 
 .container {
-    width: 85%;
+    width: 75%;
     margin: 0 auto;
 }
 
@@ -78,7 +78,7 @@ a {
 
 .dropdown-header span {
     font-weight: 600;
-    font-size: 14px;
+    font-size: 12px !important;
     line-height: 12px;
 }
 
@@ -103,7 +103,7 @@ a {
     padding: 0 15px;
     height: 30px;
     font-weight: 600;
-    font-size: 14px;
+    font-size: 12px;
     line-height: 12px;
     color: var(--black);
     transition: all .1s ease;
@@ -201,7 +201,9 @@ a {
 }
 
 .btn-cabinet-smaller {
+    font-size: 12px;
     height: 35px;
+    padding: 0 20px;
 }
 
 .btn-cabinet.active {
@@ -259,3 +261,71 @@ a {
     background: var(--light-yellow);
 }
 
+
+
+
+
+
+.dropdown-sort-header span {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 12px;
+}
+.card-subheader .btn-cabinet {
+    margin-right: 20px;
+}
+
+.dropdown-sort {
+    margin: 0;
+}
+
+.btn-sort-by-criterion {
+    padding: 0 20px;
+    height: 38px;
+    vertical-align: center;
+}
+
+.card-list-container {
+    border: 1px solid var(--lightnest-grey);
+    border-radius: 8px;
+    padding: 10px;
+    position: relative;
+    margin-top: 30px;
+}
+
+.card-list-header {
+    width: fit-content;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    cursor: pointer;
+}
+
+.card-list-header div {
+    margin-right: 15px;
+}
+
+.card-list-title {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+}
+
+.dropdown-arrow-list-response {
+    transition: all .3s ease-in-out;
+    transform: rotate(-90deg);
+}
+
+.dropdown-arrow-list-response.active {
+    transform: rotate(0deg);
+}
+
+.card-list-body {
+    margin: 0 auto;
+    width: 95%;
+    display: none;
+}
+
+.card-list-body.active {
+    display: block;
+}
