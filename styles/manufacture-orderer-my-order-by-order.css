@@ -70,6 +70,13 @@
     line-height: 12px
 }
 
+.response-header {
+    display: flex;
+    height: 25px;
+    align-items: center;
+}
+
+
 .response-title {
     margin-left: 10px;
     font-weight: 600;
@@ -80,4 +87,15 @@
     margin-top: 5px;
     line-height: 15px;
     font-size: 14px;
+}
+
+.set-meeting {
+    background: var(--light-green-100);
+    border-radius: 6px;
+    margin-left: 25px;
+    display: flex;
+    font-size: 12px;
+    height: 100%;
+    padding: 0 15px;
+    align-items: center;
 }
