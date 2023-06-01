@@ -329,11 +329,3 @@ a {
 .card-list-body.active {
     display: block;
 }
-
-.set-meeting {
-    background: var(--light-green-100);
-    border-radius: 6px;
-    height: 20px;
-    width: fit-content;
-    vertical-align: center;
-}
