@@ -1,3 +1,4 @@
+
 .card-response-header {
     display: flex;
     justify-content: space-between;
@@ -25,7 +26,6 @@
     font-size: 15px;
     line-height: 18px
 }
-
 
 .wrapper-response {
     display: flex;
@@ -82,4 +82,8 @@
     margin-top: 5px;
     line-height: 15px;
     font-size: 14px;
+}
+
+.card-list-header > .set-meeting {
+    margin-left: 5px;
 }

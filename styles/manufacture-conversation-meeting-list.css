@@ -26,7 +26,6 @@
     line-height: 18px
 }
 
-
 .wrapper-response {
     display: flex;
     justify-content: space-between;
@@ -44,7 +43,7 @@
 }
 
 .wrapper-response:nth-last-child(1)::after {
-    border: none;
+    border-bottom: 2px dashed var(--lightnest-grey);
 }
 
 .wrapper-info-response {
@@ -82,4 +81,36 @@
     margin-top: 5px;
     line-height: 15px;
     font-size: 14px;
+}
+
+
+.btn-cabinet-smaller {
+    padding: 0 20px;
+}
+
+.wrapper-list-body-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 50px;
+    margin-top: 15px;
+    position: relative;
+}
+
+.wrapper-list-body-header::after {
+    position: absolute;
+    width: 100%;
+    content: "";
+    border-bottom: 1px solid var(--lightnest-grey);
+    bottom: -5px;
+}
+
+.wrapper-list-body-header span {
+    font-weight: 600;
+    font-size: 17px;
+    line-height: 20px;
+}
+
+.dropdown-item-load-meeting-list {
+    margin: 0;
 }
