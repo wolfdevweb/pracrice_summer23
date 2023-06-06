@@ -159,21 +159,43 @@
               </div>
               <div class="dropdown-item dropdown-item-status-response">
                 <div class="dropdown-header">
-                  <span>Выбор статуса</span>
+                  <span>На рассмотрении</span>
                   <div class="dropdown-arrow"></div>
                 </div>
-                <div class="dropdown-body">
+                <div class="dropdown-body dropdown-body-status-response">
                   <a href="#">
-                    <div class="dropdown-body-item">На рассмотрении</div>
+                    <div class="dropdown-body-item dropdown-body-item-green">
+                      <svg class="dropdown-icon-response" width="14" height="12" viewBox="0 0 10 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M8.09863 1.07934L3.37367 5.80431C3.06536 6.11262 3.06536 6.61248 3.37367 6.92079C3.68198 7.2291 4.18185 7.2291 4.49016 6.92079L9.21512 2.19583C9.52343 1.88752 9.52343 1.38765 9.21512 1.07934C8.90681 0.771036 8.40694 0.771036 8.09863 1.07934Z" fill="black"/>
+                        <path d="M0.785197 4.34556L3.3607 6.92107C3.66901 7.22938 4.16888 7.22938 4.47719 6.92107C4.7855 6.61276 4.7855 6.11289 4.47719 5.80458L1.90168 3.22908C1.59337 2.92077 1.09351 2.92077 0.785197 3.22908C0.476889 3.53739 0.476889 4.03725 0.785197 4.34556Z" fill="black"/>
+                      </svg>
+                      Принят
+                    </div>
                   </a>
                   <a href="#">
-                    <div class="dropdown-body-item">Принят</div>
+                    <div class="dropdown-body-item dropdown-body-item-yellow">
+                      <svg class="dropdown-icon-response" width="14" height="14" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path opacity="0.5" d="M4.16667 8.16665C6.19171 8.16665 7.83333 6.52502 7.83333 4.49998C7.83333 2.47494 6.19171 0.833313 4.16667 0.833313C2.14162 0.833313 0.5 2.47494 0.5 4.49998C0.5 6.52502 2.14162 8.16665 4.16667 8.16665Z" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path opacity="0.5" d="M4.16699 2.66669V4.72919L5.08366 5.41669" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                      В резерве
+                    </div>
                   </a>
                   <a href="#">
-                    <div class="dropdown-body-item">В резерве</div>
+                    <div class="dropdown-body-item dropdown-body-item-red">
+                      <svg class="dropdown-icon-response-cross" width="10" height="10" viewBox="0 0 7 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4.11874 3.5L6.87187 0.746769C7.04271 0.575923 7.04271 0.298872 6.87187 0.128135C6.70102 -0.0427116 6.42408 -0.0427116 6.25323 0.128135L3.5 2.88126L0.746879 0.128135C0.576032 -0.0427116 0.298981 -0.0427116 0.128135 0.128135C-0.0427116 0.298981 -0.0427116 0.576032 0.128135 0.746769L2.88137 3.5L0.128135 6.25323C-0.0427116 6.42408 -0.0427116 6.70113 0.128135 6.87187C0.213558 6.95729 0.32556 7.00005 0.437452 7.00005C0.549344 7.00005 0.661456 6.95729 0.746879 6.87187L3.5 4.11874L6.25323 6.87187C6.33865 6.95729 6.45066 7.00005 6.56255 7.00005C6.67444 7.00005 6.78655 6.95729 6.87187 6.87187C7.04271 6.70102 7.04271 6.42397 6.87187 6.25323L4.11874 3.5Z" fill="black"/>
+                      </svg>
+                      Отклонен
+                    </div>
                   </a>
                   <a href="#">
-                    <div class="dropdown-body-item">Отклонен</div>
+                    <div class="dropdown-body-item dropdown-body-item-red">
+                      <svg class="dropdown-icon-response-cross" width="10" height="10" viewBox="0 0 7 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4.11874 3.5L6.87187 0.746769C7.04271 0.575923 7.04271 0.298872 6.87187 0.128135C6.70102 -0.0427116 6.42408 -0.0427116 6.25323 0.128135L3.5 2.88126L0.746879 0.128135C0.576032 -0.0427116 0.298981 -0.0427116 0.128135 0.128135C-0.0427116 0.298981 -0.0427116 0.576032 0.128135 0.746769L2.88137 3.5L0.128135 6.25323C-0.0427116 6.42408 -0.0427116 6.70113 0.128135 6.87187C0.213558 6.95729 0.32556 7.00005 0.437452 7.00005C0.549344 7.00005 0.661456 6.95729 0.746879 6.87187L3.5 4.11874L6.25323 6.87187C6.33865 6.95729 6.45066 7.00005 6.56255 7.00005C6.67444 7.00005 6.78655 6.95729 6.87187 6.87187C7.04271 6.70102 7.04271 6.42397 6.87187 6.25323L4.11874 3.5Z" fill="black"/>
+                      </svg>
+                      Отозван
+                    </div>
                   </a>
                 </div>
               </div>
@@ -188,21 +210,43 @@
               </div>
               <div class="dropdown-item dropdown-item-status-response">
                 <div class="dropdown-header">
-                  <span>Выбор статуса</span>
+                  <span>На рассмотрении</span>
                   <div class="dropdown-arrow"></div>
                 </div>
-                <div class="dropdown-body">
+                <div class="dropdown-body dropdown-body-status-response">
                   <a href="#">
-                    <div class="dropdown-body-item">На рассмотрении</div>
+                    <div class="dropdown-body-item dropdown-body-item-green">
+                      <svg class="dropdown-icon-response" width="14" height="12" viewBox="0 0 10 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M8.09863 1.07934L3.37367 5.80431C3.06536 6.11262 3.06536 6.61248 3.37367 6.92079C3.68198 7.2291 4.18185 7.2291 4.49016 6.92079L9.21512 2.19583C9.52343 1.88752 9.52343 1.38765 9.21512 1.07934C8.90681 0.771036 8.40694 0.771036 8.09863 1.07934Z" fill="black"/>
+                        <path d="M0.785197 4.34556L3.3607 6.92107C3.66901 7.22938 4.16888 7.22938 4.47719 6.92107C4.7855 6.61276 4.7855 6.11289 4.47719 5.80458L1.90168 3.22908C1.59337 2.92077 1.09351 2.92077 0.785197 3.22908C0.476889 3.53739 0.476889 4.03725 0.785197 4.34556Z" fill="black"/>
+                      </svg>
+                      Принят
+                    </div>
                   </a>
                   <a href="#">
-                    <div class="dropdown-body-item">Принят</div>
+                    <div class="dropdown-body-item dropdown-body-item-yellow">
+                      <svg class="dropdown-icon-response" width="14" height="14" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path opacity="0.5" d="M4.16667 8.16665C6.19171 8.16665 7.83333 6.52502 7.83333 4.49998C7.83333 2.47494 6.19171 0.833313 4.16667 0.833313C2.14162 0.833313 0.5 2.47494 0.5 4.49998C0.5 6.52502 2.14162 8.16665 4.16667 8.16665Z" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path opacity="0.5" d="M4.16699 2.66669V4.72919L5.08366 5.41669" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                      В резерве
+                    </div>
                   </a>
                   <a href="#">
-                    <div class="dropdown-body-item">В резерве</div>
+                    <div class="dropdown-body-item dropdown-body-item-red">
+                      <svg class="dropdown-icon-response-cross" width="10" height="10" viewBox="0 0 7 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4.11874 3.5L6.87187 0.746769C7.04271 0.575923 7.04271 0.298872 6.87187 0.128135C6.70102 -0.0427116 6.42408 -0.0427116 6.25323 0.128135L3.5 2.88126L0.746879 0.128135C0.576032 -0.0427116 0.298981 -0.0427116 0.128135 0.128135C-0.0427116 0.298981 -0.0427116 0.576032 0.128135 0.746769L2.88137 3.5L0.128135 6.25323C-0.0427116 6.42408 -0.0427116 6.70113 0.128135 6.87187C0.213558 6.95729 0.32556 7.00005 0.437452 7.00005C0.549344 7.00005 0.661456 6.95729 0.746879 6.87187L3.5 4.11874L6.25323 6.87187C6.33865 6.95729 6.45066 7.00005 6.56255 7.00005C6.67444 7.00005 6.78655 6.95729 6.87187 6.87187C7.04271 6.70102 7.04271 6.42397 6.87187 6.25323L4.11874 3.5Z" fill="black"/>
+                      </svg>
+                      Отклонен
+                    </div>
                   </a>
                   <a href="#">
-                    <div class="dropdown-body-item">Отклонен</div>
+                    <div class="dropdown-body-item dropdown-body-item-red">
+                      <svg class="dropdown-icon-response-cross" width="10" height="10" viewBox="0 0 7 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4.11874 3.5L6.87187 0.746769C7.04271 0.575923 7.04271 0.298872 6.87187 0.128135C6.70102 -0.0427116 6.42408 -0.0427116 6.25323 0.128135L3.5 2.88126L0.746879 0.128135C0.576032 -0.0427116 0.298981 -0.0427116 0.128135 0.128135C-0.0427116 0.298981 -0.0427116 0.576032 0.128135 0.746769L2.88137 3.5L0.128135 6.25323C-0.0427116 6.42408 -0.0427116 6.70113 0.128135 6.87187C0.213558 6.95729 0.32556 7.00005 0.437452 7.00005C0.549344 7.00005 0.661456 6.95729 0.746879 6.87187L3.5 4.11874L6.25323 6.87187C6.33865 6.95729 6.45066 7.00005 6.56255 7.00005C6.67444 7.00005 6.78655 6.95729 6.87187 6.87187C7.04271 6.70102 7.04271 6.42397 6.87187 6.25323L4.11874 3.5Z" fill="black"/>
+                      </svg>
+                      Отозван
+                    </div>
                   </a>
                 </div>
               </div>
@@ -218,21 +262,43 @@
               </div>
               <div class="dropdown-item dropdown-item-status-response">
                 <div class="dropdown-header">
-                  <span>Выбор статуса</span>
+                  <span>На рассмотрении</span>
                   <div class="dropdown-arrow"></div>
                 </div>
-                <div class="dropdown-body">
+                <div class="dropdown-body dropdown-body-status-response">
                   <a href="#">
-                    <div class="dropdown-body-item">На рассмотрении</div>
+                    <div class="dropdown-body-item dropdown-body-item-green">
+                      <svg class="dropdown-icon-response" width="14" height="12" viewBox="0 0 10 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M8.09863 1.07934L3.37367 5.80431C3.06536 6.11262 3.06536 6.61248 3.37367 6.92079C3.68198 7.2291 4.18185 7.2291 4.49016 6.92079L9.21512 2.19583C9.52343 1.88752 9.52343 1.38765 9.21512 1.07934C8.90681 0.771036 8.40694 0.771036 8.09863 1.07934Z" fill="black"/>
+                        <path d="M0.785197 4.34556L3.3607 6.92107C3.66901 7.22938 4.16888 7.22938 4.47719 6.92107C4.7855 6.61276 4.7855 6.11289 4.47719 5.80458L1.90168 3.22908C1.59337 2.92077 1.09351 2.92077 0.785197 3.22908C0.476889 3.53739 0.476889 4.03725 0.785197 4.34556Z" fill="black"/>
+                      </svg>
+                      Принят
+                    </div>
                   </a>
                   <a href="#">
-                    <div class="dropdown-body-item">Принят</div>
+                    <div class="dropdown-body-item dropdown-body-item-yellow">
+                      <svg class="dropdown-icon-response" width="14" height="14" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path opacity="0.5" d="M4.16667 8.16665C6.19171 8.16665 7.83333 6.52502 7.83333 4.49998C7.83333 2.47494 6.19171 0.833313 4.16667 0.833313C2.14162 0.833313 0.5 2.47494 0.5 4.49998C0.5 6.52502 2.14162 8.16665 4.16667 8.16665Z" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path opacity="0.5" d="M4.16699 2.66669V4.72919L5.08366 5.41669" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                      В резерве
+                    </div>
                   </a>
                   <a href="#">
-                    <div class="dropdown-body-item">В резерве</div>
+                    <div class="dropdown-body-item dropdown-body-item-red">
+                      <svg class="dropdown-icon-response-cross" width="10" height="10" viewBox="0 0 7 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4.11874 3.5L6.87187 0.746769C7.04271 0.575923 7.04271 0.298872 6.87187 0.128135C6.70102 -0.0427116 6.42408 -0.0427116 6.25323 0.128135L3.5 2.88126L0.746879 0.128135C0.576032 -0.0427116 0.298981 -0.0427116 0.128135 0.128135C-0.0427116 0.298981 -0.0427116 0.576032 0.128135 0.746769L2.88137 3.5L0.128135 6.25323C-0.0427116 6.42408 -0.0427116 6.70113 0.128135 6.87187C0.213558 6.95729 0.32556 7.00005 0.437452 7.00005C0.549344 7.00005 0.661456 6.95729 0.746879 6.87187L3.5 4.11874L6.25323 6.87187C6.33865 6.95729 6.45066 7.00005 6.56255 7.00005C6.67444 7.00005 6.78655 6.95729 6.87187 6.87187C7.04271 6.70102 7.04271 6.42397 6.87187 6.25323L4.11874 3.5Z" fill="black"/>
+                      </svg>
+                      Отклонен
+                    </div>
                   </a>
                   <a href="#">
-                    <div class="dropdown-body-item">Отклонен</div>
+                    <div class="dropdown-body-item dropdown-body-item-red">
+                      <svg class="dropdown-icon-response-cross" width="10" height="10" viewBox="0 0 7 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4.11874 3.5L6.87187 0.746769C7.04271 0.575923 7.04271 0.298872 6.87187 0.128135C6.70102 -0.0427116 6.42408 -0.0427116 6.25323 0.128135L3.5 2.88126L0.746879 0.128135C0.576032 -0.0427116 0.298981 -0.0427116 0.128135 0.128135C-0.0427116 0.298981 -0.0427116 0.576032 0.128135 0.746769L2.88137 3.5L0.128135 6.25323C-0.0427116 6.42408 -0.0427116 6.70113 0.128135 6.87187C0.213558 6.95729 0.32556 7.00005 0.437452 7.00005C0.549344 7.00005 0.661456 6.95729 0.746879 6.87187L3.5 4.11874L6.25323 6.87187C6.33865 6.95729 6.45066 7.00005 6.56255 7.00005C6.67444 7.00005 6.78655 6.95729 6.87187 6.87187C7.04271 6.70102 7.04271 6.42397 6.87187 6.25323L4.11874 3.5Z" fill="black"/>
+                      </svg>
+                      Отозван
+                    </div>
                   </a>
                 </div>
               </div>
@@ -247,21 +313,43 @@
               </div>
               <div class="dropdown-item dropdown-item-status-response">
                 <div class="dropdown-header">
-                  <span>Выбор статуса</span>
+                  <span>На рассмотрении</span>
                   <div class="dropdown-arrow"></div>
                 </div>
-                <div class="dropdown-body">
+                <div class="dropdown-body dropdown-body-status-response">
                   <a href="#">
-                    <div class="dropdown-body-item">На рассмотрении</div>
+                    <div class="dropdown-body-item dropdown-body-item-green">
+                      <svg class="dropdown-icon-response" width="14" height="12" viewBox="0 0 10 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M8.09863 1.07934L3.37367 5.80431C3.06536 6.11262 3.06536 6.61248 3.37367 6.92079C3.68198 7.2291 4.18185 7.2291 4.49016 6.92079L9.21512 2.19583C9.52343 1.88752 9.52343 1.38765 9.21512 1.07934C8.90681 0.771036 8.40694 0.771036 8.09863 1.07934Z" fill="black"/>
+                        <path d="M0.785197 4.34556L3.3607 6.92107C3.66901 7.22938 4.16888 7.22938 4.47719 6.92107C4.7855 6.61276 4.7855 6.11289 4.47719 5.80458L1.90168 3.22908C1.59337 2.92077 1.09351 2.92077 0.785197 3.22908C0.476889 3.53739 0.476889 4.03725 0.785197 4.34556Z" fill="black"/>
+                      </svg>
+                      Принят
+                    </div>
                   </a>
                   <a href="#">
-                    <div class="dropdown-body-item">Принят</div>
+                    <div class="dropdown-body-item dropdown-body-item-yellow">
+                      <svg class="dropdown-icon-response" width="14" height="14" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path opacity="0.5" d="M4.16667 8.16665C6.19171 8.16665 7.83333 6.52502 7.83333 4.49998C7.83333 2.47494 6.19171 0.833313 4.16667 0.833313C2.14162 0.833313 0.5 2.47494 0.5 4.49998C0.5 6.52502 2.14162 8.16665 4.16667 8.16665Z" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path opacity="0.5" d="M4.16699 2.66669V4.72919L5.08366 5.41669" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                      В резерве
+                    </div>
                   </a>
                   <a href="#">
-                    <div class="dropdown-body-item">В резерве</div>
+                    <div class="dropdown-body-item dropdown-body-item-red">
+                      <svg class="dropdown-icon-response-cross" width="10" height="10" viewBox="0 0 7 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4.11874 3.5L6.87187 0.746769C7.04271 0.575923 7.04271 0.298872 6.87187 0.128135C6.70102 -0.0427116 6.42408 -0.0427116 6.25323 0.128135L3.5 2.88126L0.746879 0.128135C0.576032 -0.0427116 0.298981 -0.0427116 0.128135 0.128135C-0.0427116 0.298981 -0.0427116 0.576032 0.128135 0.746769L2.88137 3.5L0.128135 6.25323C-0.0427116 6.42408 -0.0427116 6.70113 0.128135 6.87187C0.213558 6.95729 0.32556 7.00005 0.437452 7.00005C0.549344 7.00005 0.661456 6.95729 0.746879 6.87187L3.5 4.11874L6.25323 6.87187C6.33865 6.95729 6.45066 7.00005 6.56255 7.00005C6.67444 7.00005 6.78655 6.95729 6.87187 6.87187C7.04271 6.70102 7.04271 6.42397 6.87187 6.25323L4.11874 3.5Z" fill="black"/>
+                      </svg>
+                      Отклонен
+                    </div>
                   </a>
                   <a href="#">
-                    <div class="dropdown-body-item">Отклонен</div>
+                    <div class="dropdown-body-item dropdown-body-item-red">
+                      <svg class="dropdown-icon-response-cross" width="10" height="10" viewBox="0 0 7 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4.11874 3.5L6.87187 0.746769C7.04271 0.575923 7.04271 0.298872 6.87187 0.128135C6.70102 -0.0427116 6.42408 -0.0427116 6.25323 0.128135L3.5 2.88126L0.746879 0.128135C0.576032 -0.0427116 0.298981 -0.0427116 0.128135 0.128135C-0.0427116 0.298981 -0.0427116 0.576032 0.128135 0.746769L2.88137 3.5L0.128135 6.25323C-0.0427116 6.42408 -0.0427116 6.70113 0.128135 6.87187C0.213558 6.95729 0.32556 7.00005 0.437452 7.00005C0.549344 7.00005 0.661456 6.95729 0.746879 6.87187L3.5 4.11874L6.25323 6.87187C6.33865 6.95729 6.45066 7.00005 6.56255 7.00005C6.67444 7.00005 6.78655 6.95729 6.87187 6.87187C7.04271 6.70102 7.04271 6.42397 6.87187 6.25323L4.11874 3.5Z" fill="black"/>
+                      </svg>
+                      Отозван
+                    </div>
                   </a>
                 </div>
               </div>
@@ -278,7 +366,7 @@
           <div class="wrapper-info-response">
             <div class="info-response">
               <span>Откликов:</span>
-              <span>57</span>
+              <span>230</span>
             </div>
             <button class="btn-cabinet btn-cabinet-smaller">Управление заказом</button>
           </div>
@@ -296,21 +384,43 @@
               </div>
               <div class="dropdown-item dropdown-item-status-response">
                 <div class="dropdown-header">
-                  <span>Выбор статуса</span>
+                  <span>На рассмотрении</span>
                   <div class="dropdown-arrow"></div>
                 </div>
-                <div class="dropdown-body">
+                <div class="dropdown-body dropdown-body-status-response">
                   <a href="#">
-                    <div class="dropdown-body-item">На рассмотрении</div>
+                    <div class="dropdown-body-item dropdown-body-item-green">
+                      <svg class="dropdown-icon-response" width="14" height="12" viewBox="0 0 10 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M8.09863 1.07934L3.37367 5.80431C3.06536 6.11262 3.06536 6.61248 3.37367 6.92079C3.68198 7.2291 4.18185 7.2291 4.49016 6.92079L9.21512 2.19583C9.52343 1.88752 9.52343 1.38765 9.21512 1.07934C8.90681 0.771036 8.40694 0.771036 8.09863 1.07934Z" fill="black"/>
+                        <path d="M0.785197 4.34556L3.3607 6.92107C3.66901 7.22938 4.16888 7.22938 4.47719 6.92107C4.7855 6.61276 4.7855 6.11289 4.47719 5.80458L1.90168 3.22908C1.59337 2.92077 1.09351 2.92077 0.785197 3.22908C0.476889 3.53739 0.476889 4.03725 0.785197 4.34556Z" fill="black"/>
+                      </svg>
+                      Принят
+                    </div>
                   </a>
                   <a href="#">
-                    <div class="dropdown-body-item">Принят</div>
+                    <div class="dropdown-body-item dropdown-body-item-yellow">
+                      <svg class="dropdown-icon-response" width="14" height="14" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path opacity="0.5" d="M4.16667 8.16665C6.19171 8.16665 7.83333 6.52502 7.83333 4.49998C7.83333 2.47494 6.19171 0.833313 4.16667 0.833313C2.14162 0.833313 0.5 2.47494 0.5 4.49998C0.5 6.52502 2.14162 8.16665 4.16667 8.16665Z" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path opacity="0.5" d="M4.16699 2.66669V4.72919L5.08366 5.41669" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                      В резерве
+                    </div>
                   </a>
                   <a href="#">
-                    <div class="dropdown-body-item">В резерве</div>
+                    <div class="dropdown-body-item dropdown-body-item-red">
+                      <svg class="dropdown-icon-response-cross" width="10" height="10" viewBox="0 0 7 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4.11874 3.5L6.87187 0.746769C7.04271 0.575923 7.04271 0.298872 6.87187 0.128135C6.70102 -0.0427116 6.42408 -0.0427116 6.25323 0.128135L3.5 2.88126L0.746879 0.128135C0.576032 -0.0427116 0.298981 -0.0427116 0.128135 0.128135C-0.0427116 0.298981 -0.0427116 0.576032 0.128135 0.746769L2.88137 3.5L0.128135 6.25323C-0.0427116 6.42408 -0.0427116 6.70113 0.128135 6.87187C0.213558 6.95729 0.32556 7.00005 0.437452 7.00005C0.549344 7.00005 0.661456 6.95729 0.746879 6.87187L3.5 4.11874L6.25323 6.87187C6.33865 6.95729 6.45066 7.00005 6.56255 7.00005C6.67444 7.00005 6.78655 6.95729 6.87187 6.87187C7.04271 6.70102 7.04271 6.42397 6.87187 6.25323L4.11874 3.5Z" fill="black"/>
+                      </svg>
+                      Отклонен
+                    </div>
                   </a>
                   <a href="#">
-                    <div class="dropdown-body-item">Отклонен</div>
+                    <div class="dropdown-body-item dropdown-body-item-red">
+                      <svg class="dropdown-icon-response-cross" width="10" height="10" viewBox="0 0 7 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4.11874 3.5L6.87187 0.746769C7.04271 0.575923 7.04271 0.298872 6.87187 0.128135C6.70102 -0.0427116 6.42408 -0.0427116 6.25323 0.128135L3.5 2.88126L0.746879 0.128135C0.576032 -0.0427116 0.298981 -0.0427116 0.128135 0.128135C-0.0427116 0.298981 -0.0427116 0.576032 0.128135 0.746769L2.88137 3.5L0.128135 6.25323C-0.0427116 6.42408 -0.0427116 6.70113 0.128135 6.87187C0.213558 6.95729 0.32556 7.00005 0.437452 7.00005C0.549344 7.00005 0.661456 6.95729 0.746879 6.87187L3.5 4.11874L6.25323 6.87187C6.33865 6.95729 6.45066 7.00005 6.56255 7.00005C6.67444 7.00005 6.78655 6.95729 6.87187 6.87187C7.04271 6.70102 7.04271 6.42397 6.87187 6.25323L4.11874 3.5Z" fill="black"/>
+                      </svg>
+                      Отозван
+                    </div>
                   </a>
                 </div>
               </div>
@@ -325,21 +435,95 @@
               </div>
               <div class="dropdown-item dropdown-item-status-response">
                 <div class="dropdown-header">
-                  <span>Выбор статуса</span>
+                  <span>На рассмотрении</span>
                   <div class="dropdown-arrow"></div>
                 </div>
-                <div class="dropdown-body">
+                <div class="dropdown-body dropdown-body-status-response">
                   <a href="#">
-                    <div class="dropdown-body-item">На рассмотрении</div>
+                    <div class="dropdown-body-item dropdown-body-item-green">
+                      <svg class="dropdown-icon-response" width="14" height="12" viewBox="0 0 10 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M8.09863 1.07934L3.37367 5.80431C3.06536 6.11262 3.06536 6.61248 3.37367 6.92079C3.68198 7.2291 4.18185 7.2291 4.49016 6.92079L9.21512 2.19583C9.52343 1.88752 9.52343 1.38765 9.21512 1.07934C8.90681 0.771036 8.40694 0.771036 8.09863 1.07934Z" fill="black"/>
+                        <path d="M0.785197 4.34556L3.3607 6.92107C3.66901 7.22938 4.16888 7.22938 4.47719 6.92107C4.7855 6.61276 4.7855 6.11289 4.47719 5.80458L1.90168 3.22908C1.59337 2.92077 1.09351 2.92077 0.785197 3.22908C0.476889 3.53739 0.476889 4.03725 0.785197 4.34556Z" fill="black"/>
+                      </svg>
+                      Принят
+                    </div>
                   </a>
                   <a href="#">
-                    <div class="dropdown-body-item">Принят</div>
+                    <div class="dropdown-body-item dropdown-body-item-yellow">
+                      <svg class="dropdown-icon-response" width="14" height="14" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path opacity="0.5" d="M4.16667 8.16665C6.19171 8.16665 7.83333 6.52502 7.83333 4.49998C7.83333 2.47494 6.19171 0.833313 4.16667 0.833313C2.14162 0.833313 0.5 2.47494 0.5 4.49998C0.5 6.52502 2.14162 8.16665 4.16667 8.16665Z" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path opacity="0.5" d="M4.16699 2.66669V4.72919L5.08366 5.41669" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                      В резерве
+                    </div>
                   </a>
                   <a href="#">
-                    <div class="dropdown-body-item">В резерве</div>
+                    <div class="dropdown-body-item dropdown-body-item-red">
+                      <svg class="dropdown-icon-response-cross" width="10" height="10" viewBox="0 0 7 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4.11874 3.5L6.87187 0.746769C7.04271 0.575923 7.04271 0.298872 6.87187 0.128135C6.70102 -0.0427116 6.42408 -0.0427116 6.25323 0.128135L3.5 2.88126L0.746879 0.128135C0.576032 -0.0427116 0.298981 -0.0427116 0.128135 0.128135C-0.0427116 0.298981 -0.0427116 0.576032 0.128135 0.746769L2.88137 3.5L0.128135 6.25323C-0.0427116 6.42408 -0.0427116 6.70113 0.128135 6.87187C0.213558 6.95729 0.32556 7.00005 0.437452 7.00005C0.549344 7.00005 0.661456 6.95729 0.746879 6.87187L3.5 4.11874L6.25323 6.87187C6.33865 6.95729 6.45066 7.00005 6.56255 7.00005C6.67444 7.00005 6.78655 6.95729 6.87187 6.87187C7.04271 6.70102 7.04271 6.42397 6.87187 6.25323L4.11874 3.5Z" fill="black"/>
+                      </svg>
+                      Отклонен
+                    </div>
                   </a>
                   <a href="#">
-                    <div class="dropdown-body-item">Отклонен</div>
+                    <div class="dropdown-body-item dropdown-body-item-red">
+                      <svg class="dropdown-icon-response-cross" width="10" height="10" viewBox="0 0 7 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4.11874 3.5L6.87187 0.746769C7.04271 0.575923 7.04271 0.298872 6.87187 0.128135C6.70102 -0.0427116 6.42408 -0.0427116 6.25323 0.128135L3.5 2.88126L0.746879 0.128135C0.576032 -0.0427116 0.298981 -0.0427116 0.128135 0.128135C-0.0427116 0.298981 -0.0427116 0.576032 0.128135 0.746769L2.88137 3.5L0.128135 6.25323C-0.0427116 6.42408 -0.0427116 6.70113 0.128135 6.87187C0.213558 6.95729 0.32556 7.00005 0.437452 7.00005C0.549344 7.00005 0.661456 6.95729 0.746879 6.87187L3.5 4.11874L6.25323 6.87187C6.33865 6.95729 6.45066 7.00005 6.56255 7.00005C6.67444 7.00005 6.78655 6.95729 6.87187 6.87187C7.04271 6.70102 7.04271 6.42397 6.87187 6.25323L4.11874 3.5Z" fill="black"/>
+                      </svg>
+                      Отозван
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="wrapper-response">
+              <div class="container-response">
+                <div class="response-header">
+                  <span class="num-response"># 1231244</span>
+                  <span class="response-title">Отклик от  ООО “Ромашка”</span>
+                  <span class="set-meeting">Назначена встреча</span>
+                </div>
+                <p class="content-response">Добрый день! Мы разрабатываем решение для работы в полях для сотрудников и внештатных подряд ...</p>
+              </div>
+              <div class="dropdown-item dropdown-item-status-response">
+                <div class="dropdown-header">
+                  <span>На рассмотрении</span>
+                  <div class="dropdown-arrow"></div>
+                </div>
+                <div class="dropdown-body dropdown-body-status-response">
+                  <a href="#">
+                    <div class="dropdown-body-item dropdown-body-item-green">
+                      <svg class="dropdown-icon-response" width="14" height="12" viewBox="0 0 10 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M8.09863 1.07934L3.37367 5.80431C3.06536 6.11262 3.06536 6.61248 3.37367 6.92079C3.68198 7.2291 4.18185 7.2291 4.49016 6.92079L9.21512 2.19583C9.52343 1.88752 9.52343 1.38765 9.21512 1.07934C8.90681 0.771036 8.40694 0.771036 8.09863 1.07934Z" fill="black"/>
+                        <path d="M0.785197 4.34556L3.3607 6.92107C3.66901 7.22938 4.16888 7.22938 4.47719 6.92107C4.7855 6.61276 4.7855 6.11289 4.47719 5.80458L1.90168 3.22908C1.59337 2.92077 1.09351 2.92077 0.785197 3.22908C0.476889 3.53739 0.476889 4.03725 0.785197 4.34556Z" fill="black"/>
+                      </svg>
+                      Принят
+                    </div>
+                  </a>
+                  <a href="#">
+                    <div class="dropdown-body-item dropdown-body-item-yellow">
+                      <svg class="dropdown-icon-response" width="14" height="14" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path opacity="0.5" d="M4.16667 8.16665C6.19171 8.16665 7.83333 6.52502 7.83333 4.49998C7.83333 2.47494 6.19171 0.833313 4.16667 0.833313C2.14162 0.833313 0.5 2.47494 0.5 4.49998C0.5 6.52502 2.14162 8.16665 4.16667 8.16665Z" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path opacity="0.5" d="M4.16699 2.66669V4.72919L5.08366 5.41669" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                      В резерве
+                    </div>
+                  </a>
+                  <a href="#">
+                    <div class="dropdown-body-item dropdown-body-item-red">
+                      <svg class="dropdown-icon-response-cross" width="10" height="10" viewBox="0 0 7 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4.11874 3.5L6.87187 0.746769C7.04271 0.575923 7.04271 0.298872 6.87187 0.128135C6.70102 -0.0427116 6.42408 -0.0427116 6.25323 0.128135L3.5 2.88126L0.746879 0.128135C0.576032 -0.0427116 0.298981 -0.0427116 0.128135 0.128135C-0.0427116 0.298981 -0.0427116 0.576032 0.128135 0.746769L2.88137 3.5L0.128135 6.25323C-0.0427116 6.42408 -0.0427116 6.70113 0.128135 6.87187C0.213558 6.95729 0.32556 7.00005 0.437452 7.00005C0.549344 7.00005 0.661456 6.95729 0.746879 6.87187L3.5 4.11874L6.25323 6.87187C6.33865 6.95729 6.45066 7.00005 6.56255 7.00005C6.67444 7.00005 6.78655 6.95729 6.87187 6.87187C7.04271 6.70102 7.04271 6.42397 6.87187 6.25323L4.11874 3.5Z" fill="black"/>
+                      </svg>
+                      Отклонен
+                    </div>
+                  </a>
+                  <a href="#">
+                    <div class="dropdown-body-item dropdown-body-item-red">
+                      <svg class="dropdown-icon-response-cross" width="10" height="10" viewBox="0 0 7 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4.11874 3.5L6.87187 0.746769C7.04271 0.575923 7.04271 0.298872 6.87187 0.128135C6.70102 -0.0427116 6.42408 -0.0427116 6.25323 0.128135L3.5 2.88126L0.746879 0.128135C0.576032 -0.0427116 0.298981 -0.0427116 0.128135 0.128135C-0.0427116 0.298981 -0.0427116 0.576032 0.128135 0.746769L2.88137 3.5L0.128135 6.25323C-0.0427116 6.42408 -0.0427116 6.70113 0.128135 6.87187C0.213558 6.95729 0.32556 7.00005 0.437452 7.00005C0.549344 7.00005 0.661456 6.95729 0.746879 6.87187L3.5 4.11874L6.25323 6.87187C6.33865 6.95729 6.45066 7.00005 6.56255 7.00005C6.67444 7.00005 6.78655 6.95729 6.87187 6.87187C7.04271 6.70102 7.04271 6.42397 6.87187 6.25323L4.11874 3.5Z" fill="black"/>
+                      </svg>
+                      Отозван
+                    </div>
                   </a>
                 </div>
               </div>
@@ -354,50 +538,43 @@
               </div>
               <div class="dropdown-item dropdown-item-status-response">
                 <div class="dropdown-header">
-                  <span>Выбор статуса</span>
+                  <span>На рассмотрении</span>
                   <div class="dropdown-arrow"></div>
                 </div>
-                <div class="dropdown-body">
+                <div class="dropdown-body dropdown-body-status-response">
                   <a href="#">
-                    <div class="dropdown-body-item">На рассмотрении</div>
+                    <div class="dropdown-body-item dropdown-body-item-green">
+                      <svg class="dropdown-icon-response" width="14" height="12" viewBox="0 0 10 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M8.09863 1.07934L3.37367 5.80431C3.06536 6.11262 3.06536 6.61248 3.37367 6.92079C3.68198 7.2291 4.18185 7.2291 4.49016 6.92079L9.21512 2.19583C9.52343 1.88752 9.52343 1.38765 9.21512 1.07934C8.90681 0.771036 8.40694 0.771036 8.09863 1.07934Z" fill="black"/>
+                        <path d="M0.785197 4.34556L3.3607 6.92107C3.66901 7.22938 4.16888 7.22938 4.47719 6.92107C4.7855 6.61276 4.7855 6.11289 4.47719 5.80458L1.90168 3.22908C1.59337 2.92077 1.09351 2.92077 0.785197 3.22908C0.476889 3.53739 0.476889 4.03725 0.785197 4.34556Z" fill="black"/>
+                      </svg>
+                      Принят
+                    </div>
                   </a>
                   <a href="#">
-                    <div class="dropdown-body-item">Принят</div>
+                    <div class="dropdown-body-item dropdown-body-item-yellow">
+                      <svg class="dropdown-icon-response" width="14" height="14" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path opacity="0.5" d="M4.16667 8.16665C6.19171 8.16665 7.83333 6.52502 7.83333 4.49998C7.83333 2.47494 6.19171 0.833313 4.16667 0.833313C2.14162 0.833313 0.5 2.47494 0.5 4.49998C0.5 6.52502 2.14162 8.16665 4.16667 8.16665Z" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path opacity="0.5" d="M4.16699 2.66669V4.72919L5.08366 5.41669" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                      В резерве
+                    </div>
                   </a>
                   <a href="#">
-                    <div class="dropdown-body-item">В резерве</div>
+                    <div class="dropdown-body-item dropdown-body-item-red">
+                      <svg class="dropdown-icon-response-cross" width="10" height="10" viewBox="0 0 7 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4.11874 3.5L6.87187 0.746769C7.04271 0.575923 7.04271 0.298872 6.87187 0.128135C6.70102 -0.0427116 6.42408 -0.0427116 6.25323 0.128135L3.5 2.88126L0.746879 0.128135C0.576032 -0.0427116 0.298981 -0.0427116 0.128135 0.128135C-0.0427116 0.298981 -0.0427116 0.576032 0.128135 0.746769L2.88137 3.5L0.128135 6.25323C-0.0427116 6.42408 -0.0427116 6.70113 0.128135 6.87187C0.213558 6.95729 0.32556 7.00005 0.437452 7.00005C0.549344 7.00005 0.661456 6.95729 0.746879 6.87187L3.5 4.11874L6.25323 6.87187C6.33865 6.95729 6.45066 7.00005 6.56255 7.00005C6.67444 7.00005 6.78655 6.95729 6.87187 6.87187C7.04271 6.70102 7.04271 6.42397 6.87187 6.25323L4.11874 3.5Z" fill="black"/>
+                      </svg>
+                      Отклонен
+                    </div>
                   </a>
                   <a href="#">
-                    <div class="dropdown-body-item">Отклонен</div>
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div class="wrapper-response">
-              <div class="container-response">
-                <div class="response-header">
-                  <span class="num-response"># 1231244</span>
-                  <span class="response-title">Отклик от  ООО “Ромашка”</span>
-                </div>
-                <p class="content-response">Добрый день! Мы разрабатываем решение для работы в полях для сотрудников и внештатных подряд ...</p>
-              </div>
-              <div class="dropdown-item dropdown-item-status-response">
-                <div class="dropdown-header">
-                  <span>Выбор статуса</span>
-                  <div class="dropdown-arrow"></div>
-                </div>
-                <div class="dropdown-body">
-                  <a href="#">
-                    <div class="dropdown-body-item">На рассмотрении</div>
-                  </a>
-                  <a href="#">
-                    <div class="dropdown-body-item">Принят</div>
-                  </a>
-                  <a href="#">
-                    <div class="dropdown-body-item">В резерве</div>
-                  </a>
-                  <a href="#">
-                    <div class="dropdown-body-item">Отклонен</div>
+                    <div class="dropdown-body-item dropdown-body-item-red">
+                      <svg class="dropdown-icon-response-cross" width="10" height="10" viewBox="0 0 7 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4.11874 3.5L6.87187 0.746769C7.04271 0.575923 7.04271 0.298872 6.87187 0.128135C6.70102 -0.0427116 6.42408 -0.0427116 6.25323 0.128135L3.5 2.88126L0.746879 0.128135C0.576032 -0.0427116 0.298981 -0.0427116 0.128135 0.128135C-0.0427116 0.298981 -0.0427116 0.576032 0.128135 0.746769L2.88137 3.5L0.128135 6.25323C-0.0427116 6.42408 -0.0427116 6.70113 0.128135 6.87187C0.213558 6.95729 0.32556 7.00005 0.437452 7.00005C0.549344 7.00005 0.661456 6.95729 0.746879 6.87187L3.5 4.11874L6.25323 6.87187C6.33865 6.95729 6.45066 7.00005 6.56255 7.00005C6.67444 7.00005 6.78655 6.95729 6.87187 6.87187C7.04271 6.70102 7.04271 6.42397 6.87187 6.25323L4.11874 3.5Z" fill="black"/>
+                      </svg>
+                      Отозван
+                    </div>
                   </a>
                 </div>
               </div>
@@ -414,7 +591,7 @@
           <div class="wrapper-info-response">
             <div class="info-response">
               <span>Откликов:</span>
-              <span>3</span>
+              <span>230</span>
             </div>
             <button class="btn-cabinet btn-cabinet-smaller">Управление заказом</button>
           </div>
@@ -432,21 +609,43 @@
               </div>
               <div class="dropdown-item dropdown-item-status-response">
                 <div class="dropdown-header">
-                  <span>Выбор статуса</span>
+                  <span>На рассмотрении</span>
                   <div class="dropdown-arrow"></div>
                 </div>
-                <div class="dropdown-body">
+                <div class="dropdown-body dropdown-body-status-response">
                   <a href="#">
-                    <div class="dropdown-body-item">На рассмотрении</div>
+                    <div class="dropdown-body-item dropdown-body-item-green">
+                      <svg class="dropdown-icon-response" width="14" height="12" viewBox="0 0 10 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M8.09863 1.07934L3.37367 5.80431C3.06536 6.11262 3.06536 6.61248 3.37367 6.92079C3.68198 7.2291 4.18185 7.2291 4.49016 6.92079L9.21512 2.19583C9.52343 1.88752 9.52343 1.38765 9.21512 1.07934C8.90681 0.771036 8.40694 0.771036 8.09863 1.07934Z" fill="black"/>
+                        <path d="M0.785197 4.34556L3.3607 6.92107C3.66901 7.22938 4.16888 7.22938 4.47719 6.92107C4.7855 6.61276 4.7855 6.11289 4.47719 5.80458L1.90168 3.22908C1.59337 2.92077 1.09351 2.92077 0.785197 3.22908C0.476889 3.53739 0.476889 4.03725 0.785197 4.34556Z" fill="black"/>
+                      </svg>
+                      Принят
+                    </div>
                   </a>
                   <a href="#">
-                    <div class="dropdown-body-item">Принят</div>
+                    <div class="dropdown-body-item dropdown-body-item-yellow">
+                      <svg class="dropdown-icon-response" width="14" height="14" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path opacity="0.5" d="M4.16667 8.16665C6.19171 8.16665 7.83333 6.52502 7.83333 4.49998C7.83333 2.47494 6.19171 0.833313 4.16667 0.833313C2.14162 0.833313 0.5 2.47494 0.5 4.49998C0.5 6.52502 2.14162 8.16665 4.16667 8.16665Z" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path opacity="0.5" d="M4.16699 2.66669V4.72919L5.08366 5.41669" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                      В резерве
+                    </div>
                   </a>
                   <a href="#">
-                    <div class="dropdown-body-item">В резерве</div>
+                    <div class="dropdown-body-item dropdown-body-item-red">
+                      <svg class="dropdown-icon-response-cross" width="10" height="10" viewBox="0 0 7 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4.11874 3.5L6.87187 0.746769C7.04271 0.575923 7.04271 0.298872 6.87187 0.128135C6.70102 -0.0427116 6.42408 -0.0427116 6.25323 0.128135L3.5 2.88126L0.746879 0.128135C0.576032 -0.0427116 0.298981 -0.0427116 0.128135 0.128135C-0.0427116 0.298981 -0.0427116 0.576032 0.128135 0.746769L2.88137 3.5L0.128135 6.25323C-0.0427116 6.42408 -0.0427116 6.70113 0.128135 6.87187C0.213558 6.95729 0.32556 7.00005 0.437452 7.00005C0.549344 7.00005 0.661456 6.95729 0.746879 6.87187L3.5 4.11874L6.25323 6.87187C6.33865 6.95729 6.45066 7.00005 6.56255 7.00005C6.67444 7.00005 6.78655 6.95729 6.87187 6.87187C7.04271 6.70102 7.04271 6.42397 6.87187 6.25323L4.11874 3.5Z" fill="black"/>
+                      </svg>
+                      Отклонен
+                    </div>
                   </a>
                   <a href="#">
-                    <div class="dropdown-body-item">Отклонен</div>
+                    <div class="dropdown-body-item dropdown-body-item-red">
+                      <svg class="dropdown-icon-response-cross" width="10" height="10" viewBox="0 0 7 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4.11874 3.5L6.87187 0.746769C7.04271 0.575923 7.04271 0.298872 6.87187 0.128135C6.70102 -0.0427116 6.42408 -0.0427116 6.25323 0.128135L3.5 2.88126L0.746879 0.128135C0.576032 -0.0427116 0.298981 -0.0427116 0.128135 0.128135C-0.0427116 0.298981 -0.0427116 0.576032 0.128135 0.746769L2.88137 3.5L0.128135 6.25323C-0.0427116 6.42408 -0.0427116 6.70113 0.128135 6.87187C0.213558 6.95729 0.32556 7.00005 0.437452 7.00005C0.549344 7.00005 0.661456 6.95729 0.746879 6.87187L3.5 4.11874L6.25323 6.87187C6.33865 6.95729 6.45066 7.00005 6.56255 7.00005C6.67444 7.00005 6.78655 6.95729 6.87187 6.87187C7.04271 6.70102 7.04271 6.42397 6.87187 6.25323L4.11874 3.5Z" fill="black"/>
+                      </svg>
+                      Отозван
+                    </div>
                   </a>
                 </div>
               </div>
@@ -461,21 +660,95 @@
               </div>
               <div class="dropdown-item dropdown-item-status-response">
                 <div class="dropdown-header">
-                  <span>Выбор статуса</span>
+                  <span>На рассмотрении</span>
                   <div class="dropdown-arrow"></div>
                 </div>
-                <div class="dropdown-body">
+                <div class="dropdown-body dropdown-body-status-response">
                   <a href="#">
-                    <div class="dropdown-body-item">На рассмотрении</div>
+                    <div class="dropdown-body-item dropdown-body-item-green">
+                      <svg class="dropdown-icon-response" width="14" height="12" viewBox="0 0 10 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M8.09863 1.07934L3.37367 5.80431C3.06536 6.11262 3.06536 6.61248 3.37367 6.92079C3.68198 7.2291 4.18185 7.2291 4.49016 6.92079L9.21512 2.19583C9.52343 1.88752 9.52343 1.38765 9.21512 1.07934C8.90681 0.771036 8.40694 0.771036 8.09863 1.07934Z" fill="black"/>
+                        <path d="M0.785197 4.34556L3.3607 6.92107C3.66901 7.22938 4.16888 7.22938 4.47719 6.92107C4.7855 6.61276 4.7855 6.11289 4.47719 5.80458L1.90168 3.22908C1.59337 2.92077 1.09351 2.92077 0.785197 3.22908C0.476889 3.53739 0.476889 4.03725 0.785197 4.34556Z" fill="black"/>
+                      </svg>
+                      Принят
+                    </div>
                   </a>
                   <a href="#">
-                    <div class="dropdown-body-item">Принят</div>
+                    <div class="dropdown-body-item dropdown-body-item-yellow">
+                      <svg class="dropdown-icon-response" width="14" height="14" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path opacity="0.5" d="M4.16667 8.16665C6.19171 8.16665 7.83333 6.52502 7.83333 4.49998C7.83333 2.47494 6.19171 0.833313 4.16667 0.833313C2.14162 0.833313 0.5 2.47494 0.5 4.49998C0.5 6.52502 2.14162 8.16665 4.16667 8.16665Z" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path opacity="0.5" d="M4.16699 2.66669V4.72919L5.08366 5.41669" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                      В резерве
+                    </div>
                   </a>
                   <a href="#">
-                    <div class="dropdown-body-item">В резерве</div>
+                    <div class="dropdown-body-item dropdown-body-item-red">
+                      <svg class="dropdown-icon-response-cross" width="10" height="10" viewBox="0 0 7 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4.11874 3.5L6.87187 0.746769C7.04271 0.575923 7.04271 0.298872 6.87187 0.128135C6.70102 -0.0427116 6.42408 -0.0427116 6.25323 0.128135L3.5 2.88126L0.746879 0.128135C0.576032 -0.0427116 0.298981 -0.0427116 0.128135 0.128135C-0.0427116 0.298981 -0.0427116 0.576032 0.128135 0.746769L2.88137 3.5L0.128135 6.25323C-0.0427116 6.42408 -0.0427116 6.70113 0.128135 6.87187C0.213558 6.95729 0.32556 7.00005 0.437452 7.00005C0.549344 7.00005 0.661456 6.95729 0.746879 6.87187L3.5 4.11874L6.25323 6.87187C6.33865 6.95729 6.45066 7.00005 6.56255 7.00005C6.67444 7.00005 6.78655 6.95729 6.87187 6.87187C7.04271 6.70102 7.04271 6.42397 6.87187 6.25323L4.11874 3.5Z" fill="black"/>
+                      </svg>
+                      Отклонен
+                    </div>
                   </a>
                   <a href="#">
-                    <div class="dropdown-body-item">Отклонен</div>
+                    <div class="dropdown-body-item dropdown-body-item-red">
+                      <svg class="dropdown-icon-response-cross" width="10" height="10" viewBox="0 0 7 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4.11874 3.5L6.87187 0.746769C7.04271 0.575923 7.04271 0.298872 6.87187 0.128135C6.70102 -0.0427116 6.42408 -0.0427116 6.25323 0.128135L3.5 2.88126L0.746879 0.128135C0.576032 -0.0427116 0.298981 -0.0427116 0.128135 0.128135C-0.0427116 0.298981 -0.0427116 0.576032 0.128135 0.746769L2.88137 3.5L0.128135 6.25323C-0.0427116 6.42408 -0.0427116 6.70113 0.128135 6.87187C0.213558 6.95729 0.32556 7.00005 0.437452 7.00005C0.549344 7.00005 0.661456 6.95729 0.746879 6.87187L3.5 4.11874L6.25323 6.87187C6.33865 6.95729 6.45066 7.00005 6.56255 7.00005C6.67444 7.00005 6.78655 6.95729 6.87187 6.87187C7.04271 6.70102 7.04271 6.42397 6.87187 6.25323L4.11874 3.5Z" fill="black"/>
+                      </svg>
+                      Отозван
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="wrapper-response">
+              <div class="container-response">
+                <div class="response-header">
+                  <span class="num-response"># 1231244</span>
+                  <span class="response-title">Отклик от  ООО “Ромашка”</span>
+                  <span class="set-meeting">Назначена встреча</span>
+                </div>
+                <p class="content-response">Добрый день! Мы разрабатываем решение для работы в полях для сотрудников и внештатных подряд ...</p>
+              </div>
+              <div class="dropdown-item dropdown-item-status-response">
+                <div class="dropdown-header">
+                  <span>На рассмотрении</span>
+                  <div class="dropdown-arrow"></div>
+                </div>
+                <div class="dropdown-body dropdown-body-status-response">
+                  <a href="#">
+                    <div class="dropdown-body-item dropdown-body-item-green">
+                      <svg class="dropdown-icon-response" width="14" height="12" viewBox="0 0 10 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M8.09863 1.07934L3.37367 5.80431C3.06536 6.11262 3.06536 6.61248 3.37367 6.92079C3.68198 7.2291 4.18185 7.2291 4.49016 6.92079L9.21512 2.19583C9.52343 1.88752 9.52343 1.38765 9.21512 1.07934C8.90681 0.771036 8.40694 0.771036 8.09863 1.07934Z" fill="black"/>
+                        <path d="M0.785197 4.34556L3.3607 6.92107C3.66901 7.22938 4.16888 7.22938 4.47719 6.92107C4.7855 6.61276 4.7855 6.11289 4.47719 5.80458L1.90168 3.22908C1.59337 2.92077 1.09351 2.92077 0.785197 3.22908C0.476889 3.53739 0.476889 4.03725 0.785197 4.34556Z" fill="black"/>
+                      </svg>
+                      Принят
+                    </div>
+                  </a>
+                  <a href="#">
+                    <div class="dropdown-body-item dropdown-body-item-yellow">
+                      <svg class="dropdown-icon-response" width="14" height="14" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path opacity="0.5" d="M4.16667 8.16665C6.19171 8.16665 7.83333 6.52502 7.83333 4.49998C7.83333 2.47494 6.19171 0.833313 4.16667 0.833313C2.14162 0.833313 0.5 2.47494 0.5 4.49998C0.5 6.52502 2.14162 8.16665 4.16667 8.16665Z" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path opacity="0.5" d="M4.16699 2.66669V4.72919L5.08366 5.41669" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                      В резерве
+                    </div>
+                  </a>
+                  <a href="#">
+                    <div class="dropdown-body-item dropdown-body-item-red">
+                      <svg class="dropdown-icon-response-cross" width="10" height="10" viewBox="0 0 7 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4.11874 3.5L6.87187 0.746769C7.04271 0.575923 7.04271 0.298872 6.87187 0.128135C6.70102 -0.0427116 6.42408 -0.0427116 6.25323 0.128135L3.5 2.88126L0.746879 0.128135C0.576032 -0.0427116 0.298981 -0.0427116 0.128135 0.128135C-0.0427116 0.298981 -0.0427116 0.576032 0.128135 0.746769L2.88137 3.5L0.128135 6.25323C-0.0427116 6.42408 -0.0427116 6.70113 0.128135 6.87187C0.213558 6.95729 0.32556 7.00005 0.437452 7.00005C0.549344 7.00005 0.661456 6.95729 0.746879 6.87187L3.5 4.11874L6.25323 6.87187C6.33865 6.95729 6.45066 7.00005 6.56255 7.00005C6.67444 7.00005 6.78655 6.95729 6.87187 6.87187C7.04271 6.70102 7.04271 6.42397 6.87187 6.25323L4.11874 3.5Z" fill="black"/>
+                      </svg>
+                      Отклонен
+                    </div>
+                  </a>
+                  <a href="#">
+                    <div class="dropdown-body-item dropdown-body-item-red">
+                      <svg class="dropdown-icon-response-cross" width="10" height="10" viewBox="0 0 7 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4.11874 3.5L6.87187 0.746769C7.04271 0.575923 7.04271 0.298872 6.87187 0.128135C6.70102 -0.0427116 6.42408 -0.0427116 6.25323 0.128135L3.5 2.88126L0.746879 0.128135C0.576032 -0.0427116 0.298981 -0.0427116 0.128135 0.128135C-0.0427116 0.298981 -0.0427116 0.576032 0.128135 0.746769L2.88137 3.5L0.128135 6.25323C-0.0427116 6.42408 -0.0427116 6.70113 0.128135 6.87187C0.213558 6.95729 0.32556 7.00005 0.437452 7.00005C0.549344 7.00005 0.661456 6.95729 0.746879 6.87187L3.5 4.11874L6.25323 6.87187C6.33865 6.95729 6.45066 7.00005 6.56255 7.00005C6.67444 7.00005 6.78655 6.95729 6.87187 6.87187C7.04271 6.70102 7.04271 6.42397 6.87187 6.25323L4.11874 3.5Z" fill="black"/>
+                      </svg>
+                      Отозван
+                    </div>
                   </a>
                 </div>
               </div>
@@ -490,50 +763,43 @@
               </div>
               <div class="dropdown-item dropdown-item-status-response">
                 <div class="dropdown-header">
-                  <span>Выбор статуса</span>
+                  <span>На рассмотрении</span>
                   <div class="dropdown-arrow"></div>
                 </div>
-                <div class="dropdown-body">
+                <div class="dropdown-body dropdown-body-status-response">
                   <a href="#">
-                    <div class="dropdown-body-item">На рассмотрении</div>
+                    <div class="dropdown-body-item dropdown-body-item-green">
+                      <svg class="dropdown-icon-response" width="14" height="12" viewBox="0 0 10 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M8.09863 1.07934L3.37367 5.80431C3.06536 6.11262 3.06536 6.61248 3.37367 6.92079C3.68198 7.2291 4.18185 7.2291 4.49016 6.92079L9.21512 2.19583C9.52343 1.88752 9.52343 1.38765 9.21512 1.07934C8.90681 0.771036 8.40694 0.771036 8.09863 1.07934Z" fill="black"/>
+                        <path d="M0.785197 4.34556L3.3607 6.92107C3.66901 7.22938 4.16888 7.22938 4.47719 6.92107C4.7855 6.61276 4.7855 6.11289 4.47719 5.80458L1.90168 3.22908C1.59337 2.92077 1.09351 2.92077 0.785197 3.22908C0.476889 3.53739 0.476889 4.03725 0.785197 4.34556Z" fill="black"/>
+                      </svg>
+                      Принят
+                    </div>
                   </a>
                   <a href="#">
-                    <div class="dropdown-body-item">Принят</div>
+                    <div class="dropdown-body-item dropdown-body-item-yellow">
+                      <svg class="dropdown-icon-response" width="14" height="14" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path opacity="0.5" d="M4.16667 8.16665C6.19171 8.16665 7.83333 6.52502 7.83333 4.49998C7.83333 2.47494 6.19171 0.833313 4.16667 0.833313C2.14162 0.833313 0.5 2.47494 0.5 4.49998C0.5 6.52502 2.14162 8.16665 4.16667 8.16665Z" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path opacity="0.5" d="M4.16699 2.66669V4.72919L5.08366 5.41669" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                      В резерве
+                    </div>
                   </a>
                   <a href="#">
-                    <div class="dropdown-body-item">В резерве</div>
+                    <div class="dropdown-body-item dropdown-body-item-red">
+                      <svg class="dropdown-icon-response-cross" width="10" height="10" viewBox="0 0 7 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4.11874 3.5L6.87187 0.746769C7.04271 0.575923 7.04271 0.298872 6.87187 0.128135C6.70102 -0.0427116 6.42408 -0.0427116 6.25323 0.128135L3.5 2.88126L0.746879 0.128135C0.576032 -0.0427116 0.298981 -0.0427116 0.128135 0.128135C-0.0427116 0.298981 -0.0427116 0.576032 0.128135 0.746769L2.88137 3.5L0.128135 6.25323C-0.0427116 6.42408 -0.0427116 6.70113 0.128135 6.87187C0.213558 6.95729 0.32556 7.00005 0.437452 7.00005C0.549344 7.00005 0.661456 6.95729 0.746879 6.87187L3.5 4.11874L6.25323 6.87187C6.33865 6.95729 6.45066 7.00005 6.56255 7.00005C6.67444 7.00005 6.78655 6.95729 6.87187 6.87187C7.04271 6.70102 7.04271 6.42397 6.87187 6.25323L4.11874 3.5Z" fill="black"/>
+                      </svg>
+                      Отклонен
+                    </div>
                   </a>
                   <a href="#">
-                    <div class="dropdown-body-item">Отклонен</div>
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div class="wrapper-response">
-              <div class="container-response">
-                <div class="response-header">
-                  <span class="num-response"># 1231244</span>
-                  <span class="response-title">Отклик от  ООО “Ромашка”</span>
-                </div>
-                <p class="content-response">Добрый день! Мы разрабатываем решение для работы в полях для сотрудников и внештатных подряд ...</p>
-              </div>
-              <div class="dropdown-item dropdown-item-status-response">
-                <div class="dropdown-header">
-                  <span>Выбор статуса</span>
-                  <div class="dropdown-arrow"></div>
-                </div>
-                <div class="dropdown-body">
-                  <a href="#">
-                    <div class="dropdown-body-item">На рассмотрении</div>
-                  </a>
-                  <a href="#">
-                    <div class="dropdown-body-item">Принят</div>
-                  </a>
-                  <a href="#">
-                    <div class="dropdown-body-item">В резерве</div>
-                  </a>
-                  <a href="#">
-                    <div class="dropdown-body-item">Отклонен</div>
+                    <div class="dropdown-body-item dropdown-body-item-red">
+                      <svg class="dropdown-icon-response-cross" width="10" height="10" viewBox="0 0 7 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4.11874 3.5L6.87187 0.746769C7.04271 0.575923 7.04271 0.298872 6.87187 0.128135C6.70102 -0.0427116 6.42408 -0.0427116 6.25323 0.128135L3.5 2.88126L0.746879 0.128135C0.576032 -0.0427116 0.298981 -0.0427116 0.128135 0.128135C-0.0427116 0.298981 -0.0427116 0.576032 0.128135 0.746769L2.88137 3.5L0.128135 6.25323C-0.0427116 6.42408 -0.0427116 6.70113 0.128135 6.87187C0.213558 6.95729 0.32556 7.00005 0.437452 7.00005C0.549344 7.00005 0.661456 6.95729 0.746879 6.87187L3.5 4.11874L6.25323 6.87187C6.33865 6.95729 6.45066 7.00005 6.56255 7.00005C6.67444 7.00005 6.78655 6.95729 6.87187 6.87187C7.04271 6.70102 7.04271 6.42397 6.87187 6.25323L4.11874 3.5Z" fill="black"/>
+                      </svg>
+                      Отозван
+                    </div>
                   </a>
                 </div>
               </div>

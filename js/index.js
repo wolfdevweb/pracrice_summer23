@@ -1,45 +1,25 @@
-function dropdownToggleActive(index) {
-    dropdownItem[index].classList.toggle("active")
-    dropdownBody[index].classList.toggle("active")
-}
+
+let dropdownStatus = document.querySelectorAll(".dropdown-item-status-response")
+dropdownStatus.forEach((elem, i) => {
+    elem.addEventListener("click", (event) => {
+        // console.log(dropdownStatus[i].children[1].classList.toggle("close"))
+         if (event.target.classList.contains("dropdown-body-item")) {
+             if (dropdownStatus[i].classList.length > 2)
+                 dropdownStatus[i].classList.remove(dropdownStatus[i].classList[dropdownStatus[i].classList.length-1])
+             dropdownStatus[i].children[0].children[0].innerHTML = event.target.innerHTML
+             dropdownStatus[i].classList.add(event.target.classList[event.target.classList.length-1])
+             dropdownStatus[i].children[1].classList.add("close")
+             setTimeout(()=> {
+                 dropdownStatus[i].children[1].classList.remove("close")
+             },0)
+         }
+    })
+})
+
 
 function changeContentBtnHint(contentElement) {
     return (contentElement === "Показать") ? "Скрыть" : "Показать"
 }
-
-
-let dropdownItem = document.querySelectorAll(".dropdown-item")
-let dropdownHeader = document.querySelectorAll(".dropdown-header span")
-let dropdownBody = document.querySelectorAll(".dropdown-body")
-dropdownItem.forEach((elem, i) => {
-    if (!elem.classList.contains("dropdown-item-status-response")) {
-        elem.addEventListener("mouseover", () => dropdownToggleActive(i))
-        elem.addEventListener("mouseout", () => dropdownToggleActive(i))
-    }
-    else
-        elem.addEventListener("click", (event) => {
-            dropdownToggleActive(i)
-            if (event.target !== dropdownItem[i] && event.target.textContent !== "" &&
-            event.target !== dropdownBody[i]) {
-                dropdownHeader[i].textContent = event.target.textContent
-                let item = dropdownItem[i]
-                switch (dropdownHeader[i].textContent) {
-                    case "Принят":
-                        item.style.background = "var(--light-green-100)"
-                        break;
-                    case "В резерве":
-                        item.style.background = "var(--light-yellow)"
-                        break;
-                    case "Отклонен":
-                        item.style.background = "var(--light-red)"
-                        break;
-                    case "На рассмотрении":
-                        item.style.background = "var(--light-grey)"
-                        break;
-                }
-            }
-        })
-})
 
 let btnHint = document.querySelector(".btn-hint")
 let hintProfile = document.querySelector(".hint-profile-fullness")
