@@ -2,6 +2,7 @@
 /*Общие стили для кабинета*/
 
 :root {
+    --blue: #67acfd;
     --black: #000000;
     --light-green: #9cdfd3;
     --darked-green: #075055;
@@ -12,6 +13,7 @@
     --yellow: #FEC608;
     --light-yellow: rgba(255, 238, 151, 0.72);
     --mint: #C9E4DF;
+    --mint-100: #CAE3DF;
     --light-grey: #EAEDF1;
     --lightnest-grey: #dddddd;
     --grey--200: #939393;
@@ -199,16 +201,6 @@ a {
     color: var(--black);
     border-radius: 9px;
     padding: 0 6px;
-    position: relative;
-}
-
-.menu-cabinet-item::after {
-    position: absolute;
-    bottom: 0;
-    width: calc(100% - 12px);
-    display: flex;
-    content: "";
-    border-bottom: 1px solid var(--mint);
 }
 
 .menu-cabinet-item:nth-last-child(1)::after {
@@ -217,7 +209,6 @@ a {
 
 .menu-cabinet-item:hover, .menu-cabinet-item.active:hover {
     background-color: var(--light-green);
-    font-weight: 500;
 }
 
 .menu-cabinet-item.active {
