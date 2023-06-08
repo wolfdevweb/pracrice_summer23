@@ -13,7 +13,7 @@ readContinue.addEventListener("click", () => {
 // Реализация прокрутки имени файла
 let file = document.querySelectorAll(".file")
 file.forEach((elem,i) => {
-    elem.addEventListener("mouseover", (event) => {
+    elem.addEventListener("mouseover", () => {
         file[i].children[1].scroll(0, file[i].children[1].scrollHeight)
     })
     elem.addEventListener("mouseout", () => {
@@ -42,14 +42,14 @@ btnEditOrder.addEventListener("click", ()=> {
 })
 
 // Закрытие конктретного модального окна по кнопке
-undoAction.forEach((elem, i) => {
+undoAction.forEach((elem) => {
     elem.addEventListener("click", () => {
         closeModal(elem.parentNode.parentNode.parentNode)
     })
 })
 // Закрытие модального окна по нажатию на крестик
-crossModal.forEach((elem, i) => {
-    elem.addEventListener("click", (event) => {
+crossModal.forEach((elem) => {
+    elem.addEventListener("click", () => {
         closeModal(elem.parentNode.parentNode)
     })
 })
