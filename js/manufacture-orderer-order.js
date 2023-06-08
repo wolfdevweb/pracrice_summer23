@@ -9,3 +9,13 @@ readContinue.addEventListener("click", () => {
     descriptionContent.classList.toggle("open")
     hidingBlock.classList.toggle("hide")
 })
+
+let filename = document.querySelectorAll(".filename")
+filename.forEach((elem,i) => {
+    elem.addEventListener("mouseover", (event) => {
+        filename[i].scroll(0, filename[i].scrollHeight)
+    })
+    elem.addEventListener("mouseout", () => {
+        filename[i].scroll(0, 0)
+    })
+})

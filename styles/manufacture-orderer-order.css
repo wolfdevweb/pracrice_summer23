@@ -213,6 +213,10 @@
     position: relative;
 }
 
+.meet-container:last-child::after {
+    display: none;
+}
+
 .meet-container::after {
     position: absolute;
     bottom: 0;
@@ -423,9 +427,11 @@
     overflow: scroll;
     overflow-x: hidden;
     text-align: center;
+    scroll-behavior: smooth;
 }
 
 .filename::-webkit-scrollbar {
+    transition-duration: 3s;
     width: 1px;
 }
 
