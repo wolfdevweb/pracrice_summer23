@@ -7,7 +7,109 @@
   <link rel="stylesheet" href="/styles/manufacture-orderer-order.css">
 </head>
 <body>
-
+<div class="overlay active"></div>
+<div class="modal modal-transfer-meeting active">
+  <div class="modal-header">
+    <span>Перенос встречи</span>
+    <img src="/assets/img/cross.svg" class="cross-modal" alt="">
+  </div>
+  <div class="modal-subheader">
+    <span>Просьба желаемого интервала дат и времени:</span>
+  </div>
+  <div class="modal-body-content">
+    <p class="modal-description">
+      Просим перенести встречу на 25.06.2023 на 16:30 так как будем находиться в другом городе
+      на конференции и дальше еще очень много оправданий почему заказчик должен перенести встречу
+    </p>
+  </div>
+  <div class="header-content">
+    <span class="title-header-content">Выберите помещение</span>
+  </div>
+  <div class="slider">
+    <img src="/assets/img/arrow.svg" class="slider-arrow slider-arrow-left" alt="">
+    <div class="slider-body">
+      <div class="slider-card">
+        <div class="slider-card-overlay">
+        </div>
+        <div class="slider-card-head">
+          <div class="additionally-info">
+            <div class="additional-info">15м2</div>
+            <div class="additional-info">до 5000 человек</div>
+          </div>
+        </div>
+        <div class="slider-card-content">
+          <div class="hall-name">Зал Микеланджело</div>
+          <div class="hall-title-feature">Забронировано столов</div>
+          <div class="hall-feature">15 шт.</div>
+          <div class="hall-title-feature">Забронированное время</div>
+          <div class="hall-feature time-reservation">20.05.2023 c 12:30 до 21:00</div>
+        </div>
+        <button class="btn-cabinet btn-cabinet-smaller btn-enter-hall">Выбрать</button>
+      </div>
+      <div class="slider-card">
+        <div class="slider-card-overlay">
+        </div>
+        <div class="slider-card-head">
+          <div class="additionally-info">
+            <div class="additional-info">15м2</div>
+            <div class="additional-info">до 5000 человек</div>
+          </div>
+        </div>
+        <div class="slider-card-content">
+          <div class="hall-name">Зал Микеланджело</div>
+          <div class="hall-title-feature">Забронировано столов</div>
+          <div class="hall-feature">15 шт.</div>
+          <div class="hall-title-feature">Забронированное время</div>
+          <div class="hall-feature time-reservation">20.05.2023 c 12:30 до 21:00</div>
+        </div>
+        <button class="btn-cabinet btn-cabinet-smaller btn-enter-hall">Выбрать</button>
+      </div>
+      <div class="slider-card">
+        <div class="slider-card-overlay">
+        </div>
+        <div class="slider-card-head">
+          <div class="additionally-info">
+            <div class="additional-info">15м2</div>
+            <div class="additional-info">до 5000 человек</div>
+          </div>
+        </div>
+        <div class="slider-card-content">
+          <div class="hall-name">Зал Микеланджело</div>
+          <div class="hall-title-feature">Забронировано столов</div>
+          <div class="hall-feature">15 шт.</div>
+          <div class="hall-title-feature">Забронированное время</div>
+          <div class="hall-feature time-reservation">20.05.2023 c 12:30 до 21:00</div>
+        </div>
+        <button class="btn-cabinet btn-cabinet-smaller btn-enter-hall">Выбрать</button>
+      </div>
+      <div class="slider-card">
+        <div class="slider-card-overlay">
+        </div>
+        <div class="slider-card-head">
+          <div class="additionally-info">
+            <div class="additional-info">15м2</div>
+            <div class="additional-info">до 5000 человек</div>
+          </div>
+        </div>
+        <div class="slider-card-content">
+          <div class="hall-name">Комната на большой Порховой</div>
+          <div class="hall-title-feature">Забронировано столов</div>
+          <div class="hall-feature">15 шт.</div>
+          <div class="hall-title-feature">Забронированное время</div>
+          <div class="hall-feature time-reservation">20.05.2023 c 12:30 до 21:00</div>
+        </div>
+        <button class="btn-cabinet btn-cabinet-smaller btn-enter-hall">Выбрать</button>
+      </div>
+    </div>
+    <img src="/assets/img/arrow.svg" class="slider-arrow slider-arrow-right" alt="">
+  </div>
+  <div class="modal-bottom-menu-container">
+    <a href="#" class="modal-help">Как правильно перенести встречу?</a>
+    <div class="modal-bottom-menu">
+      <button class="btn-cabinet btn-cabinet-smaller undo-action">Отмена переноса</button>
+    </div>
+  </div>
+</div>
 <div class="container">
   <div class="submenu">
     <div class="dropdown-item">
@@ -167,8 +269,69 @@
         <div class="container-manage">
           <div class="manage-menu">
             <div class="header-manage">Управление заказом</div>
-            <button class="btn-cabinet btn-manage">Редактировать заказ</button>
-            <button class="btn-cabinet active btn-manage">Закрыть заказ</button>
+            <button class="btn-cabinet btn-manage" id="edit-order">Редактировать заказ</button>
+            <div class="modal modal-edit-order">
+              <div class="modal-header">
+                <span>Редактирование заказ</span>
+                <img src="/assets/img/cross.svg" class="cross-modal" alt="">
+              </div>
+              <div class="modal-body-content">
+                <p class="modal-description">
+                  Вы уверены, что хотите редактировать данный заказ? Он отправится на модерацию и временно не будет доступен в каталоге.
+                  При этом Вы сможете общаться с исполнителями в уже добавленных ранее откликах, а также назначать встречи исполнителями.
+                </p>
+              </div>
+              <div class="modal-bottom-menu-container">
+                <a href="#" class="modal-help">Зачем нужно модерирование заказа?</a>
+                <div class="modal-bottom-menu">
+                  <button class="btn-cabinet btn-cabinet-smaller undo-action cancel-order">Нет, чуть позже</button>
+                  <button class="btn-cabinet btn-cabinet-smaller active" id="apply-edit-order">Да, хочу редактировать</button>
+                </div>
+              </div>
+            </div>
+            <button class="btn-cabinet active btn-manage" id="close-order">Закрыть заказ</button>
+            <div class="modal modal-close-order">
+              <div class="modal-header">
+                <span>Закрытие заказа</span>
+                <img src="/assets/img/cross.svg" class="cross-modal" alt="">
+              </div>
+              <div class="modal-subheader">
+                <span>Расскажите нам пожалуйста почему Вы закрываете заказ?</span>
+              </div>
+              <div class="modal-body-content">
+                <label class="input-radio">
+                  <input type="radio" name="cause-close">
+                  Этот заказ больше не актуален
+                </label>
+                <label class="input-radio">
+                  <input type="radio" name="cause-close">
+                  Я нашел поставщика через отклики
+                </label>
+                <label class="input-radio">
+                  <input type="radio" name="cause-close">
+                  Я не нашел поставщика
+                </label>
+                <label class="input-radio">
+                  <input type="radio" name="cause-close">
+                  Поставщики не закрыли полностью мои потребности в заказе
+                </label>
+                <label class="input-radio">
+                  <input type="radio" name="cause-close">
+                  Другое, свой вариант
+                </label>
+              </div>
+              <div class="modal-subheader">
+                <span>Комментарий</span>
+              </div>
+              <textarea class="comment-area" placeholder="Напишите тут все что хотите"></textarea>
+              <div class="modal-bottom-menu-container">
+                <a href="#" class="modal-help">Зачем нужна эта информация нам?</a>
+                <div class="modal-bottom-menu">
+                  <button class="btn-cabinet btn-cabinet-smaller undo-action cancel-order">Отменить действие</button>
+                  <button class="btn-cabinet btn-cabinet-smaller active" id="apply-close-order">Закрыть заказ</button>
+                </div>
+              </div>
+            </div>
             <div class="warning-content">
               Внимание: <br>
               После закрытия заказа, исполнители не смогут подавать отклики на Ваш заказ. История заказа и отклики сохранятся.

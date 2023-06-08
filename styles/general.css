@@ -2,6 +2,7 @@
 /*Общие стили для кабинета*/
 
 :root {
+    --blue-100: #0085FF;
     --blue: #67acfd;
     --black: #000000;
     --light-green: #9cdfd3;
@@ -15,6 +16,7 @@
     --mint: #C9E4DF;
     --mint-100: #CAE3DF;
     --light-grey: #EAEDF1;
+    --grey--100: #DEDEDE;
     --lightnest-grey: #dddddd;
     --grey--200: #939393;
     --grey--300: #A1A1A1;
@@ -90,7 +92,7 @@ a {
 .dropdown-arrow {
     width: 19px;
     height: 14px;
-    background: url("../../pracrice_summer23/assets/img/dropdown_arrow.svg") no-repeat;
+    background: url("../../pracrice_summer23/assets/img/arrow.svg") no-repeat;
 }
 
 .dropdown-arrow-white {
@@ -405,4 +407,162 @@ a {
     position: absolute;
     bottom: -11px;
     border-bottom: 1px solid var(--lightnest-grey);
+}
+
+.modal {
+    display: none;
+    z-index: 10;
+    position: fixed;
+    background: var(--white);
+    width: 800px;
+    height: fit-content;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 25px;
+    border-radius: 12px;
+}
+
+.modal.active {
+    display: block;
+}
+
+.overlay.active {
+    position: fixed;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(3px);
+    z-index: 5;
+    background: rgba(154, 154, 154, 0.3);
+}
+
+.cross-modal {
+    cursor: pointer;
+    width: 17px;
+    height: 17px;
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.modal-header > span {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    color: var(--darked-green);
+}
+
+.modal-subheader {
+    margin-bottom: 20px;
+}
+
+.modal-subheader > span {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 15px;
+}
+
+.modal-body-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+input[type="radio"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 1px solid var(--darked-green);
+    outline: none;
+    position: relative;
+    margin-right: 10px;
+}
+
+input[type="radio"]:checked::after {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--darked-green);
+}
+
+.input-radio {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 15px;
+}
+
+.comment-area {
+    outline: none;
+    border-radius: 8px;
+    width: 100%;
+    height: 140px;
+    overflow: scroll;
+    overflow-x: hidden;
+    resize: none;
+    padding: 15px;
+    border: 1px solid var(--grey--100);
+    color: var(--black);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 15px;
+}
+
+.comment-area::placeholder {
+    color: var(--grey--300);
+}
+
+.comment-area::-webkit-scrollbar {
+    width: 5px;
+}
+
+.comment-area::-webkit-scrollbar-thumb {
+    width: 100%;
+    background-color: var(--darked-green);
+    border-radius: 20px;
+}
+
+.modal-bottom-menu-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.modal-help {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 15px;
+    color: var(--blue-100);
+}
+
+.cancel-order {
+    margin-right: 10px;
+}
+
+.modal-bottom-menu > button {
+    font-size: 14px;
+}
+
+.modal-description {
+    margin-top: 10px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 15px;
+    margin-bottom: 30px;
 }
