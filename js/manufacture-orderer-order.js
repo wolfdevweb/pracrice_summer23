@@ -102,7 +102,7 @@ let enterHallName;
 
 // Выбор помещения и переход на модальное окно со столами
 btnEnterHalls.forEach((elem) => {
-    elem.addEventListener("click", (event) => {
+    elem.addEventListener("click", () => {
         enterHallName = elem.parentNode.children[2].children[0].innerText
         closeModal(transferMeetingModal)
         openModal(choiceTableModal)
