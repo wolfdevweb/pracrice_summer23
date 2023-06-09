@@ -173,6 +173,7 @@
     font-weight: 600;
     font-size: 14px;
     line-height: 15px;
+    white-space: nowrap;
 }
 
 
@@ -480,14 +481,23 @@
 
 .header-content {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     width: calc(100% / 3);
     text-align: center;
     margin: 0 auto 20px;
 
 }
 
+.header-content-two-elem {
+    display: flex;
+    justify-content: flex-start;
+    width: calc(100% / 1.5);
+    text-align: center;
+    margin: 0;
+}
+
 .title-header-content {
+    width: 100%;
     font-weight: 600;
     font-size: 14px;
     line-height: 15px;
@@ -500,11 +510,16 @@
     align-items: center;
 }
 
-.slider-body {
+.slider-body-container {
     display: flex;
     width: 100%;
     flex-wrap: nowrap;
     overflow: hidden;
+}
+
+.slider-body {
+    display: flex;
+    transition: all .3s ease-out;
 }
 
 .slider-card {
@@ -628,4 +643,27 @@
 
 .slider-arrow-right:hover .slider-body {
     transform: translate(245px);
+}
+
+.return-rooms, .return-tables {
+    cursor: pointer;
+    width: 100%;
+    margin: 0;
+}
+
+.spreadsheet-tables {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.btn-table {
+    width: calc(100% / 5);
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 15px;
+    padding: 0 15px;
+    max-width: 130px;
+    min-width: 120px;
+    margin-top: 15px;
 }

@@ -74,6 +74,55 @@ applyEditOrder.addEventListener("click", async () => {
     closeModal(modalEditOrder)
 })
 
+// Реализация слайдера
+let arrowSliderLeft = document.querySelector(".slider-arrow-left")
+let arrowSliderRight = document.querySelector(".slider-arrow-right")
+let sliderBody = document.querySelector(".slider-body")
+let i = 0
+arrowSliderRight.addEventListener("click", () => {
+    sliderBody.children.length
+    if (i < (sliderBody.children.length-3) * 230) {
+        i += 230
+        sliderBody.style.transform = `translate(-${i}px)`
+    }
+})
+arrowSliderLeft.addEventListener("click", () => {
+    if (i !== 0) {
+        i -= 230
+        sliderBody.style.transform = `translate(-${i}px)`
+    }
+})
+
+// Переход с модального окна выбора помещения на модальное окно со столами и наоборот
+let returnToRooms = document.querySelector(".return-rooms")
+let choiceTableModal = document.querySelector(".modal-transfer-meeting-tables")
+let transferMeetingModal = document.querySelector(".modal-transfer-meeting")
+let btnEnterHalls = document.querySelectorAll(".btn-enter-hall")
+let enterHallName;
+
+// Выбор помещения и переход на модальное окно со столами
+btnEnterHalls.forEach((elem) => {
+    elem.addEventListener("click", (event) => {
+        enterHallName = elem.parentNode.children[2].children[0].innerText
+        closeModal(transferMeetingModal)
+        openModal(choiceTableModal)
+    })
+})
+// Возврат на модальное окно выбора помещения
+returnToRooms.addEventListener("click", () => {
+    closeModal(choiceTableModal)
+    openModal(transferMeetingModal)
+})
+
+let btnTables = document.querySelectorAll(".btn-table")
+
+btnTables.forEach((elem) => {
+    elem.addEventListener("click", () => {
+        closeModal(choiceTableModal)
+        // openModal()
+    })
+})
+
 
 function closeModal(modal) {
     modal.classList.remove("active")

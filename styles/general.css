@@ -249,6 +249,17 @@ a {
     cursor: pointer;
 }
 
+.btn-cabinet:disabled {
+    color: var(--grey--300);
+    border-color: var(--grey--300);
+}
+
+.btn-cabinet:disabled:hover {
+    color: var(--grey--300);
+    border-color: var(--grey--300);
+    background: var(--white);
+}
+
 .btn-cabinet-smaller {
     font-size: 12px;
     height: 30px;
