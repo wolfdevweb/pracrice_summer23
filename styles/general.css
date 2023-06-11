@@ -21,7 +21,8 @@
     --grey--200: #939393;
     --grey--300: #A1A1A1;
     --light-red: #FF7D7DB8;
-    --light-green-100: rgba(180, 255, 183, 0.72)
+    --light-green-100: rgba(180, 255, 183, 0.72);
+    --red-100: #FFA2A2;
 }
 
 a {
