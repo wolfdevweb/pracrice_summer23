@@ -134,3 +134,112 @@ function openModal(modal) {
     overlay.classList.add("active")
     modal.classList.add("active")
 }
+
+//реализация выбора времени встречи
+const step = 5 // "шаг" 5 минут
+const intervalLength = 288
+//убираем 10 утренних часов (0:00 - 10:00) для того чтобы интервал смотрелся красивее
+const intervalMorning = 120
+//убираем 2 ночных часа (22:00 - 0:00) 
+const intervalNight = 24
+
+const beautifyTime = (time) => {
+    if (time.toString().length === 1) return "0" + time
+    return time
+}
+
+const timeToSteps = (time) => {
+    const [hours, minutes] = time.split(":")
+    if (hours === 0) hours = 24
+    return (hours * 60 / step) + Math.round(minutes / step)
+}
+
+const stepsToTime = (steps) => {
+    const hours = Math.floor(steps / 12)
+    const minutes = (steps - hours * 12) * 5 
+    return `${beautifyTime(hours)}:${beautifyTime(minutes)}`
+}
+
+const stepsToOffset = (steps) => {
+    return (steps-intervalMorning)/(intervalLength-intervalMorning-intervalNight)*100 + "%"
+}
+
+const stepsToWidth = (steps) => {
+    return (steps)/(intervalLength-intervalMorning-intervalNight)*100 + "%"
+}
+
+const interval = document.querySelector("#transferMeetinInterval")
+
+const timeSlots = {
+    available: [
+        {
+            start: timeToSteps("12:00"),
+            end: timeToSteps("19:00")
+        },
+    ],
+    appointment: [
+        {
+            start: timeToSteps("12:00"),
+            end: timeToSteps("14:30")
+        },
+        {
+            start: timeToSteps("16:00"),
+            end: timeToSteps("17:45")
+        }
+    ]
+}
+
+// устанавливаем точки начала/конца интервалов
+const placeIntervalTips = () => {
+    const timeSlotsFlattened = []
+
+    Object.keys(timeSlots).forEach((key) => {
+        const flattenedPoint = []
+        timeSlots[key].forEach((point) => {
+            flattenedPoint.push(...Object.values(point))
+        })
+        timeSlotsFlattened.push(...flattenedPoint)
+    })
+
+    const tipPositions = [...new Set(timeSlotsFlattened)].sort((a, b) => a - b)
+    
+    tipPositions.forEach(tip => {
+        const tipEl = document.createElement("div")
+        tipEl.classList.add("interval-tip")
+        tipEl.style.left = stepsToOffset(tip)
+        tipEl.dataset.content = stepsToTime(tip)
+        interval.appendChild(tipEl)
+    })
+}
+
+const placeStripe = (start, end, classList) => {
+    const stripeEl = document.createElement("div")
+    stripeEl.classList.add(...classList)
+
+    stripeEl.style.left = stepsToOffset(start)
+    stripeEl.style.width = stepsToWidth(end - start)
+
+    console.log(timeSlots)
+
+    interval.appendChild(stripeEl)
+}
+
+const placeGreenStripe = () => {
+    placeStripe(timeSlots.available[0].start, timeSlots.available[0].end, ["interval-stripe", "interval-stripe-green"])
+}
+
+const placeYellowStripes = () => {
+    timeSlots.appointment.forEach(slot => {
+        console.log(slot)
+        placeStripe(slot.start, slot.end, ["interval-stripe", "interval-stripe-yellow"])
+    })
+}
+
+const placeIntervalStripes = () => {
+    placeGreenStripe()
+    placeYellowStripes()
+}
+
+console.log(timeSlots)
+placeIntervalTips()
+placeIntervalStripes()

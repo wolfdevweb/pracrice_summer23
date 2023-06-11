@@ -238,14 +238,73 @@
     </div>
     <span class="title-header-content">Укажите время</span>
   </div>
-  <div class="choice-time-container">
-    <div class="timeline">
+  <div class="interval" id="transferMeetinInterval">
+    <div class="interval-tooltip">
+      <div class="interval-tooltip-text">
+        Встреча с <br>
+        ООО “Ромашка” <br>
+        16:00 - 18:00 <br>
+      </div>
+      <div class="interval-tooltip-bottom"></div>
     </div>
+    <div class="interval-stroke">
+      <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+      <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+      <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+    </div>
+    <div class="interval-stripes-wrapper">
+      <div class="interval-stripe interval-stripe-red"></div>
+      <div class="interval-stripe interval-stripe-yellow"></div>
+    </div>
+  </div>
+  <div class="interval-modal-bottom-wrapper">
+    <div class="interval-legend">
+      <div class="interval-legend-item">
+        <div class="interval legend-interval">
+          <div class="interval-stroke">
+            <div></div><div></div>
+          </div>
+          <div class="interval-stripe interval-stripe-green"></div>
+        </div>
+        <span class="interval-legend-text">- Время свободно</span>
+      </div>
+      <div class="interval-legend-item">
+        <div class="interval legend-interval">
+          <div class="interval-stroke">
+            <div></div><div></div>
+          </div>
+          <div class="interval-stripe interval-stripe-yellow"></div>
+        </div>
+        <span class="interval-legend-text">- Встреча назначена</span>
+      </div>
+      <div class="interval-legend-item">
+        <div class="interval legend-interval">
+          <div class="interval-stroke">
+            <div></div><div></div>
+          </div>
+          <div class="interval-stripe interval-stripe-red"></div>
+        </div>
+        <span class="interval-legend-text">- Недоступно</span>
+      </div>
+    </div>
+    <div class="interval-changer-wrapper">
+      <span class="title-header-content">Новое дата и время встречи</span>
+      <span class="interval-changer-subheader">Помещение: </span>
+      <div class="interval-changer-inputs">
+        <div class="interval-changer-inputs-text">с</div>
+        <input class="interval-changer-input" placeholder="12:00">
+        <div class="interval-changer-inputs-text">до</div>
+        <input class="interval-changer-input" placeholder="16:00">
+      </div>
+    </div>
+  </div>
+  <div>
   </div>
   <div class="modal-bottom-menu-container">
     <a href="#" class="modal-help">Как правильно перенести встречу?</a>
     <div class="modal-bottom-menu">
       <button class="btn-cabinet btn-cabinet-smaller undo-action">Отмена переноса</button>
+      <button class="btn-cabinet active btn-cabinet-smaller">Перенести встречу</button>
     </div>
   </div>
 </div>

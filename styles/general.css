@@ -16,6 +16,7 @@
     --mint: #C9E4DF;
     --mint-100: #CAE3DF;
     --light-grey: #EAEDF1;
+    --grey--50: #EFEFEF;
     --grey--100: #DEDEDE;
     --lightnest-grey: #dddddd;
     --grey--200: #939393;
@@ -565,6 +566,11 @@ input[type="radio"]:checked::after {
 
 .cancel-order {
     margin-right: 10px;
+}
+
+.modal-bottom-menu {
+    display: flex;
+    gap: 24px;
 }
 
 .modal-bottom-menu > button {

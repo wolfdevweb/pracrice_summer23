@@ -693,3 +693,228 @@
     background-position: center;
     background-repeat: repeat-x;
 }
+
+.interval {
+    position: relative;
+    height: 20px;
+    margin-top: 70px;
+    margin-bottom: 45px;
+    display: flex;
+    align-items: center;
+}
+
+.interval-stripes-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 20px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.interval-stripe {
+    position: absolute;
+    height: 100%;
+    display: flex;
+    gap: 20px;
+    overflow: hidden;
+}
+
+.interval-stripe-red {
+    background: var(--light-red) !important;
+    width: 100%;
+    z-index: 2;
+}
+
+.interval-stripe-green {
+    background: var(--light-green-100) !important;
+    z-index: 3;
+}
+
+.interval-stripe-yellow {
+    background: var(--light-yellow) !important;
+    z-index: 4;
+}
+
+.interval-stroke {
+    position: absolute;
+    height: 20px;
+    width: 100%;
+    display: flex;
+    gap: 20px;
+    z-index: 5;
+    overflow: hidden;
+}
+
+.interval-stroke div {
+    position: relative;
+    height: 250%;
+    width: 10px;
+    background-color: var(--white);
+    transform: rotateZ(45deg) translateY(-33%);
+}
+
+.interval-tip {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    z-index: 6;
+    height: 32px;
+    width: 5px;
+    background-color: var(--darked-green);
+}
+
+.interval-tip::after {
+    content: attr(data-content);
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 15px;
+    letter-spacing: 0em;
+    text-align: left;
+    position: absolute;
+    bottom: -16px;
+}
+
+.interval-tooltip {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    top: -55px;
+    background-color: var(--grey--50);
+    padding: 3px 5px;
+    border-radius: 10px;
+}
+
+.interval-tooltip-text {
+    width: 120px;
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 12px;
+    letter-spacing: 0em;
+    text-align: center;
+}
+
+.interval-tooltip-bottom {
+    position: absolute;
+    background-color: var(--grey--50);
+    bottom: -10px;
+    width: 20px;
+    height: 20px;
+    z-index: -1;
+}
+
+.interval-tooltip-bottom::after {
+    content: '';
+    position: absolute;
+    background-color: var(--white);
+    display: block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    right: -50%;
+    bottom: -50%;
+}
+
+.interval-tooltip-bottom::before {
+    content: '';
+    position: absolute;
+    background-color: var(--white);
+    display: block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    left: -50%;
+    bottom: -50%;
+}
+
+.interval-modal-bottom-wrapper {
+    display: flex;
+    gap: 95px;
+}
+
+.interval-legend {
+    min-width: 250px;
+    width: 250px;
+    margin-top: 25px;
+    display: flex;
+    gap: 16px;
+    flex-direction: column;
+}
+
+.interval-legend-item {
+    display: flex;
+    gap: 12px;
+}
+
+.interval-legend-text {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 15px;
+    text-align: left;
+} 
+
+.legend-interval {
+    width: 24px;
+    height: 15px;
+    margin: 0;
+}
+
+.legend-interval .interval-stripe {
+    width: 100%;
+}
+
+.legend-interval .interval-stroke {
+    left: -10px;
+    height: 15px;
+    gap: 10px;
+    width: 200%;
+}
+
+.legend-interval .interval-stroke div {
+    width: 5px;
+}
+
+.interval-changer-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.interval-changer-subheader {
+    margin-top: 4px;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 15px;
+    text-align: left;
+}
+
+.interval-changer-inputs {
+    margin-top: 36px;
+    display: flex;
+    align-items: center;
+    gap: 3px;
+}
+
+.interval-changer-inputs-text {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+    text-align: left;
+}
+ 
+.interval-changer-input {
+    width: 85px;
+    height: 30px;
+    text-align: center;
+    outline: none;
+    border: 1px solid rgba(0, 0, 0, 0.18);
+    border-radius: 8px;
+}
+
+.interval-changer-input:not(:last-of-type) {
+    margin-right: 10px;
+}
+
+.interval-changer-input:focus::placeholder {
+    color: transparent;
+}
