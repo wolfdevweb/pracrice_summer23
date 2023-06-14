@@ -7,8 +7,9 @@
   <link rel="stylesheet" href="/styles/manufacture-orderer-order.css">
 </head>
 <body>
-<div class="overlay active"></div>
-<div class="modal modal-transfer-meeting">
+  <script src="https://unpkg.com/imask"></script>
+  <div class="overlay active"></div>
+  <div class="modal modal-transfer-meeting active">
   <div class="modal-header">
     <span>Перенос встречи</span>
     <img src="/assets/img/cross.svg" class="cross-modal" alt="">
@@ -213,7 +214,7 @@
     </div>
   </div>
 </div>
-<div class="modal modal-transfer-meeting-tables active">
+<div class="modal modal-transfer-meeting-time">
   <div class="modal-header">
     <span>Перенос встречи</span>
     <img src="/assets/img/cross.svg" class="cross-modal" alt="">
@@ -243,7 +244,7 @@
       <div class="interval-tooltip-text">
         Встреча с <br>
         ООО “Ромашка” <br>
-        16:00 - 18:00 <br>
+        <span></span> <br>
       </div>
       <div class="interval-tooltip-bottom"></div>
     </div>
@@ -304,7 +305,7 @@
     <a href="#" class="modal-help">Как правильно перенести встречу?</a>
     <div class="modal-bottom-menu">
       <button class="btn-cabinet btn-cabinet-smaller undo-action">Отмена переноса</button>
-      <button class="btn-cabinet active btn-cabinet-smaller">Перенести встречу</button>
+      <button class="btn-cabinet active btn-cabinet-smaller" id="transferMeetButton">Перенести встречу</button>
     </div>
   </div>
 </div>

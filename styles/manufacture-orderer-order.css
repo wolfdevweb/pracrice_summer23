@@ -776,6 +776,11 @@
     bottom: -16px;
 }
 
+.interval-tip.tip-time-top::after {
+    bottom: none;
+    top: -16px;
+}
+
 .interval-tooltip {
     position: absolute;
     display: flex;
@@ -793,6 +798,11 @@
     line-height: 12px;
     letter-spacing: 0em;
     text-align: center;
+}
+
+.interval-tooltip-text span {
+    font-size: 10px;
+    line-height: 12px;
 }
 
 .interval-tooltip-bottom {

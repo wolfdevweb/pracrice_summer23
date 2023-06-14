@@ -95,8 +95,10 @@ arrowSliderLeft.addEventListener("click", () => {
 
 // Переход с модального окна выбора помещения на модальное окно со столами и наоборот
 let returnToRooms = document.querySelector(".return-rooms")
-let choiceTableModal = document.querySelector(".modal-transfer-meeting-tables")
+let returnToTables = document.querySelector(".return-tables")
 let transferMeetingModal = document.querySelector(".modal-transfer-meeting")
+let choiceTableModal = document.querySelector(".modal-transfer-meeting-tables")
+let choiceTimeModal = document.querySelector(".modal-transfer-meeting-time")
 let btnEnterHalls = document.querySelectorAll(".btn-enter-hall")
 let enterHallName;
 
@@ -119,8 +121,14 @@ let btnTables = document.querySelectorAll(".btn-table")
 btnTables.forEach((elem) => {
     elem.addEventListener("click", () => {
         closeModal(choiceTableModal)
-        // openModal()
+        openModal(choiceTimeModal)
     })
+})
+
+//Возврат на модальное окно выбора стола
+returnToTables.addEventListener("click", () => {
+    closeModal(choiceTimeModal)
+    openModal(choiceTableModal)
 })
 
 
@@ -169,6 +177,8 @@ const stepsToWidth = (steps) => {
 }
 
 const interval = document.querySelector("#transferMeetinInterval")
+const intervalTooltip = interval.querySelector(".interval-tooltip")
+const intervalTooltipTime = interval.querySelector(".interval-tooltip-text").querySelector("span")
 
 const timeSlots = {
     available: [
@@ -191,6 +201,10 @@ const timeSlots = {
 
 // устанавливаем точки начала/конца интервалов
 const placeIntervalTips = () => {
+    const intervalTips = interval.querySelectorAll(".interval-tip")
+
+    intervalTips.forEach(el => el.remove())
+
     const timeSlotsFlattened = []
 
     Object.keys(timeSlots).forEach((key) => {
@@ -203,9 +217,12 @@ const placeIntervalTips = () => {
 
     const tipPositions = [...new Set(timeSlotsFlattened)].sort((a, b) => a - b)
     
-    tipPositions.forEach(tip => {
+    tipPositions.forEach((tip, i) => {
         const tipEl = document.createElement("div")
         tipEl.classList.add("interval-tip")
+
+        if (tipPositions[i+1] && (tipPositions[i+1] - tip < 7)) tipEl.classList.add("tip-time-top")
+
         tipEl.style.left = stepsToOffset(tip)
         tipEl.dataset.content = stepsToTime(tip)
         interval.appendChild(tipEl)
@@ -219,8 +236,6 @@ const placeStripe = (start, end, classList) => {
     stripeEl.style.left = stepsToOffset(start)
     stripeEl.style.width = stepsToWidth(end - start)
 
-    console.log(timeSlots)
-
     interval.appendChild(stripeEl)
 }
 
@@ -230,16 +245,75 @@ const placeGreenStripe = () => {
 
 const placeYellowStripes = () => {
     timeSlots.appointment.forEach(slot => {
-        console.log(slot)
         placeStripe(slot.start, slot.end, ["interval-stripe", "interval-stripe-yellow"])
     })
 }
 
 const placeIntervalStripes = () => {
+    const intervalStripes = interval.querySelectorAll(".interval-stripe")
+
+    intervalStripes.forEach(el => !el.classList.contains("interval-stripe-red") && el.remove())
+
     placeGreenStripe()
     placeYellowStripes()
 }
 
-console.log(timeSlots)
-placeIntervalTips()
-placeIntervalStripes()
+const placeIntervalTooltip = (slot) => {
+    const slotCenter = (slot.end + slot.start) / 2
+    const intervalTooltipPos = `calc(${stepsToOffset(slotCenter)} - ${intervalTooltip.clientWidth / 2}px)`
+    intervalTooltip.style.left = intervalTooltipPos
+}
+
+// инициализация
+let changingSlot = timeSlots.appointment[1]
+
+const renderInterval = () => {
+    placeIntervalTips()
+    placeIntervalStripes()
+    placeIntervalTooltip(changingSlot)
+    
+    intervalTooltipTime.innerText = `${stepsToTime(changingSlot.start)} - ${stepsToTime(changingSlot.end)}`
+}
+
+const observer = new MutationObserver(() => {
+    renderInterval()
+})
+
+observer.observe(choiceTimeModal, {
+  attributes: true, 
+  attributeFilter: ["class"],
+  childList: false
+})
+
+
+// редактирование интервала
+const intervalChangerInputs = document.querySelectorAll(".interval-changer-input")
+const [intervalStartInput, intervalEndInput] = intervalChangerInputs
+
+intervalChangerInputs.forEach(input => {
+    let maskOptions = {
+        mask: 'hh:mm',
+        blocks: {
+            hh: {
+                mask: IMask.MaskedRange,
+                from: 12,
+                to: 18
+            },
+            mm: {
+                mask: IMask.MaskedRange,
+                from: 0,
+                to: 59
+            }
+        }
+      };
+    IMask(input, maskOptions);
+})
+
+const transferMeetButton = document.querySelector("#transferMeetButton")
+
+transferMeetButton.addEventListener("click", () => {
+    if (!intervalStartInput.value || !intervalEndInput.value) return
+    timeSlots.appointment[1].start = timeToSteps(intervalStartInput.value)
+    timeSlots.appointment[1].end = timeToSteps(intervalEndInput.value)
+    renderInterval()
+})
